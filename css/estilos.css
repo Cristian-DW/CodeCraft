@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Comfortaa:wght@400;600&family=Indie+Flower&family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+
+:root{
+    --color-primario: #57C5B6;
+    --color-secundario: #159895;
+    --color-terciario: #1A5F7A;
+    --color-alternativo: #002B5B;
+    --letra:'Kalam', cursive;
+    --letra-alternativa: 'Caveat', cursive;
+    --letra-texto: 'Courgette', cursive;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img:hover{
+    background-color: #fff;
+}
+nav ul li a { 
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: var(--color-alternativo);
+}
+
+nav ul li.register a {
+    background-image: linear-gradient(150deg, 
+    var(--color-primario), var(--color-secundario),
+    var(--color-terciario), var(--color-alternativo)
+    );
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+nav ul li.register a:hover{
+    color: #002B5B;
+    background-image: none;
+    cursor: pointer;
+    transition: 1s;
+    box-shadow: 3px 3px 5px 5px ;
+}
+
+nav ul li img{
+    width: 50px;
+    height: 50px;
+}
+.nombre{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: 'Kalam', cursive;
+}
+.contenedor{
+    display: flex;
+    margin: 0 auto;
+    padding: 50px;
+   
+}
+.legenda{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    font-family: 'Kalam', cursive;
+}
+.legenda h1{
+    font-size: 3rem;
+}
+.legenda p{
+    font-size: 2rem;
+}
+
+button{
+    display: inline-block;
+    width: 180px;
+    padding: 10px;
+    border-radius: 10px;
+    background-image: linear-gradient(150deg, 
+    var(--color-primario), var(--color-secundario),
+    var(--color-terciario), var(--color-alternativo)
+    );
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+    transition: .5s;
+}
+button:hover{
+    color: #002B5B;
+    background-image: none;
+    cursor: pointer;
+    transition: 1s;
+    box-shadow: 3px 3px 5px 5px ;
+}
+.ilustracion{
+    width: 800px;
+    height: 600px;
+}
+.text-guia{
+    margin: 5rem 5rem 0rem 5rem;
+    text-align: center;
+}
+.text-guia h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Kalam', cursive;
+}
+.text-guia p{
+    font-size: 1.3rem;
+    font-family: 'Kalam', cursive;
+}
+.inicio{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 1500px;
+    background-image: url(./media/bg-2.png);
+}
+.inicio-text h2{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+}
+.tarjetas{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+.tarjeta{
+    width: 250px;
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(221, 221, 221);
+    padding-bottom: 1rem;
+}
+
+.tarjeta img{
+    width: 250px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    background-color: #fff;
+}
+.tarjeta h3{
+    margin: .5rem 0 0 1rem;
+    font-size: 1.5rem;
+}
+.tarjeta p{
+    margin: .5rem 0 0 1rem;
+    font-size: 1rem;
+}
+.tarjeta:hover{
+    color: #fff;
+    background-image: linear-gradient(150deg, 
+    #aaa, #aaa
+    );
+    border: .1px solid #eee;
+    cursor: pointer;
+    transition: 0.7s;
+    transform: scale(1.05);
+}
+
+.encabezado{
+    min-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.contenido{
+    margin: 0 auto;
+    width: 1300px;
+    height: auto;
+    border-radius: 20px 20px;
+    padding: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    font-family: var(--letra);
+}
+.nombre-curso{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: let(--letra);
+    font-size: 2rem;
+    
+}
+
+.encabezado-curso{
+    min-height: 250px;
+    margin-top: 2rem;
+    border-radius: 30px 30px 0 0;
+    background-image: url(/media/cool-background.png);
+
+}
+.background{
+    background-image: url(/media/backgroundHTML.png);
+}
+.background2{
+    background-image: url(/media/cool-backgroundCss.png);
+}
+.background3{
+    background-image: url(/media/backgroundJs.png);
+}
+.encabezado-curso button{
+    margin: 1rem;
+}
+
+
+.leccionUno h2{
+    margin-left: 1rem;
+    font-size: 3rem;
+    color:#fff;
+    font-family: var(--letra);
+}
+.leccionUno p{
+    font-size: 1.7rem;
+    color: #eee;
+    font-family: var(--letra);
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+.anuncio{
+    font-size: 1.5rem;
+    color: #eee;
+    font-family: var(--letra-alternativa);
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+}
+
+
+.link{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    height: 80px;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+
+
+.seccion{
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-family: var(--letra);
+}
+
+.seccion:active{
+    text-decoration:overline;
+    color: var(--color-secundario);
+    font-size: 2rem;
+}
+
+/*hgfdasdgfsdhjfgs*/
+
+
+.cursos{
+    text-align: center;
+    height:  100%;
+    margin-top: 2rem;
+}
+
+.cursos_contenido{
+    display: grid;
+}
+
+.curso{
+    padding: 0;
+    transition: .7s;
+    border-radius: 7px;
+    margin-bottom: 1rem;
+    background-color: #eee;
+    height: 50px;
+}
+
+.curso_padding--add{
+    padding-bottom: 100px;
+}
+
+.curso_partes{
+    padding: 0 30px;
+    overflow: hidden;
+}
+
+.curso_titulo{
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: .8rem 0;
+    color:#777; 
+    font-family: var(--letra);
+}
+.curso_titulo:active{
+    color: #000;
+}
+
+.titulo_despliegue{
+    border-radius: 50%;
+    background-color: #fff ;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    transition: .7s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.titulo_despliegue--rotate{
+    transform: rotate(180deg);
+}
+
+.curso_adicionado{
+    text-align: left;
+    height: 0;
+    transition: height  .7s;
+   font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+.curso_adicionado a{
+    cursor: pointer;
+    padding-top: .5rem;
+    color: #777;
+}
+
+.curso_adicionado a:hover{
+    text-decoration: underline;
+    color: #000;
+}
+
+.curso_img{
+    display: block;
+
+}
+
+.curso_copy{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+
+
+/*sobre el curso*/
+
+#conten{
+    height: 100%;
+}
+
+.titulo-curso{
+    margin:2rem 0 1rem 0;
+    font-family: var(--letra);
+}
+
+.texto-curso{
+    font-family: var(--letra);
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+/*Temario*/
+
+.subtitulo-temario{
+    font-size: 1.5rem;
+    margin: 2rem;
+}
+.screen.active p{
+    color: #eee;
+    font-family: var(--letra);
+    font-size: 1rem;
+    word-spacing: 2px;
+}
+
+.button{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.titulo-temario{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.slider {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+.slide {
+    width: 100%;
+    height: 300px;
+    display: none;
+    position: absolute;
+  }
+  
+.slide.active {
+    display: block;
+}
+  
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.video{
+    width: 80%;
+    margin: 0 auto;
+}
+.video h2{
+    margin-bottom: 1rem;
+    font-family: var(--letra);
+}
+.video p{
+    font-size: 1.3rem;
+    font-family: var(--letra);
+}
+.temario{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.html{
+    display: flex;
+    gap: 1rem;
+}
+.html img{
+    width: 350px;
+    height: auto;
+}
+.volver{
+    margin: 1rem;
+}

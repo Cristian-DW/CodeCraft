@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JavaScript</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="shortcut icon" href="/media/002-javascript.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div class="logo">
+                    <li><a href="/"><img src="/Media/Logo.png" alt="Logo"></li>
+                    <li class="nombre">CodeCraft</li></a>
+                </div>
+            </ul>
+        </nav>
+        <div class="encabezado">
+            <a href="/cursos/CSS.html"><button>volver</button></a>
+            <a href=""><button>Siguiente</button></a>
+        </div>
+    </header>
+    <section>
+        <div class="contenido">
+            <div class="nombre-curso">
+                <h1>JavaScript</h1>
+            </div>
+            <div class="encabezado-curso background3">
+                <p class="anuncio">Empieza la primera leccion</p>
+                <div class="leccionUno">
+                    <h2>Tema 1: Introducción a JavaScript</h2>
+                    <p>En esta sesión aprenderás que es JavaScript.</p>
+                    <a href="/temario/temasJs.html"><button>Empezar</button></a>
+                </div>
+            </div>
+            
+            <div class="link">
+                <a href="#" onclick="cargarSobre()" class="seccion">Sobre el curso</a>
+                <a href="#" onclick="cargarContenido()" class="seccion">Contenido del curso</a>
+            </div>
+            <div class="contentJs">
+                    <div id="contentJs"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="/Js/agregarPropiedad.js"></script>
+    <script src="/Js/cargar.js"></script>
+    <script src="/Js/javascript.js"></script>
+</body>
+
+</html>

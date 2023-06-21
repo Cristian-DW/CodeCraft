@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Introducción a la programación</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="shortcut icon" href="/media/aprende.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <div class="logo">
+                    <li><a href="/"><img src="/Media/Logo.png" alt="Logo"></li>
+                    <li class="nombre">CodeCraft</li></a>
+                </div>
+            </ul>
+        </nav>
+        <div class="encabezado">
+            <a href="/Index.html"><button>Volver</button></a>
+            <a href="/cursos/HTML.html"><button>Siguiente</button></a>
+        </div>
+    </header>
+    <section>
+        <div class="contenido">
+            <div class="nombre-curso">
+                    <h1>Introducción a la programación</h1>
+            </div>
+            <div class="encabezado-curso">
+                <p class="anuncio">Empieza la primera leccion</p>
+                <div class="leccionUno">
+                    <h2>Tema 1: Historia de la programación</h2>
+                    <p>En esta sesion aprenderas que es la programación.</p>
+                    <a href="/temario/temasIntro.html"><button>Empezar</button></a>
+                </div>
+            </div>
+            
+            <div class="link">
+                <a href="#" onclick="cargarSobre()" class="seccion">Sobre el curso</a>
+                <a href="#" onclick="cargarContenido()" class="seccion">Contenido del curso</a>
+            </div>
+            <div class="content">
+                    <div id="contentIntro"></div>
+                    
+            </div>
+        </div>
+    </section>
+
+    <script src="/Js/agregarPropiedad.js"></script>
+    <script src="/Js/cargar.js"></script>
+    <script src="/Js/Introduccion.js"></script>
+    <script src="/Js/localiza.js"></script>
+</body>
+
+</html>
