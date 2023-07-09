@@ -10,9 +10,11 @@ function showSlide(slideIndex) {
     slides[i].classList.remove('active');
   }
   // Mostrar el slide actual
+  
   slides[slideIndex].classList.add('active');
 
   // Habilitar o deshabilitar botones según el índice del slide actual
+  
   if (slideIndex === 0) {
     prevBtn.disabled = true;
   } else {
@@ -29,6 +31,7 @@ function showSlide(slideIndex) {
 }
 
 // Función para avanzar al siguiente slide
+
 function nextSlide() {
   if (currentSlide < slides.length - 1) {
     currentSlide++;
@@ -44,12 +47,11 @@ function prevSlide() {
   showSlide(currentSlide);
 }
 
-// Función para redirigir a una URL específica
-
-
 // Asignar eventos a los botones
+
 prevBtn.addEventListener('click', prevSlide);
 nextBtn.addEventListener('click', nextSlide);
 
 // Mostrar el primer slide al cargar la página
+
 showSlide(currentSlide);
