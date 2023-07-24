@@ -580,6 +580,8 @@ hr{
 @media (max-width: 768px){
 	.ilustracion{
    	display:none;
+
+		
        }
 	.text-guia{
     	margin: 0.5rem;
