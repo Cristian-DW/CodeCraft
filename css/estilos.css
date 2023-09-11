@@ -577,23 +577,65 @@ hr{
 	}
 }
 
-@media (max-width: 768px){
-	.ilustracion{
-   	display:none;
-
-		
-       }
+@media (max-width: 1200px){
+	
 	.text-guia{
     	margin: 0.5rem;
     	text-align: center;
 	}
 	.contenedor{
+        width: 100%;
 	    display: flex;
 	    flex-direction: column;
-	    gap:20px;
-	    margin: 0 auto;
-	    padding: 0.5rem;
-	   
+        justify-content: center;
+        align-items: center;
+	    padding: 100px  100px ;
 	}
+    .legenda h1{
+        font-size: 80px;
+        margin-bottom: 2rem;
+    }
+    .legenda p{
+        font-size: 50px;
+
+    }
+    .text-guia h2{
+        font-size: 80px;
+        margin-bottom: 4rem;
+        text-align: left;
+    }
+    .text-guia p{
+        font-size: 50px;
+        text-align: left;
+    }
+    .init{
+        margin-top: 8rem;
+        width: 800px;
+        min-height: 150px;
+        height: auto;
+        font-size: 50px;
+    }
+    .tarjetas{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap:100px ;
+    }
+    .tarjeta{
+        width: 70%;
+        height: 800px;
+    }
+    .tarjeta img{
+        width: 100%;
+        height: 700px;
+    }
+    .tarjeta h3{
+        font-size: 50px;
+        text-align: left;
+    }
+
 	
 }
+
