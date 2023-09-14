@@ -586,7 +586,7 @@ hr{
 	.contenedor{
         width: 100%;
 	    display: flex;
-	    flex-direction: column;
+	    flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
 	    padding: 100px  100px ;
