@@ -669,6 +669,10 @@ hr{
         font-size: 4rem;
         
     }
+    .footer_copyright{
+        margin-bottom: 40px;
+        font-size: 1.9rem;
+    }
     .btn-whatsapp {
         display: none;
     }
