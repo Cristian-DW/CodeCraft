@@ -29,7 +29,7 @@
 #### Clona el Repositorio:
 
 `
-git clone https://github.com/tuusuario/CodeCraft.git 
+git clone https://github.com/Cristian-DW/CodeCraft.git 
 `
 
 #### Abre el Archivo Index.html:
