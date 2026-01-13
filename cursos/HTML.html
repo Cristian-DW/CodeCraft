@@ -1,98 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso HTML</title>
-    <link rel="stylesheet" href="/css/estilos.css">
+    <title>Curso HTML | CodeCraft</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Kalam:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/estilos.css">
     <link rel="shortcut icon" href="/media/003-html-5.png" type="image/x-icon">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <div class="logo">
-                    <li><a href="/"><img src="/Media/Logo.png" alt="Logo"></li>
-                    <li class="nombre">CodeCraft</li></a>
-                </div>
-            </ul>
+    <header class="main-header">
+        <nav class="navbar container">
+            <a href="../Index.html" class="logo">
+                <img src="../Media/Logo.png" alt="CodeCraft Logo">
+                <span class="nombre">CodeCraft</span>
+            </a>
+            <div class="course-navigation">
+                <a href="../Index.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Inicio</a>
+            </div>
         </nav>
-        <div class="encabezado">
-            <a href="/cursos/Introduccion.html"><button>volver</button></a>
-            <a href="/cursos/CSS.html"><button>Siguiente</button></a>
-        </div>
     </header>
-    <section>
-        <div class="contenido">
-            <div class="nombre-curso">
-                    <h1>HTML básico</h1>
-               
+
+    <main>
+        <section class="course-header" style="background: linear-gradient(135deg, #e34c26, #f06529);">
+            <div class="container">
+                <h1>HTML Básico</h1>
+                <p>Domina el lenguaje de marcado que estructura toda la web. Aprende etiquetas, semántica y SEO.</p>
             </div>
-            <div class="encabezado-curso background">
-                <p class="anuncio">Empieza la primera lección</p>
-                <div class="leccionUno">
-                    <h2>Tema 1: Introducción a HTML</h2>
-                    <p>En esta sesión aprenderás que es HTML.</p>
-                    <a href="/temario/temasHtml.html"><button>Empezar</button></a>
+        </section>
+
+        <section class="container">
+            <div class="lesson-container" style="text-align: center;">
+                <h2 class="lesson-title">Tema 1: Introducción a HTML</h2>
+                <p class="lesson-text" style="max-width: 700px; margin: 0 auto var(--spacing-md);">
+                    Aprende la estructura básica de una página web, etiquetas esenciales y cómo crear tu primer archivo
+                    HTML.
+                </p>
+                <div style="margin-top: var(--spacing-md);">
+                    <a href="../temario/temasHtml.html" class="btn btn-primary">Empezar Lección</a>
                 </div>
             </div>
-            
-            <div class="link">
-                <a href="#" onclick="cargarSobre()" class="seccion">Sobre el curso</a>
-                <a href="#" onclick="cargarContenido()" class="seccion">Contenido del curso</a>
+
+            <div class="course-navigation" style="justify-content: space-between; margin-top: var(--spacing-xl);">
+                <a href="Introduccion.html" class="btn" style="background: #eee;">&larr; Anterior:
+                    Introducción</a>
+                <a href="CSS.html" class="btn btn-primary">Siguiente Curso: CSS &rarr;</a>
             </div>
-            <div class="content">
-                    <div id="contentHtml"></div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container container">
+            <div class="footer-brand">
+                <a href="../Index.html" class="logo">
+                    <img src="../Media/Logo.png" alt="Logo CodeCraft">
+                    <span class="nombre">CodeCraft</span>
+                </a>
             </div>
-        </div>
-    </section>
-    <hr>
-    <!-- Footer -->
-    <footer class="footer">
-        <section class="footer_container ">
-            <nav>
+
+            <div class="footer-column">
+                <h3>Cursos</h3>
                 <ul>
-                    <div class="logo">
-                        <li><a href="#"><img src="/Media/Logo.png" alt="Logo"></li>
-                        <li class="nombre">CodeCraft</li></a>
-                    </div>
-                </ul>
-            </nav>
-            <div class="info">
-                <h3>Cursos de Programación</h3>
-                <ul>
-                    <li><a href="/cursos/Introduccion.html">Introducción</a></li>
-                    <li><a href="/cursos/HTML.html">HTML</a></li>
-                    <li><a href="/cursos/CSS.html">CSS</a></li>
-                    <li><a href="/cursos/JavaScript.html">JavaScript</a></li>
+                    <li><a href="Introduccion.html">Introducción</a></li>
+                    <li><a href="HTML.html">HTML</a></li>
+                    <li><a href="CSS.html">CSS</a></li>
+                    <li><a href="JavaScript.html">JavaScript</a></li>
                 </ul>
             </div>
-            <div class="info">
+
+            <div class="footer-column">
                 <h3>Contacto</h3>
                 <ul>
-                <li>Correo electrónico: <a href="mailto:cristiancastropineda1@gmail.com">info@codecraft.com</a></li>
-                <li>Teléfono: 103-441-7900</li>
-            </ul>
-            </div>
-            <div class="info">
-                <h3>Desarrolladores</h3>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/cristian-castro-pineda">Cristian Castro</a></li>
-                    <li><a href="https://www.linkedin.com/in/david-alejandro-ortiz-barrera-999bb91b8">David Ortiz</a></li>
+                    <li><a href="mailto:info@codecraft.com">info@codecraft.com</a></li>
+                    <li>Teléfono: +57 322 438 9547</li>
                 </ul>
             </div>
-    
-        </section>
-        <section class="footer_copy container">
-    
-            <h3 class="footer_copyright">Derechos reservados &copy; 2023</h3>
-        </section>
-    </footer>
-    
 
-    <script src="/Js/agregarPropiedad.js"></script>
-    <script src="/Js/cargar.js"></script>
-    <script src="/Js/html.js"></script>
+            <div class="footer-column">
+                <h3>Desarrolladores</h3>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/cristian-castro-pineda" target="_blank">Cristian Castro</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/david-alejandro-ortiz-barrera-999bb91b8"
+                            target="_blank">David Ortiz</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 CodeCraft. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
