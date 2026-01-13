@@ -1,148 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso JavaScript</title>
+    <title>Lecciones: JavaScript | CodeCraft</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Kalam:wght@700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="/css/estilos.css">
     <link rel="shortcut icon" href="/media/002-javascript.png" type="image/x-icon">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <div class="logo">
-                    <li><a href="/"><img src="/Media/Logo.png" alt="Logo"></li>
-                    <li class="nombre">CodeCraft</li></a>
-                </div>
-            </ul>
+    <header class="main-header">
+        <nav class="navbar container">
+            <a href="/Index.html" class="logo">
+                <img src="/Media/Logo.png" alt="CodeCraft Logo">
+                <span class="nombre">CodeCraft</span>
+            </a>
+            <div class="course-navigation">
+                <a href="/cursos/JavaScript.html" class="btn btn-primary"
+                    style="padding: 8px 20px; font-size: 0.9rem;">Volver al Curso</a>
+            </div>
         </nav>
-        <a href="/cursos/JavaScript.html"><button class="volver">volver</button></a>
     </header>
-    <section class="temario">
-        <!-- Primer Tema  -->
-        <div class="contenido">
-            <h2 class="titulo-temario">Introducción a la programación</h2>
-            
-            <div class="slider">
-                <div class="slide">
-                    <div id="leccion1" class="video">
-                        <h2 class="subtitulo-temario">Tema 1: Introducción a JavaScript</h2>
-                        <h2>leccion 1: ¿Qué es JavaScript y cómo se relaciona con HTML y CSS?</h2>
-                        <p><br>JavaScript complementa a HTML y CSS al agregar interactividad y dinamismo a los sitios web. Con JavaScript, puedes manipular y modificar los elementos y comportamientos de una página web, responder a eventos del usuario, realizar validaciones, cargar contenido dinámicamente, comunicarte con servidores y mucho más. JavaScript se ejecuta en el navegador web del usuario y puede interactuar con el árbol de elementos HTML y los estilos CSS para lograr una experiencia interactiva y en tiempo real.</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion1" class="video">
-                        <h2 class="subtitulo-temario">Tema 1: Introducción a JavaScript</h2>
-                        <h2>leccion 2: Fundamentos de JavaScript</h2>
-                        <iframe width="100%" height="340" src="https://www.youtube.com/embed/Z4TuS0HEJP8" title="Javascript: 10 Fundamentos modernos que debes conocer 🙌" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion1" class="video">
-                        <h2 class="subtitulo-temario">Tema 2: Manipulación de DOM</h2>
-                        <h2>leccion 1: Acceso y modificación de elementos HTML</h2>
-                        <p> <br> El DOM (Document Object Model) representa la estructura HTML de una página como un
-                            árbol de objetos. <br>
-                            Con JavaScript, podemos acceder a los elementos del DOM utilizando métodos como
-                            getElementById, getElementsByClassName o querySelector. <br>
-                            Una vez que tenemos acceso a un elemento, podemos modificar su contenido, atributos,
-                            estilos y otros aspectos utilizando propiedades y métodos específicos.</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion1" class="video">
-                        <h2 class="subtitulo-temario">Tema 2: Manipulación de DOM</h2>
-                        <h2>leccion 2: Eventos del DOM</h2>
-                        <iframe width="100%" height="340" src="https://www.youtube.com/embed/P44XEaO35O4" title="Curso Básico de Javascript 20.- Eventos del DOM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion1" class="video">
-                        <h2 class="subtitulo-temario">Tema 3: Objetos y JSON</h2>
-                        <h2>leccion 1: Creación y uso de objetos en JavaScript.</h2>
-                        <p>● Los objetos en JavaScript son estructuras de datos que nos permiten almacenar y
-                            organizar información relacionada. <br>
-                            ● Se pueden crear objetos utilizando la sintaxis de llaves ({}) y especificando sus
-                            propiedades y valores. <br>
-                            ● Las propiedades de un objeto pueden ser de cualquier tipo de dato, incluso otros
-                            objetos. <br>
-                            ● Podemos acceder a las propiedades de un objeto utilizando la notación de punto
-                            (objeto.propiedad) o la notación de corchetes (objeto['propiedad']).</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion1" class="video">
-                        <h2 class="subtitulo-temario">Tema 3: Objetos y JSON</h2>
-                        <h2>leccion 2: Trabajo con JSON (JavaScript Object Notation).</h2>
-                        <p>● JSON es un formato de intercambio de datos basado en texto que es ampliamente
-                            utilizado en aplicaciones web. <br> <br>
-                            ● Permite representar datos estructurados utilizando una sintaxis similar a los objetos de
-                            JavaScript. <br> <br>
-                            ● Los datos en formato JSON se pueden enviar y recibir fácilmente entre un servidor y
-                            un cliente. <br> <br>
-                            ● En JavaScript, podemos convertir objetos en JSON utilizando el método
-                            JSON.stringify() y convertir JSON en objetos utilizando el método JSON.parse().
-                            </p>
-                    </div>
-                </div>
+
+    <main>
+        <section class="course-header"
+            style="padding: var(--spacing-lg) 0; margin-bottom: var(--spacing-md); background: linear-gradient(135deg, #f0db4f, #d6c100); color: #333;">
+            <div class="container">
+                <h1 style="color: #333;">Lecciones: JavaScript</h1>
             </div>
-            <div class="button">
-                <button id="prevBtn">Lección anterior</button>
-                <button id="nextBtn">Siguiente lección</button>
-            </div>
-        </div>
-    </section>
-    <hr>
-    <!-- Footer -->
-    <footer class="footer">
-        <section class="footer_container ">
-            <nav>
-                <ul>
-                    <div class="logo">
-                        <li><a href="#"><img src="/Media/Logo.png" alt="Logo"></li>
-                        <li class="nombre">CodeCraft</li></a>
-                    </div>
-                </ul>
-            </nav>
-            <div class="info">
-                <h3>Cursos de Programación</h3>
-                <ul>
-                    <li><a href="/cursos/Introduccion.html">Introducción</a></li>
-                    <li><a href="/cursos/HTML.html">HTML</a></li>
-                    <li><a href="/cursos/CSS.html">CSS</a></li>
-                    <li><a href="/cursos/JavaScript.html">JavaScript</a></li>
-                </ul>
-            </div>
-            <div class="info">
-                <h3>Contacto</h3>
-                <ul>
-                <li>Correo electrónico: <a href="mailto:cristiancastropineda1@gmail.com">info@codecraft.com</a></li>
-                <li>Teléfono: 103-441-7900</li>
-            </ul>
-            </div>
-            <div class="info">
-                <h3>Desarrolladores</h3>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/cristian-castro-pineda">Cristian Castro</a></li>
-                    <li><a href="https://www.linkedin.com/in/david-alejandro-ortiz-barrera-999bb91b8">David Ortiz</a></li>
-                </ul>
-            </div>
-    
         </section>
-        <section class="footer_copy container">
-    
-            <h3 class="footer_copyright">Derechos reservados &copy; 2023</h3>
+
+        <section class="container">
+            <div class="lesson-container">
+
+                <div class="slider">
+                    <!-- Slide 1 -->
+                    <div class="slide active">
+                        <h2 class="lesson-title">Tema 1: Introducción a JavaScript</h2>
+                        <h3>Lección 1: ¿Qué es JS?</h3>
+                        <p class="lesson-text">
+                            JavaScript agrega interactividad y dinamismo. Ejecutado en el navegador, permite manipular
+                            el DOM, responder a eventos y realizar validaciones en tiempo real.
+                        </p>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 1: Introducción a JavaScript</h2>
+                        <h3>Lección 2: Fundamentos Modernos</h3>
+                        <div class="video-container">
+                            <iframe
+                                src="https://www.youtube.com/embed/Z4TuS0HEJP8?list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR"
+                                title="Fundamentos JS" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 2: El DOM</h2>
+                        <h3>Lección 1: Manipulación</h3>
+                        <p class="lesson-text">
+                            El <strong>DOM (Document Object Model)</strong> es la representación en árbol del HTML.<br>
+                            Usamos <code>document.getElementById()</code> o <code>querySelector()</code> para acceder a
+                            elementos y modificar su contenido, estilos o atributos.
+                        </p>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 2: El DOM</h2>
+                        <h3>Lección 2: Eventos</h3>
+                        <div class="video-container">
+                            <iframe
+                                src="https://www.youtube.com/embed/P44XEaO35O4?list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR"
+                                title="Eventos DOM" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 3: Objetos y Datos</h2>
+                        <h3>Lección 1: Objetos</h3>
+                        <p class="lesson-text">
+                            Estructuras de datos claves-valor.<br>
+                            <code>const persona = { nombre: "Juan", edad: 30 };</code><br>
+                            Accedemos con <code>persona.nombre</code>.
+                        </p>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 3: Objetos y Datos</h2>
+                        <h3>Lección 2: JSON</h3>
+                        <p class="lesson-text">
+                            <strong>JSON (JavaScript Object Notation):</strong> Formato estándar de intercambio de
+                            datos.<br>
+                            - <code>JSON.stringify()</code>: Objeto a String.<br>
+                            - <code>JSON.parse()</code>: String a Objeto.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="slider-controls">
+                    <button id="prevBtn" class="btn" style="background: #ccc; color: #333;">Lección Anterior</button>
+                    <button id="nextBtn" class="btn btn-primary">Siguiente Lección</button>
+                </div>
+            </div>
         </section>
-    </footer>
-    
-    <script src="/Js/localiza.js"></script>
+    </main>
+
     <script src="/Js/slider.js"></script>
 </body>
 
 </html>
-
-

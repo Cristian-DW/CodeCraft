@@ -1,153 +1,125 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso CSS</title>
+    <title>Lecciones: CSS | CodeCraft</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Kalam:wght@700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="/css/estilos.css">
     <link rel="shortcut icon" href="/media/001-css-3.png" type="image/x-icon">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <div class="logo">
-                    <li><a href="/"><img src="/Media/Logo.png" alt="Logo"></li>
-                    <li class="nombre">CodeCraft</li></a>
-                </div>
-            </ul>
+    <header class="main-header">
+        <nav class="navbar container">
+            <a href="/Index.html" class="logo">
+                <img src="/Media/Logo.png" alt="CodeCraft Logo">
+                <span class="nombre">CodeCraft</span>
+            </a>
+            <div class="course-navigation">
+                <a href="/cursos/CSS.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Volver
+                    al Curso</a>
+            </div>
         </nav>
-        <a href="/cursos/CSS.html"><button class="volver">volver</button></a>
     </header>
-    <section class="temario">
-        <!-- Primer Tema  -->
-        <div class="contenido">
-            <h2 class="titulo-temario">CSS</h2>
-            
-            <div class="slider">
-                <div class="slide">
-                    <div id="leccion1" class="video">
-                        <h2 class="subtitulo-temario">Tema 1: Introducción a CSS</h2>
-                        <h2>leccion 1: ¿Qué es CSS y como se relaciona con HTML?</h2>
-                        <p>● CSS (Cascading Style Sheets) es un lenguaje de diseño utilizado para aplicar estilos y
-                            dar formato a documentos HTML. <br> <br>
-                            ● CSS se utiliza para definir el aspecto visual de los elementos HTML, como el color, el
-                            tamaño de fuente, el fondo y la disposición. <br> <br>
-                            ● Se relaciona con HTML al vincular archivos CSS externos a un documento HTML
-                            utilizando la etiqueta < link > o al aplicar estilos directamente en el documento HTML
-                            utilizando la etiqueta style  </p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion1" class="video">
-                        <h2 class="subtitulo-temario">Tema 1: Introducción a CSS</h2>
-                        <h2>leccion 2: Selectores básicos</h2>
-                        <iframe width="100%" height="340" src="https://www.youtube.com/embed/uqkj7HQ7ids?list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR" title="Curso Basico de CSS - 2. Selectores" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion1" class="video">
-                        <h2 class="subtitulo-temario">Tema 2: Diseño de cajas y posicionamiento</h2>
-                        <h2>leccion 1: Modelo de caja CSS.</h2>
-                        <p><br>
-                            ● El modelo de caja CSS describe cómo se renderiza y se muestra un elemento HTML. <br> <br>
-                            ● Consiste en el contenido, el relleno (padding), el borde (border) y el margen (margin)
-                            alrededor del contenido. <br> <br>
-                            ● Puedes ajustar el tamaño y el espacio de un elemento manipulando estas propiedades.</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion1" class="video">
-                        <h2 class="subtitulo-temario">Tema 2: Diseño de cajas y posicionamiento</h2>
-                        <h2>leccion 2: Posicionamiento de cajas</h2>
-                        <iframe width="100%" height="340" src="https://www.youtube.com/embed/JwyjHyGOgmg?list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR" title="Curso Básico de CSS - 7. Posicionamiento de cajas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion1" class="video">
-                        <h2 class="subtitulo-temario">Tema 3: Media queries y diseño responsivo</h2>
-                        <h2>leccion 1: Uso de media queries para adaptar la página a diferentes dispositivos.</h2>
-                        <p><br>
-                            ● Las media queries son reglas en CSS que permiten aplicar estilos diferentes según las
-                            características del dispositivo en el que se visualiza la página, como el ancho de la
-                            pantalla. <br> <br>
-                            ● Se utilizan para crear diseños responsivos y adaptativos, optimizando la experiencia
-                            de usuario en diferentes dispositivos, como teléfonos móviles, tabletas y
-                            computadoras de escritorio.
-                            </p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion1" class="video">
-                        <h2 class="subtitulo-temario">Tema 3: Media queries y diseño responsivo</h2>
-                        <h2>leccion 2: Diseño responsivo utilizando CSS</h2>
-                        <p>
-                            ● El diseño responsivo es una técnica que permite que una página web se adapte y se
-                            vea bien en diferentes tamaños y resoluciones de pantalla. <br> <br>
-                            ● Se logra utilizando unidades de medida flexibles (porcentajes, ems) en lugar de
-                            unidades fijas (píxeles) y aplicando reglas CSS específicas para diferentes rangos de
-                            tamaño de pantalla. <br> <br>
-                            ● Los elementos y componentes de la página se redimensionan y reorganizan
-                            automáticamente para ajustarse al espacio disponible.
+
+    <main>
+        <section class="course-header"
+            style="padding: var(--spacing-lg) 0; margin-bottom: var(--spacing-md); background: linear-gradient(135deg, #264de4, #2965f1);">
+            <div class="container">
+                <h1>Lecciones: CSS</h1>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="lesson-container">
+
+                <div class="slider">
+                    <!-- Slide 1 -->
+                    <div class="slide active">
+                        <h2 class="lesson-title">Tema 1: Introducción a CSS</h2>
+                        <h3>Lección 1: ¿Qué es CSS?</h3>
+                        <p class="lesson-text">
+                            <strong>CSS (Cascading Style Sheets):</strong> Lenguaje para diseñar y dar formato a
+                            HTML.<br><br>
+                            Define el aspecto visual (color, fuente, layout). Se vincula al HTML mediante la etiqueta
+                            <code>&lt;link&gt;</code> o <code>&lt;style&gt;</code>.
                         </p>
                     </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 1: Introducción a CSS</h2>
+                        <h3>Lección 2: Selectores Básicos</h3>
+                        <div class="video-container">
+                            <iframe
+                                src="https://www.youtube.com/embed/uqkj7HQ7ids?list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR"
+                                title="Selectores CSS" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 2: Diseño de Cajas</h2>
+                        <h3>Lección 1: Modelo de Caja (Box Model)</h3>
+                        <p class="lesson-text">
+                            Todo elemento en CSS es una caja que consiste en:<br>
+                            - <strong>Contenido:</strong> El texto o imagen real.<br>
+                            - <strong>Padding:</strong> Espacio interno.<br>
+                            - <strong>Border:</strong> Borde alrededor del padding.<br>
+                            - <strong>Margin:</strong> Espacio externo entre elementos.
+                        </p>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 2: Diseño de Cajas</h2>
+                        <h3>Lección 2: Posicionamiento</h3>
+                        <div class="video-container">
+                            <iframe
+                                src="https://www.youtube.com/embed/JwyjHyGOgmg?list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR"
+                                title="Posicionamiento CSS" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 3: Diseño Responsivo</h2>
+                        <h3>Lección 1: Media Queries</h3>
+                        <p class="lesson-text">
+                            Permiten aplicar estilos diferentes según el dispositivo (móvil, tablet, desktop).<br>
+                            Es la clave para que la web se vea bien en todas partes.<br>
+                            Ejemplo: <code>@media (max-width: 600px) { ... }</code>
+                        </p>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 3: Diseño Responsivo</h2>
+                        <h3>Lección 2: Técnicas Fluxidas</h3>
+                        <p class="lesson-text">
+                            Usar unidades relativas (%, em, rem) en lugar de píxeles fijos.<br>
+                            El contenido fluye y se adapta al contenedor disponible.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="slider-controls">
+                    <button id="prevBtn" class="btn" style="background: #ccc; color: #333;">Lección Anterior</button>
+                    <button id="nextBtn" class="btn btn-primary">Siguiente Lección</button>
                 </div>
             </div>
-            <div class="button">
-                <button id="prevBtn">Lección anterior</button>
-                <button id="nextBtn">Siguiente lección</button>
-            </div>
-        </div>
-    </section>
-    <hr>
-    <!-- Footer -->
-    <footer class="footer">
-        <section class="footer_container ">
-            <nav>
-                <ul>
-                    <div class="logo">
-                        <li><a href="#"><img src="/Media/Logo.png" alt="Logo"></li>
-                        <li class="nombre">CodeCraft</li></a>
-                    </div>
-                </ul>
-            </nav>
-            <div class="info">
-                <h3>Cursos de Programación</h3>
-                <ul>
-                    <li><a href="/cursos/Introduccion.html">Introducción</a></li>
-                    <li><a href="/cursos/HTML.html">HTML</a></li>
-                    <li><a href="/cursos/CSS.html">CSS</a></li>
-                    <li><a href="/cursos/JavaScript.html">JavaScript</a></li>
-                </ul>
-            </div>
-            <div class="info">
-                <h3>Contacto</h3>
-                <ul>
-                 <li>Correo electrónico: <a href="mailto:cristiancastropineda1@gmail.com">info@codecraft.com</a></li>
-                <li>Teléfono: 103-441-7900</li>
-            </ul>
-            </div>
-            <div class="info">
-                <h3>Desarrolladores</h3>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/cristian-castro-pineda">Cristian Castro</a></li>
-                    <li><a href="https://www.linkedin.com/in/david-alejandro-ortiz-barrera-999bb91b8">David Ortiz</a></li>
-                </ul>
-            </div>
-    
         </section>
-        <section class="footer_copy container">
-    
-            <h3 class="footer_copyright">Derechos reservados &copy; 2023</h3>
-        </section>
-    </footer>
-    
-    <script src="/Js/localiza.js"></script>
+    </main>
+
     <script src="/Js/slider.js"></script>
 </body>
 
 </html>
-
-

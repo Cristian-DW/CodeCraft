@@ -23,10 +23,10 @@ function showSlide(slideIndex) {
 
   if (slideIndex === slides.length - 1) {
     nextBtn.innerHTML = 'Curso Finalizado';
-    nextBtn.addEventListener('click');
+    nextBtn.disabled = true;
   } else {
     nextBtn.innerHTML = 'Siguiente Lección';
-    nextBtn.removeEventListener('click');
+    nextBtn.disabled = false;
   }
 }
 

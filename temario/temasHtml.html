@@ -1,173 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso HTML</title>
+    <title>Lecciones: HTML | CodeCraft</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Kalam:wght@700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="/css/estilos.css">
     <link rel="shortcut icon" href="/media/003-html-5.png" type="image/x-icon">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <div class="logo">
-                    <li><a href="/"><img src="/Media/Logo.png" alt="Logo"></li>
-                    <li class="nombre">CodeCraft</li></a>
-                </div>
-            </ul>
+    <header class="main-header">
+        <nav class="navbar container">
+            <a href="/Index.html" class="logo">
+                <img src="/Media/Logo.png" alt="CodeCraft Logo">
+                <span class="nombre">CodeCraft</span>
+            </a>
+            <div class="course-navigation">
+                <a href="/cursos/HTML.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Volver
+                    al Curso</a>
+            </div>
         </nav>
-        <a href="/cursos/HTML.html"><button class="volver">volver</button></a>
     </header>
-    <section class="temario">
-        <!-- Primer Tema  -->
-        <div class="contenido">
-            <h2 class="titulo-temario">HTML</h2>
-            <div class="slider">
-                <div class="slide">
-                    <div id="leccion1" class="video">
-                        <h2>Tema 1:  Introducción a HTML</h2>
-                        <h2>leccion 1: Estructura básica de una página HTML.</h2>
-                        <iframe width="100%" height="340" src="https://www.youtube.com/embed/oUKJdqkd6a0?list=PLROIqh_5RZeB92ME1GFyeqDVOa-gL0Ybd" title="CURSO de HTML5 desde CERO 2021 - #7 - Estructura de un sitio web" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion1" class="video">
-                        <h2>Tema 1: Introducción a HTML</h2>
-                        <h2>leccion 2: Etiquetas, elementos y atributos.</h2>
-                        
-                        <p>● Etiquetas: Son palabras o símbolos encerrados entre corchetes angulares <> que
-                            indican cómo se debe mostrar o tratar un contenido en HTML. Ejemplo: < h1 >, < p >,< a >. <br> <br>
 
-                            ● Elementos: Son la combinación de etiquetas de apertura y cierre, junto con el
-                            contenido que se encuentra entre ellas. Ejemplo: < p >Texto de ejemplo< /p >. <br> <br >
-                            ● Atributos: Proporcionan información adicional sobre un elemento y se especifican
-                            dentro de la etiqueta de apertura. Ejemplo: < a
-                            href="https://www.ejemplo.com">Enlace</a>.
-                            </p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion3" class="video">
-                        <h2>Tema 1: Introducción a HTML</h2>
-                        <h2> Leccion 3: Uso de encabezados, párrafos y enlaces.</h2>
-                       <p>● Encabezados: Se utilizan para estructurar y dar jerarquía al contenido de una página.
-                        Hay seis niveles de encabezados, desde < h1 > (el más grande) hasta < h6 > (el más
-                        pequeño). <br> <br>
-                        ● Párrafos: Se utilizan para agrupar y mostrar bloques de texto. Se definen con la
-                        etiqueta < p >. <br> <br>
-                        ● Enlaces: Permiten crear hipervínculos a otras páginas web. Se definen con la etiqueta
-                        < a > y se especifica la URL de destino utilizando el atributo href.</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion3" class="video">
-                        <h2>Tema 2: Elementos de texto y formato</h2>
-                        <h2> Leccion 1: Uso de estilos de texto: negrita, cursiva, subrayado.</h2>
-                       <p> <br> 
-                        ● Negrita: Se logra utilizando la etiqueta < b > o la etiqueta < strong >. Ejemplo:
-                        <b>Texto en negrita</b>. <br> <br>
-                        ● Cursiva: Se logra utilizando la etiqueta < i  > o la etiqueta < em>. Ejemplo: <i>Texto en
-                        cursiva</i>. <br> <br>
-                        ● Subrayado: Se logra utilizando la etiqueta < u>. Ejemplo: <u>Texto subrayado</u>.</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion3" class="video">
-                        <h2>Tema 2: Elementos de texto y formato</h2>
-                        <h2> Leccion 2: Listas  tablas y estructuras semanticas.</h2>
-                        <iframe width="100%" height="340" src="https://www.youtube.com/embed/Vcxl4Gq6cd8" title="Tablas, listas y estructuras semánticas. ➡️ CURSO HTML desde CERO 🤯 Aprende HTML" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion3" class="video">
-                        <h2>Tema 3: Elementos de entrada de datos</h2>
-                        <h2> Leccion 1: Formularios</h2>
-                        <iframe width="100%" height="340" src="https://www.youtube.com/embed/QDOfODwsfuQ?list=PLhSj3UTs2_yVHt2DgHky_MzzRC58UHE4z" title="Curso Básico de HTML - 7. Formularios" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion3" class="video">
-                        <h2>Tema 4: Optimización y buenas prácticas</h2>
-                        <h2> Leccion 1: Validación de código HTML.</h2>
-                        <p><br>
-                            ● La validación del código HTML consiste en comprobar si el código cumple con los
-                            estándares y las especificaciones establecidas. <br> <br>
-                            ● Puedes utilizar herramientas en línea, como el Validador de HTML del W3C, para
-                            verificar si tu código HTML es válido y corregir posibles errores.</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion3" class="video">
-                        <h2>Tema 4: Optimización y buenas prácticas</h2>
-                        <h2> Leccion 2: Prácticas recomendadas de accesibilidad web.</h2>
-                        <p>
-                            ● La accesibilidad web se refiere a hacer que tu página sea usable y accesible para todas
-                            las personas, incluyendo aquellas con discapacidades. <br> <br>
-                            ● Algunas prácticas recomendadas incluyen proporcionar alternativas textuales para
-                            imágenes (alt), utilizar etiquetas de encabezado correctamente (h1, h2, etc.), y
-                            asegurarse de que el contenido sea navegable con el teclado. <br> <br>
-                            ● También es importante utilizar colores contrastantes para facilitar la lectura y
-                            proporcionar una estructura clara y lógica en tu página.</p>
-                    </div>
-                </div>
+    <main>
+        <section class="course-header"
+            style="padding: var(--spacing-lg) 0; margin-bottom: var(--spacing-md); background: linear-gradient(135deg, #e34c26, #f06529);">
+            <div class="container">
+                <h1>Lecciones: HTML</h1>
             </div>
-            <div class="button">
-                <button id="prevBtn">Lección anterior</button>
-                <button id="nextBtn">Siguiente lección</button>
-            </div>
-        </div>
-    </section>
-    <hr>
-    <!-- Footer -->
-    <footer class="footer">
-        <section class="footer_container ">
-            <nav>
-                <ul>
-                    <div class="logo">
-                        <li><a href="#"><img src="/Media/Logo.png" alt="Logo"></li>
-                        <li class="nombre">CodeCraft</li></a>
-                    </div>
-                </ul>
-            </nav>
-            <div class="info">
-                <h3>Cursos de Programación</h3>
-                <ul>
-                    <li><a href="/cursos/Introduccion.html">Introducción</a></li>
-                    <li><a href="/cursos/HTML.html">HTML</a></li>
-                    <li><a href="/cursos/CSS.html">CSS</a></li>
-                    <li><a href="/cursos/JavaScript.html">JavaScript</a></li>
-                </ul>
-            </div>
-            <div class="info">
-                <h3>Contacto</h3>
-                <ul>
-               <li>Correo electrónico: <a href="mailto:cristiancastropineda1@gmail.com">info@codecraft.com</a></li>
-                <li>Teléfono: 103-441-7900</li>
-            </ul>
-            </div>
-            <div class="info">
-                <h3>Desarrolladores</h3>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/cristian-castro-pineda">Cristian Castro</a></li>
-                    <li><a href="https://www.linkedin.com/in/david-alejandro-ortiz-barrera-999bb91b8">David Ortiz</a></li>
-                </ul>
-            </div>
-    
         </section>
-        <section class="footer_copy container">
-    
-            <h3 class="footer_copyright">Derechos reservados &copy; 2023</h3>
+
+        <section class="container">
+            <div class="lesson-container">
+
+                <div class="slider">
+                    <!-- Slide 1 -->
+                    <div class="slide active">
+                        <h2 class="lesson-title">Tema 1: Introducción a HTML</h2>
+                        <h3>Lección 1: Estructura Básica</h3>
+                        <div class="video-container">
+                            <iframe
+                                src="https://www.youtube.com/embed/oUKJdqkd6a0?list=PLROIqh_5RZeB92ME1GFyeqDVOa-gL0Ybd"
+                                title="Estructura HTML" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 1: Conceptos Básicos</h2>
+                        <h3>Lección 2: Etiquetas, Elementos y Atributos</h3>
+                        <p class="lesson-text">
+                            <strong>Etiquetas:</strong> Palabras clave entre &lt; &gt; que indican cómo mostrar
+                            contenido. Ej: &lt;h1&gt;, &lt;p&gt;.<br><br>
+                            <strong>Elementos:</strong> Combinación de etiqueta de apertura, contenido y cierre. Ej:
+                            &lt;p&gt;Texto&lt;/p&gt;.<br><br>
+                            <strong>Atributos:</strong> Información adicional en la etiqueta de apertura. Ej: &lt;a
+                            href="..."&gt;.
+                        </p>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 1: Texto Básico</h2>
+                        <h3>Lección 3: Estructura de Texto</h3>
+                        <p class="lesson-text">
+                            <strong>Encabezados:</strong> Jerarquía del contenido (&lt;h1&gt; a &lt;h6&gt;).<br>
+                            <strong>Párrafos:</strong> Bloques de texto (&lt;p&gt;).<br>
+                            <strong>Enlaces:</strong> Hipervínculos (&lt;a href="..."&gt;).
+                        </p>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 2: Formato de Texto</h2>
+                        <h3>Lección 1: Estilos Básicos</h3>
+                        <p class="lesson-text">
+                            <strong>Negrita:</strong> &lt;b&gt; ó &lt;strong&gt;.<br>
+                            <strong>Cursiva:</strong> &lt;i&gt; ó &lt;em&gt;.<br>
+                            <strong>Subrayado:</strong> &lt;u&gt;.
+                        </p>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 2: Estructuras Avanzadas</h2>
+                        <h3>Lección 2: Listas y Tablas</h3>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/Vcxl4Gq6cd8" title="Tablas y Listas"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 3: Formularios</h2>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/QDOfODwsfuQ" title="Formularios HTML"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Slide 7 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 4: Buenas Prácticas</h2>
+                        <h3>Lección 1: Validación</h3>
+                        <p class="lesson-text">
+                            La validación comprueba si el código cumple los estándares W3C. Usa herramientas online como
+                            el Validador de W3C para asegurar que tu sitio funciona correctamente en todos los
+                            navegadores.
+                        </p>
+                    </div>
+
+                    <!-- Slide 8 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 4: Accesibilidad</h2>
+                        <h3>Lección 2: Web para Todos</h3>
+                        <p class="lesson-text">
+                            Hacer la web accesible para personas con discapacidades.<br><br>
+                            - Usar textos alternativos (alt) en imágenes.<br>
+                            - Usar jerarquía de encabezados correcta.<br>
+                            - Asegurar contraste de colores y navegación por teclado.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="slider-controls">
+                    <button id="prevBtn" class="btn" style="background: #ccc; color: #333;">Lección Anterior</button>
+                    <button id="nextBtn" class="btn btn-primary">Siguiente Lección</button>
+                </div>
+            </div>
         </section>
-    </footer>
-    
-    <script src="/Js/localiza.js"></script>
+    </main>
+
     <script src="/Js/slider.js"></script>
 </body>
 
 </html>
-
-
-

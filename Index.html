@@ -1,129 +1,163 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aprende a programar desde cero con CodeCraft. Cursos gratuitos de HTML, CSS y JavaScript.">
+    <meta name="keywords" content="programación, desarrollo web, HTML, CSS, JavaScript, curso gratis">
+    <title>CodeCraft | Aprende Desarrollo Web</title>
+
+    <!-- Google Fonts: Inter (Modern/Clean) & Kalam (Creative Accents) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Kalam:wght@700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="./css/estilos.css">
     <link rel="shortcut icon" href="./media/Logo.png" type="image/x-icon">
-    <title>CodeCraft</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <div class="logo">
-                    <li><a href="#"><img src="./Media/Logo.png" alt="Logo"></li>
-                    <li class="nombre">CodeCraft</li></a>
-                </div>
+    <header class="main-header">
+        <nav class="navbar container">
+            <a href="#" class="logo">
+                <img src="./Media/Logo.png" alt="CodeCraft Logo">
+                <span class="nombre">CodeCraft</span>
+            </a>
+            <ul class="nav-links">
+                <!-- Add navigation links here if needed in future, currently empty in original but structure ready -->
             </ul>
         </nav>
-        <div class="contenedor">
-            <div class="legenda">
-                <h1>Bienvenido a CodeCraft</h1>
-                <p>Entra al mundo digital, línea a línea. Aprende, crea y cautiva con HTML, CSS y JavaScript con nuestro curso web.</p>
-                <a href="/cursos/Introduccion.html"><button>Empieza ahora </button></a>
-            </div>
-            <div class="imagen">
-                <img class="ilustracion"src="./Media/ilustracion.png" alt="Logo">
-            </div>
-        </div>
     </header>
-    <section>
-        <div class="contenedor">
-            <div class="text-guia">
+
+    <main>
+        <section class="hero container">
+            <div class="hero-content">
+                <h1>Bienvenido a <span class="highlight">CodeCraft</span></h1>
+                <p>Entra al mundo digital, línea a línea. Aprende, crea y cautiva con HTML, CSS y JavaScript con nuestro
+                    curso web.</p>
+                <a href="cursos/Introduccion.html" class="btn btn-primary">Empieza ahora</a>
+            </div>
+            <div class="hero-image">
+                <img src="./Media/ilustracion.png" alt="Ilustración de programación web">
+            </div>
+        </section>
+
+        <section class="features container">
+            <div class="features-intro">
                 <h2>¿Quieres aprender a programar desde cero?</h2>
-                <p>Domina HTML, CSS y JavaScript con nuestra guía rápida y concisa. Aprende los fundamentos y escala rápidamente tus conocimientos en desarrollo web. Construye una base sólida y adquiere la confianza necesaria para enfrentar desafíos. ¡Prepárate para un aprendizaje efectivo y ágil!</p>
+                <p>Domina HTML, CSS y JavaScript con nuestra guía rápida y concisa. Aprende los fundamentos y escala
+                    rápidamente tus conocimientos en desarrollo web. Construye una base sólida y adquiere la confianza
+                    necesaria para enfrentar desafíos.</p>
+            </div>
+        </section>
+
+        <section class="courses container">
+            <div class="course-grid">
+                <article class="card">
+                    <a href="cursos/Introduccion.html">
+                        <div class="card-image">
+                            <img src="./Media/aprende.png" alt="Introducción">
+                        </div>
+                        <div class="card-content">
+                            <h3>Introducción</h3>
+                            <p>9 lecciones</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <a href="cursos/HTML.html">
+                        <div class="card-image">
+                            <img src="./Media/003-html-5.png" alt="Curso HTML">
+                        </div>
+                        <div class="card-content">
+                            <h3>HTML</h3>
+                            <p>8 lecciones</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <a href="cursos/CSS.html">
+                        <div class="card-image">
+                            <img src="./Media/001-css-3.png" alt="Curso CSS">
+                        </div>
+                        <div class="card-content">
+                            <h3>CSS</h3>
+                            <p>6 lecciones</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="card">
+                    <a href="cursos/JavaScript.html">
+                        <div class="card-image">
+                            <img src="./media/002-javascript.png" alt="Curso JavaScript">
+                        </div>
+                        <div class="card-content">
+                            <h3>JavaScript</h3>
+                            <p>6 lecciones</p>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://wa.me/573224389547" class="btn-floating-whatsapp" target="_blank"
+        aria-label="Contactar por WhatsApp">
+        <img src="media/icon-whatsapp.svg" alt="WhatsApp">
+    </a>
+
+    <footer class="main-footer">
+        <div class="footer-container container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <img src="./Media/Logo.png" alt="Logo CodeCraft">
+                    <span class="nombre">CodeCraft</span>
+                </a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Cursos</h3>
+                <ul>
+                    <li><a href="cursos/Introduccion.html">Introducción</a></li>
+                    <li><a href="cursos/HTML.html">HTML</a></li>
+                    <li><a href="cursos/CSS.html">CSS</a></li>
+                    <li><a href="cursos/JavaScript.html">JavaScript</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><a href="mailto:info@codecraft.com">info@codecraft.com</a></li>
+                    <li>Teléfono: +57 322 438 9547</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Desarrolladores</h3>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/cristian-castro-pineda" target="_blank">Cristian Castro</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/in/david-alejandro-ortiz-barrera-999bb91b8"
+                            target="_blank">David Ortiz</a></li>
+                </ul>
             </div>
         </div>
-        <div class="contenedor inicio">
-            <div class="tarjetas">
-                <div class="tarjeta">
-                    <a href="/cursos/Introduccion.html">
-                    <img class="rara" src="./Media/aprende.png" alt="Introduccion">
-                    <h3>Introducción</h3>
-                    <p>9 lecciones</p>
-                    </a>
-                </div>
-                <div class="tarjeta">
-                    <a href="/cursos/HTML.html">
-                        <img src="./Media/003-html-5.png" alt=" HTML">
-                        <h3>HTML</h3>
-                        <p>8 lecciones</p>
-                    </a>
-                </div>
-                <div class="tarjeta">
-                    <a href="/cursos/CSS.html">
-                        <img src="./Media/001-css-3.png" alt="CSS">
-                        <h3>CSS</h3>
-                        <p>6 lecciones</p>
-                    </a>
-                </div>
-                <div class="tarjeta">
-                    <a href="/cursos/JavaScript.html">
-                        <img src="./media/002-javascript.png" alt="JavaScript">
-                        <h3>JavaScript</h3>
-                        <p>6 lecciones</p>
-                    </a>
-                </div>
-                <a href="https://wa.me/573224389547" class="btn-whatsapp">
-                    <img src="/media/icon-whatsapp.svg" alt="Contactar por WhatsApp">
-                </a>                
-             </div>
-         </div>
-        </section>
-        <hr>
-        <!-- Footer -->
-        <footer class="footer">
-            <section class="footer_container ">
-                <nav>
-                    <ul>
-                        <div class="logo">
-                            <li><a href="#"><img src="./Media/Logo.png" alt="Logo"></li>
-                            <li class="nombre">CodeCraft</li></a>
-                        </div>
-                    </ul>
-                </nav>
-                <div class="info">
-                    <h3>Cursos de Programación</h3>
-                    <ul>
-                        <li><a href="/cursos/Introduccion.html">Introducción</a></li>
-                        <li><a href="/cursos/HTML.html">HTML</a></li>
-                        <li><a href="/cursos/CSS.html">CSS</a></li>
-                        <li><a href="/cursos/JavaScript.html">JavaScript</a></li>
-                    </ul>
-                </div>
-                <div class="info">
-                    <h3>Contacto</h3>
-                    <ul>
-                    <li>Correo electrónico: <a href="mailto:cristiancastropineda1@gmail.com">info@codecraft.com</a></li>
-                    <li>Teléfono: 103-441-7900</li>
-                </ul>
-                </div>
-                <div class="info">
-                    <h3>Desarrolladores</h3>
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/cristian-castro-pineda">Cristian Castro</a></li>
-                        <li><a href="https://www.linkedin.com/in/david-alejandro-ortiz-barrera-999bb91b8">David Ortiz</a></li>
-                    </ul>
-                </div>
-            </section>
-            <section class="footer_copy container">
-        
-                <h3 class="footer_copyright">Derechos reservados &copy; 2023</h3>
-            </section>
-        </footer>
-        <script src="/Js/agregarPropiedad.js"></script>
-        <script src="/Js/cargar.js"></script>
-        <script src="/Js/opciones.js"></script>
-        </body>
 
-    </html>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CodeCraft. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
-    </html>
-
-    </section>
-        <script src="/Js/agregarPropiedad.js"></script>
-        <script src="/Js/cargar.js"></script>
-        <script src="/Js/opciones.js"></script>
+    <script src="Js/agregarPropiedad.js"></script>
+    <script src="Js/cargar.js"></script>
+    <script src="Js/opciones.js"></script>
 </body>
+
 </html>
-
-

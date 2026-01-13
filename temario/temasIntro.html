@@ -1,196 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso Introducción a la programación</title>
+    <title>Lecciones: Introducción a la Programación | CodeCraft</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Kalam:wght@700&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="/css/estilos.css">
     <link rel="shortcut icon" href="/media/aprende.png" type="image/x-icon">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <div class="logo">
-                    <li><a href="/"><img src="/Media/Logo.png" alt="Logo"></li>
-                    <li class="nombre">CodeCraft</li></a>
-                </div>
-            </ul>
+    <header class="main-header">
+        <nav class="navbar container">
+            <a href="/Index.html" class="logo">
+                <img src="/Media/Logo.png" alt="CodeCraft Logo">
+                <span class="nombre">CodeCraft</span>
+            </a>
+            <div class="course-navigation">
+                <a href="/cursos/Introduccion.html" class="btn btn-primary"
+                    style="padding: 8px 20px; font-size: 0.9rem;">Volver al Curso</a>
+            </div>
         </nav>
-        <a href="/cursos/Introduccion.html"><button class="Salir del curso">volver</button></a>
     </header>
-    <section class="temario">
-        <!-- Primer Tema  -->
-        <div class="contenido">
-            <h2 class="titulo-temario"> Curso: Introducción a la programación</h2>
 
-            <div class="slider">
-                <div class="slide">
-                    <div id="leccion1" class="video">
-                        <h2>Tema 1: programación</h2>
-                        <h2>leccion 1: Historia de la programacion</h2>
-                        <iframe width="100%" height="350" src="https://www.youtube.com/embed/u_PHSr_t-q0"
-                            title="Historia de la programación" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+    <main>
+        <section class="course-header" style="padding: var(--spacing-lg) 0; margin-bottom: var(--spacing-md);">
+            <div class="container">
+                <h1>Lecciones: Introducción</h1>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="lesson-container">
+
+                <div class="slider">
+                    <!-- Slide 1 -->
+                    <div class="slide active">
+                        <h2 class="lesson-title">Tema 1: Historia de la Programación</h2>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/u_PHSr_t-q0" title="Historia de la programación"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
                     </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion2" class="video">
-                        <h2>Tema 1: programación</h2>
-                        <h2> Leccion 2: ¿Qué son los lenguajes de programación</h2>
-                        <p>Los lenguajes de programación son conjuntos de reglas y símbolos utilizados para escribir
+
+                    <!-- Slide 2 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 1: Lenguajes de Programación</h2>
+                        <h3>Lección 2: ¿Qué son?</h3>
+                        <p class="lesson-text">
+                            Los lenguajes de programación son conjuntos de reglas y símbolos utilizados para escribir
                             instrucciones que una computadora puede entender y ejecutar. Son herramientas fundamentales
-                            en
-                            el desarrollo de software y permiten a los programadores comunicarse con las máquinas de
-                            manera
-                            eficiente y precisa.
-                            Cada lenguaje de programación tiene su propia sintaxis y semántica, lo que significa que
-                            tienen
-                            reglas específicas para escribir y organizar el código. Algunos lenguajes son más verbosos y
-                            se
-                            asemejan más al lenguaje humano, mientras que otros son más concisos y se centran en la
+                            en el desarrollo de software.<br><br>
+                            Cada lenguaje de programación tiene su propia sintaxis y semántica. Algunos son más verbosos
+                            y se asemejan más al lenguaje humano, mientras que otros son más concisos y se centran en la
                             eficiencia.
-                            Los lenguajes de programación se utilizan para una amplia letiedad de propósitos, desde el
-                            desarrollo de aplicaciones de escritorio y móviles, hasta la creación de sitios web, el
-                            análisis
-                            de datos, la inteligencia artificial y mucho más. Cada lenguaje tiene sus fortalezas y
-                            debilidades, y es importante elegir el lenguaje adecuado para cada proyecto, teniendo en
-                            cuenta
-                            sus requisitos y características.</p>
+                        </p>
                     </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion3" class="video">
-                        <h2>Tema 1: programación</h2>
-                        <h2> Leccion 3: ¿Para qué sirve un lenguaje de programación?</h2>
-                        <iframe width="100%" height="350" src="https://www.youtube.com/embed/pWw4UtQhdek"
-                            title="Qué son los lenguajes de programación y para qué sirven | Computación y programación"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 1: Utilidad</h2>
+                        <h3>Lección 3: ¿Para qué sirven?</h3>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/pWw4UtQhdek"
+                                title="Qué son los lenguajes de programación" frameborder="0" allowfullscreen></iframe>
+                        </div>
                     </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion3" class="video">
-                        <h2>Tema 2: Estructuras de control</h2>
-                        <h2> Leccion 1: Condicionales: if, else, else if </h2>
-                        <p>Condicionales: if, else if, else.
+
+                    <!-- Slide 4 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 2: Estructuras de Control</h2>
+                        <h3>Lección 1: Condicionales (if, else)</h3>
+                        <p class="lesson-text">
                             Las estructuras condicionales nos permiten tomar decisiones en función de ciertas
-                            condiciones. <br> 
-                            Los condicionales más comunes son: <br> <br>
-                            ● if: Permite ejecutar un bloque de código si una condición es verdadera. <br>
-                            ● else if: Permite verificar una segunda condición si la condición anterior no se cumple. <br>
-                            ● else: Se ejecuta cuando ninguna de las condiciones anteriores es verdadera</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion3" class="video">
-                        <h2>Tema 2: Estructuras de control</h2>
-                        <h2> Leccion 2: Bucles: for, while. </h2>
-                        <p>Bucle for:
-                            El bucle for es una estructura de control que permite repetir un bloque de código un número específico de veces. Se compone de tres partes: la inicialización, la condición de continuación y la expresión de incremento o decremento. El bucle for se utiliza cuando se conoce la cantidad exacta de iteraciones necesarias. <br> <br>
-                            Bucle while:
-                            El bucle while es otra estructura de control que repite un bloque de código mientras una condición dada sea verdadera. A diferencia del bucle for, el bucle while se utiliza cuando no se conoce la cantidad exacta de iteraciones y se repite hasta que la condición se vuelva falsa.
+                            condiciones.<br><br>
+                            <strong>if:</strong> Permite ejecutar un bloque de código si una condición es verdadera.<br>
+                            <strong>else if:</strong> Permite verificar una segunda condición si la anterior no se
+                            cumple.<br>
+                            <strong>else:</strong> Se ejecuta cuando ninguna de las condiciones anteriores es verdadera.
                         </p>
                     </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion3" class="video">
-                        <h2>Tema 2: Estructuras de control</h2>
-                        <h2> Leccion 3: Uso de funciones. </h2>
-                        <p>Las funciones son bloques de código que se pueden llamar o invocar en cualquier parte de un
-                            programa. Su uso principal es organizar y reutilizar código. Algunos puntos importantes
-                            sobre las funciones son: <br> <br>
-                            ● Definición de función: Se declara utilizando la palabra clave "function", seguida del
-                            nombre de la función y los parámetros que acepta. <br>
-                            ● Parámetros y argumentos: Los parámetros son variables utilizadas por la función,
-                            mientras que los argumentos son los valores reales pasados a la función al invocarla. <br>
-                            ● Valor de retorno: Una función puede devolver un valor mediante la palabra clave
-                            "return". Este valor puede ser utilizado en el programa principal.
+
+                    <!-- Slide 5 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 2: Estructuras de Control</h2>
+                        <h3>Lección 2: Bucles (for, while)</h3>
+                        <p class="lesson-text">
+                            <strong>Bucle for:</strong> Repite un bloque de código un número específico de veces. Se usa
+                            cuando se conoce la cantidad exacta de iteraciones.<br><br>
+                            <strong>Bucle while:</strong> Repite un bloque de código mientras una condición sea
+                            verdadera. Se usa cuando no se conoce la cantidad exacta de iteraciones.
                         </p>
                     </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion3" class="video">
-                        <h2>Tema 3: Programación orientada a objetos</h2>
-                        <h2> Leccion 1: Introducción a la programación orientada a objetos (POO). </h2>
-                        <iframe width="100%" height="320" src="https://www.youtube.com/embed/nRRNYjOeVsg" title="Introducción a la Programación Orientada a Objetos" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                    <!-- Slide 6 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 2: Funciones</h2>
+                        <h3>Lección 3: Uso de funciones</h3>
+                        <p class="lesson-text">
+                            Las funciones son bloques de código reutilizables.<br><br>
+                            <strong>Definición:</strong> palabra clave "function", nombre y parámetros.<br>
+                            <strong>Parámetros vs Argumentos:</strong> Variables en la definición vs Valores reales al
+                            llamar.<br>
+                            <strong>Return:</strong> Devuelve un valor al programa principal.
+                        </p>
                     </div>
-                </div>
-                <div class="slide">
-                    <div id="leccion3" class="video">
-                        <h2>Tema 3: Programación orientada a objetos</h2>
-                        <h2> Leccion 2: Encapsulamiento, herencia y polimorfismo.  </h2>
-                        <p>
-                            Estos son tres conceptos clave en la programación orientada a objetos: <br> <br>
-                            ● Encapsulamiento: Es el proceso de ocultar los detalles internos de un objeto y
-                            proporcionar una interfaz para interactuar con él. Esto se logra mediante la definición
-                            de atributos y métodos públicos y privados. <br>
-                            ● Herencia: Permite crear nuevas clases basadas en clases existentes. La herencia
-                            permite que una clase herede atributos y métodos de otra, promoviendo la
-                            reutilización del código y la creación de jerarquías de clases. <br>
-                            ● Polimorfismo: Es la capacidad de un objeto de comportarse de diferentes formas
-                            según el contexto. Permite que diferentes objetos respondan de manera distinta a una
-                            misma llamada a un método, facilitando la flexibilidad y extensibilidad del código.</p>
+
+                    <!-- Slide 7 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 3: POO</h2>
+                        <h3>Lección 1: Introducción a Objetos</h3>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/nRRNYjOeVsg" title="POO Introducción"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
                     </div>
+
+                    <!-- Slide 8 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 3: POO</h2>
+                        <h3>Lección 2: Pilares de la POO</h3>
+                        <p class="lesson-text">
+                            <strong>Encapsulamiento:</strong> Ocultar detalles internos y exponer una interfaz
+                            segura.<br>
+                            <strong>Herencia:</strong> Crear nuevas clases basadas en existentes.<br>
+                            <strong>Polimorfismo:</strong> Capacidad de un objeto de comportarse de diferentes formas.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="slider-controls">
+                    <button id="prevBtn" class="btn" style="background: #ccc; color: #333;">Lección Anterior</button>
+                    <button id="nextBtn" class="btn btn-primary">Siguiente Lección</button>
                 </div>
             </div>
-            <div class="button">
-                <button id="prevBtn">Lección anterior</button>
-                <button id="nextBtn">Siguiente lección</button>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 CodeCraft.</p>
             </div>
         </div>
-    </section>
-    <hr>
-    <!-- Footer -->
-    <footer class="footer">
-        <section class="footer_container ">
-            <nav>
-                <ul>
-                    <div class="logo">
-                        <li><a href="#"><img src="/Media/Logo.png" alt="Logo"></li>
-                        <li class="nombre">CodeCraft</li></a>
-                    </div>
-                </ul>
-            </nav>
-            <div class="info">
-                <h3>Cursos de Programación</h3>
-                <ul>
-                    <li><a href="/cursos/Introduccion.html">Introducción</a></li>
-                    <li><a href="/cursos/HTML.html">HTML</a></li>
-                    <li><a href="/cursos/CSS.html">CSS</a></li>
-                    <li><a href="/cursos/JavaScript.html">JavaScript</a></li>
-                </ul>
-            </div>
-            <div class="info">
-                <h3>Contacto</h3>
-                <ul>
-                <li>Correo electrónico: <a href="mailto:cristiancastropineda1@gmail.com">info@codecraft.com</a></li>
-                <li>Teléfono: 103-441-7900</li>
-            </ul>
-            </div>
-            <div class="info">
-                <h3>Desarrolladores</h3>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/cristian-castro-pineda">Cristian Castro</a></li>
-                    <li><a href="https://www.linkedin.com/in/david-alejandro-ortiz-barrera-999bb91b8">David Ortiz</a></li>
-                </ul>
-            </div>
-    
-        </section>
-        <section class="footer_copy container">
-    
-            <h3 class="footer_copyright">Derechos reservados &copy; 2023</h3>
-        </section>
     </footer>
-    
-    <script src="/Js/localiza.js"></script>
+
     <script src="/Js/slider.js"></script>
+    <!-- Keeping existing robust scripts if needed, though mostly just slider is needed here -->
 </body>
 
 </html>
-
-
