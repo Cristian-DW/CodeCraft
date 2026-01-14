@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecciones: React.js | CodeCraft</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="navbar container">
+            <a href="../Index.html" class="logo">
+                <span class="nombre">CodeCraft</span>
+            </a>
+            <div class="course-navigation">
+                <a href="../cursos/ReactJS.html" class="btn btn-primary"
+                    style="padding: 8px 20px; font-size: 0.9rem;">Volver al Curso</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container" style="margin-top: 2rem;">
+            <div class="lesson-container">
+
+                <div class="slider">
+                    <!-- Slide 1 -->
+                    <div class="slide active">
+                        <h2 class="lesson-title">Tema 1: ¿Qué es JSX?</h2>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/T3Px88x_PsA" title="React Intro" frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
+                        <p class="lesson-text">
+                            JSX es una extensión de sintaxis para JavaScript que permite escribir HTML dentro de
+                            JavaScript. Se parece a una plantilla, pero tiene todo el poder de JS.
+                        </p>
+                    </div>
+
+                    <!-- Slide 2: QUIZ -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación Rápida</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿JSX es validado directamente por el navegador?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">Sí, nativamente.</div>
+                                <div class="option-btn" data-correct="true">No, necesita transpilarse (ej. Babel).</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Tema 2: Componentes y Props</h2>
+                        <p class="lesson-text">
+                            Los componentes son como funciones de JavaScript que devuelven elementos de React. Aceptan
+                            entradas llamadas "props".
+                        </p>
+                        <pre style="background:#eee; padding: 1rem; border-radius: 8px;">
+function Bienvenida(props) {
+  return &lt;h1&gt;Hola, {props.nombre}&lt;/h1&gt;;
+}
+                        </pre>
+                    </div>
+
+                    <!-- Slide 4: FINAL QUIZ -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación Final</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Cómo se accede a los datos pasados a un componente?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">this.datos</div>
+                                <div class="option-btn" data-correct="true">props</div>
+                                <div class="option-btn" data-correct="false">arguments</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="slider-controls">
+                    <button id="prevBtn" class="btn" style="background: #ccc; color: #333;">Lección Anterior</button>
+                    <button id="nextBtn" class="btn btn-primary">Siguiente Lección</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../Js/slider.js"></script>
+</body>
+
+</html>
