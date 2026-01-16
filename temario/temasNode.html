@@ -29,55 +29,158 @@
                 <div class="slider">
                     <!-- Slide 1 -->
                     <div class="slide active">
-                        <h2 class="lesson-title">Tema 1: ¿Qué es Node.js?</h2>
+                        <h2 class="lesson-title">1. ¿Qué es Node.js?</h2>
                         <div class="video-container">
                             <iframe src="https://www.youtube.com/embed/yXEesONyd_o" title="Node.js Intro"
                                 frameborder="0" allowfullscreen></iframe>
                         </div>
                         <p class="lesson-text">
-                            Node.js es un entorno de ejecución para JavaScript construido con el motor V8 de Chrome.
-                            Permite ejecutar JS en el servidor.
+                            No es un lenguaje. Es un entorno de ejecución de JavaScript construido sobre el motor V8 de
+                            Chrome. Permite crear servidores, herramientas de línea de comandos y más.
                         </p>
                     </div>
 
-                    <!-- Slide 2: QUIZ -->
+                    <!-- Slide 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación Rápida</h2>
+                        <h2 class="lesson-title">2. Instalación</h2>
+                        <p class="lesson-text">
+                            Se descarga desde nodejs.org. Viene con NPM (Node Package Manager).<br>
+                            Comando para verificar: `node -v`.
+                        </p>
+                    </div>
+
+                    <!-- Slide 3: QUIZ 1 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación 1: Conceptos</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Qué motor utiliza Node.js para ejecutar código JavaScript?</p>
+                            <p class="quiz-question">¿Node.js es un framework frontend?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">SpiderMonkey</div>
-                                <div class="option-btn" data-correct="true">V8 Engine</div>
-                                <div class="option-btn" data-correct="false">Chakra</div>
+                                <div class="option-btn" data-correct="false">Sí, reemplaza a React.</div>
+                                <div class="option-btn" data-correct="true">No, es un entorno de ejecución backend.
+                                </div>
+                                <div class="option-btn" data-correct="false">Es una base de datos.</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Slide 3 -->
+                    <!-- Slide 4 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 2: Servidor HTTP</h2>
+                        <h2 class="lesson-title">3. Módulos</h2>
                         <p class="lesson-text">
-                            Con el módulo `http` de Node.js, puedes crear un servidor web básico sin necesidad de Apache
-                            o Nginx.
+                            Node usa módulos para organizar código.<br>
+                            CommonJS: `const fs = require('fs');`<br>
+                            ES Modules (Moderno): `import fs from 'fs';`
                         </p>
-                        <pre style="background:#eee; padding: 1rem; border-radius: 8px;">
-const http = require('http');
-const server = http.createServer((req, res) => {
-  res.end('Hola Mundo desde Node!');
-});
-server.listen(3000);
-                        </pre>
                     </div>
 
-                    <!-- Slide 4: FINAL QUIZ -->
+                    <!-- Slide 5 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">4. File System (fs)</h2>
+                        <p class="lesson-text">
+                            Módulo nativo para leer y escribir archivos en el servidor.<br>
+                            `fs.readFile('archivo.txt', ...)`
+                        </p>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">5. Event Loop</h2>
+                        <p class="lesson-text">
+                            El secreto de la velocidad de Node. Es "Non-blocking I/O". Puede manejar miles de conexiones
+                            concurrentes sin crear nuevos hilos.
+                        </p>
+                    </div>
+
+                    <!-- Slide 7: QUIZ 2 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación 2: Arquitectura</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Node.js es bloqueante o no bloqueante?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">Bloqueante (Espera a que termine una tarea)
+                                </div>
+                                <div class="option-btn" data-correct="true">No Bloqueante (Asíncrono)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 8 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">6. Módulo HTTP</h2>
+                        <p class="lesson-text">
+                            Permite crear un servidor web básico.<br>
+                            `http.createServer((req, res) => ...)`
+                        </p>
+                    </div>
+
+                    <!-- Slide 9 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">7. NPM y package.json</h2>
+                        <p class="lesson-text">
+                            NPM es el registro de software más grande del mundo.<br>
+                            `package.json` es el archivo donde configuras tu proyecto y sus dependencias.
+                        </p>
+                    </div>
+
+                    <!-- Slide 10 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">8. Express.js</h2>
+                        <p class="lesson-text">
+                            Framework minimalista para Node. Simplifica la creación de servidores.<br>
+                            `const app = express();`
+                        </p>
+                    </div>
+
+                    <!-- Slide 11: QUIZ 3 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación 3: NPM</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Qué comando instala una librería nueva?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="true">npm install nombre-paquete</div>
+                                <div class="option-btn" data-correct="false">node add nombre-paquete</div>
+                                <div class="option-btn" data-correct="false">git clone nombre-paquete</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 12 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">9. Rutas (Routing)</h2>
+                        <p class="lesson-text">
+                            Cómo responde tu aplicación a diferentes URLs.<br>
+                            `app.get('/', (req, res) => res.send('Hola'))`
+                        </p>
+                    </div>
+
+                    <!-- Slide 13 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">10. Middleware</h2>
+                        <p class="lesson-text">
+                            Funciones que se ejecutan entre la petición y la respuesta. Se usan para autenticación,
+                            logs, etc.
+                        </p>
+                    </div>
+
+                    <!-- Slide 14 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">11. Bases de Datos</h2>
+                        <p class="lesson-text">
+                            Node conecta bien con todo.<br>
+                            SQL: MySQL, PostgreSQL.<br>
+                            NoSQL: MongoDB (muy popular con Node, stack MERN).
+                        </p>
+                    </div>
+
+                    <!-- Slide 15: Final Quiz -->
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación Final</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Qué método se usa para iniciar el servidor en el puerto 3000?</p>
+                            <p class="quiz-question">¿Cuál es el framework web más popular para Node.js?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">server.start(3000)</div>
-                                <div class="option-btn" data-correct="false">server.run(3000)</div>
-                                <div class="option-btn" data-correct="true">server.listen(3000)</div>
+                                <div class="option-btn" data-correct="false">Django</div>
+                                <div class="option-btn" data-correct="false">Laravel</div>
+                                <div class="option-btn" data-correct="true">Express</div>
                             </div>
                         </div>
                     </div>

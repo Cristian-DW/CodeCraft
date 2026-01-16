@@ -29,52 +29,159 @@
                 <div class="slider">
                     <!-- Slide 1 -->
                     <div class="slide active">
-                        <h2 class="lesson-title">Tema 1: ¿Qué es JSX?</h2>
+                        <h2 class="lesson-title">1. ¿Qué es React?</h2>
                         <div class="video-container">
                             <iframe src="https://www.youtube.com/embed/T3Px88x_PsA" title="React Intro" frameborder="0"
                                 allowfullscreen></iframe>
                         </div>
                         <p class="lesson-text">
-                            JSX es una extensión de sintaxis para JavaScript que permite escribir HTML dentro de
-                            JavaScript. Se parece a una plantilla, pero tiene todo el poder de JS.
+                            Librería de JavaScript para construir interfaces de usuario. Basada en componentes. Creada
+                            por Facebook.
                         </p>
                     </div>
 
-                    <!-- Slide 2: QUIZ -->
+                    <!-- Slide 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación Rápida</h2>
+                        <h2 class="lesson-title">2. JSX (JavaScript XML)</h2>
+                        <p class="lesson-text">
+                            Parece HTML, pero es JS. Permite escribir etiquetas dentro del código JavaScript.<br>
+                            `const elemento = &lt;h1&gt;Hola&lt;/h1&gt;;`
+                        </p>
+                    </div>
+
+                    <!-- Slide 3: QUIZ 1 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación 1: Sintaxis</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿JSX es validado directamente por el navegador?</p>
+                            <p class="quiz-question">¿Puedes escribir HTML puro en un archivo .js sin transpilar?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Sí, nativamente.</div>
-                                <div class="option-btn" data-correct="true">No, necesita transpilarse (ej. Babel).</div>
+                                <div class="option-btn" data-correct="false">Sí, funciona siempre.</div>
+                                <div class="option-btn" data-correct="true">No, requiere JSX y un transpilador (Babel).
+                                </div>
+                                <div class="option-btn" data-correct="false">Solo si usas jQuery.</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Slide 3 -->
+                    <!-- Slide 4 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 2: Componentes y Props</h2>
+                        <h2 class="lesson-title">3. Componentes</h2>
                         <p class="lesson-text">
-                            Los componentes son como funciones de JavaScript que devuelven elementos de React. Aceptan
-                            entradas llamadas "props".
+                            Piezas de UI reutilizables. Pueden ser funciones o clases (hoy en día usamos funciones).<br>
+                            `function Boton() { return &lt;button&gt;Click&lt;/button&gt;; }`
                         </p>
-                        <pre style="background:#eee; padding: 1rem; border-radius: 8px;">
-function Bienvenida(props) {
-  return &lt;h1&gt;Hola, {props.nombre}&lt;/h1&gt;;
-}
-                        </pre>
                     </div>
 
-                    <!-- Slide 4: FINAL QUIZ -->
+                    <!-- Slide 5 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">4. Props (Propiedades)</h2>
+                        <p class="lesson-text">
+                            Información que pasas de un componente padre a un hijo. Son de solo lectura.<br>
+                            `&lt;Saludo nombre="Juan" /&gt;`
+                        </p>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">5. Estado (State)</h2>
+                        <p class="lesson-text">
+                            La memoria del componente. Si cambia el estado, el componente se vuelve a renderizar para
+                            mostrar los cambios.
+                        </p>
+                    </div>
+
+                    <!-- Slide 7: QUIZ 2 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación 2: Hooks</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Qué Hook se usa para manejar el estado en componentes funcionales?
+                            </p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">useEffect</div>
+                                <div class="option-btn" data-correct="true">useState</div>
+                                <div class="option-btn" data-correct="false">useHistory</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 8 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">6. Manejo de Eventos</h2>
+                        <p class="lesson-text">
+                            Son como los de HTML pero en camelCase.<br>
+                            `onclick` -> `onClick`.<br>
+                            `&lt;button onClick={manejarClick}&gt;`
+                        </p>
+                    </div>
+
+                    <!-- Slide 9 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">7. Renderizado Condicional</h2>
+                        <p class="lesson-text">
+                            Mostrar u ocultar cosas según condiciones.<br>
+                            `{ logueado ? &lt;Perfil /&gt; : &lt;Login /&gt; }`
+                        </p>
+                    </div>
+
+                    <!-- Slide 10 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">8. Listas y Keys</h2>
+                        <p class="lesson-text">
+                            Usamos `.map()` para convertir arrays de datos en arrays de elementos. Siempre necesitas una
+                            `key` única.
+                        </p>
+                    </div>
+
+                    <!-- Slide 11: QUIZ 3 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación 3: Listas</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Por qué React necesita una "key" en las listas?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="true">Para identificar qué elementos han cambiado.
+                                </div>
+                                <div class="option-btn" data-correct="false">Para dar estilos CSS automáticamente.</div>
+                                <div class="option-btn" data-correct="false">Es opcional.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 12 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">9. useEffect</h2>
+                        <p class="lesson-text">
+                            Para efectos secundarios: llamadas a APIs, suscripciones, timers. Reemplaza a
+                            `componentDidMount` y `componentDidUpdate`.
+                        </p>
+                    </div>
+
+                    <!-- Slide 13 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">10. Formularios Controlados</h2>
+                        <p class="lesson-text">
+                            En React, el estado es la única fuente de la verdad. Los inputs leen del estado y escriben
+                            al estado (`onChange`).
+                        </p>
+                    </div>
+
+                    <!-- Slide 14 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">11. Build & Deploy</h2>
+                        <p class="lesson-text">
+                            `npm run build`. Crea una versión optimizada y minificada de tu app lista para subir a
+                            producción (Vercel, Netlify).
+                        </p>
+                    </div>
+
+                    <!-- Slide 15: Final Quiz -->
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación Final</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Cómo se accede a los datos pasados a un componente?</p>
+                            <p class="quiz-question">¿React manipula el DOM real directamente todo el tiempo?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">this.datos</div>
-                                <div class="option-btn" data-correct="true">props</div>
-                                <div class="option-btn" data-correct="false">arguments</div>
+                                <div class="option-btn" data-correct="false">Sí, por eso es lento.</div>
+                                <div class="option-btn" data-correct="true">No, usa un Virtual DOM para optimizar
+                                    cambios.</div>
                             </div>
                         </div>
                     </div>

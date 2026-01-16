@@ -4,22 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lecciones: Introducción a la Programación | CodeCraft</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Kalam:wght@700&display=swap"
-        rel="stylesheet">
+    <title>Lecciones: Introducción | CodeCraft</title>
 
     <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="shortcut icon" href="/media/aprende.png" type="image/x-icon">
 </head>
 
 <body>
     <header class="main-header">
         <nav class="navbar container">
             <a href="../Index.html" class="logo">
-                <img src="../Media/Logo.png" alt="CodeCraft Logo">
                 <span class="nombre">CodeCraft</span>
             </a>
             <div class="course-navigation">
@@ -30,110 +23,168 @@
     </header>
 
     <main>
-        <section class="course-header" style="padding: var(--spacing-lg) 0; margin-bottom: var(--spacing-md);">
-            <div class="container">
-                <h1>Lecciones: Introducción</h1>
-            </div>
-        </section>
-
-        <section class="container">
+        <section class="container" style="margin-top: 2rem;">
             <div class="lesson-container">
 
                 <div class="slider">
-                    <!-- Slide 1 -->
+                    <!-- Slide 1: History -->
                     <div class="slide active">
-                        <h2 class="lesson-title">Tema 1: Historia de la Programación</h2>
+                        <h2 class="lesson-title">1. Historia de la Programación</h2>
+                        <p class="lesson-text">
+                            Todo comenzó con Ada Lovelace en el siglo XIX, considerada la primera programadora. Desde
+                            tarjetas perforadas hasta la nube moderna, la programación ha evolucionado para resolver
+                            problemas complejos mediante instrucciones lógicas dadas a una computadora.
+                        </p>
+                    </div>
+
+                    <!-- Slide 2: Video Logic -->
+                    <div class="slide">
+                        <h2 class="lesson-title">2. Lógica y Algoritmos</h2>
                         <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/u_PHSr_t-q0" title="Historia de la programación"
+                            <iframe src="https://www.youtube.com/embed/U3CGMyjzlvM" title="Lógica de Programación"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p class="lesson-text">Un algoritmo es simplemente una serie de pasos ordenados para realizar
+                            una tarea.</p>
+                    </div>
+
+                    <!-- Slide 3: QUIZ 1 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación 1: Lógica</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Qué es un algoritmo?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">Un lenguaje de programación.</div>
+                                <div class="option-btn" data-correct="true">Una secuencia de pasos para resolver un
+                                    problema.</div>
+                                <div class="option-btn" data-correct="false">Un componente de hardware.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Data Types -->
+                    <div class="slide">
+                        <h2 class="lesson-title">3. Tipos de Datos</h2>
+                        <p class="lesson-text">
+                            Las computadoras manejan diferente información:<br>
+                            - <strong>Texto (String):</strong> "Hola mundo"<br>
+                            - <strong>Números (Int/Float):</strong> 42, 3.14<br>
+                            - <strong>Booleanos:</strong> true (verdadero) o false (falso)
+                        </p>
+                    </div>
+
+                    <!-- Slide 5: Variables -->
+                    <div class="slide">
+                        <h2 class="lesson-title">4. Variables y Constantes</h2>
+                        <p class="lesson-text">
+                            Imagina una variable como una caja donde guardas información. Puedes cambiar lo que hay
+                            dentro. Una constante es una caja cerrada que, una vez guardas algo, no puede cambiar.
+                        </p>
+                    </div>
+
+                    <!-- Slide 6: VS Code -->
+                    <div class="slide">
+                        <h2 class="lesson-title">5. Tu entorno de trabajo</h2>
+                        <p class="lesson-text">
+                            Para escribir código, necesitas un editor de texto. VS Code es el estándar de la industria
+                            hoy en día: rápido, gratuito y lleno de extensiones útiles.
+                        </p>
+                    </div>
+
+                    <!-- Slide 7: QUIZ 2 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación 2: Conceptos</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Qué tipo de dato usarías para guardar tu edad?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">String ("Veinte")</div>
+                                <div class="option-btn" data-correct="false">Boolean (true)</div>
+                                <div class="option-btn" data-correct="true">Integer (20)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 8: Internet -->
+                    <div class="slide">
+                        <h2 class="lesson-title">6. ¿Cómo funciona Internet?</h2>
+                        <p class="lesson-text">
+                            Internet es una red global de cables y servidores. Cuando visitas una web, tu computadora
+                            (cliente) pide archivos a otra computadora (servidor) que puede estar al otro lado del
+                            mundo.
+                        </p>
+                    </div>
+
+                    <!-- Slide 9: Client vs Server -->
+                    <div class="slide">
+                        <h2 class="lesson-title">7. Cliente vs Servidor</h2>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/zx6b3kGjWdY" title="Cliente y Servidor"
                                 frameborder="0" allowfullscreen></iframe>
                         </div>
                     </div>
 
-                    <!-- Slide 2 -->
+                    <!-- Slide 10: Frontend vs Backend -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 1: Lenguajes de Programación</h2>
-                        <h3>Lección 2: ¿Qué son?</h3>
+                        <h2 class="lesson-title">8. Frontend vs Backend</h2>
                         <p class="lesson-text">
-                            Los lenguajes de programación son conjuntos de reglas y símbolos utilizados para escribir
-                            instrucciones que una computadora puede entender y ejecutar. Son herramientas fundamentales
-                            en el desarrollo de software.<br><br>
-                            Cada lenguaje de programación tiene su propia sintaxis y semántica. Algunos son más verbosos
-                            y se asemejan más al lenguaje humano, mientras que otros son más concisos y se centran en la
-                            eficiencia.
+                            <strong>Frontend:</strong> Lo que ves (Diseño, botones). HTML, CSS, JS.<br>
+                            <strong>Backend:</strong> Lo que no ves (Base de datos, lógica del servidor). Python, Java,
+                            Node.js.
                         </p>
                     </div>
 
-                    <!-- Slide 3 -->
+                    <!-- Slide 11: QUIZ 3 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 1: Utilidad</h2>
-                        <h3>Lección 3: ¿Para qué sirven?</h3>
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/pWw4UtQhdek"
-                                title="Qué son los lenguajes de programación" frameborder="0" allowfullscreen></iframe>
+                        <h2 class="lesson-title">Evaluación 3: Arquitectura Web</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Dónde se ejecuta el código HTML y CSS?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="true">En el Cliente (Navegador)</div>
+                                <div class="option-btn" data-correct="false">En la Base de Datos</div>
+                                <div class="option-btn" data-correct="false">En el Servidor Backend</div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Slide 4 -->
+                    <!-- Slide 12: OS -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 2: Estructuras de Control</h2>
-                        <h3>Lección 1: Condicionales (if, else)</h3>
+                        <h2 class="lesson-title">9. Sistemas Operativos</h2>
                         <p class="lesson-text">
-                            Las estructuras condicionales nos permiten tomar decisiones en función de ciertas
-                            condiciones.<br><br>
-                            <strong>if:</strong> Permite ejecutar un bloque de código si una condición es verdadera.<br>
-                            <strong>else if:</strong> Permite verificar una segunda condición si la anterior no se
-                            cumple.<br>
-                            <strong>else:</strong> Se ejecuta cuando ninguna de las condiciones anteriores es verdadera.
+                            Windows, macOS y Linux. Como programador, te encontrarás mucho con **Linux** en los
+                            servidores. Es importante perderle el miedo.
                         </p>
                     </div>
 
-                    <!-- Slide 5 -->
+                    <!-- Slide 13: Terminal -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 2: Estructuras de Control</h2>
-                        <h3>Lección 2: Bucles (for, while)</h3>
+                        <h2 class="lesson-title">10. La Terminal</h2>
                         <p class="lesson-text">
-                            <strong>Bucle for:</strong> Repite un bloque de código un número específico de veces. Se usa
-                            cuando se conoce la cantidad exacta de iteraciones.<br><br>
-                            <strong>Bucle while:</strong> Repite un bloque de código mientras una condición sea
-                            verdadera. Se usa cuando no se conoce la cantidad exacta de iteraciones.
+                            Esa pantalla negra con letras blancas. Es la forma más directa de hablar con la computadora.
+                            Comandos básicos: `ls` (listar), `cd` (cambiar carpeta), `mkdir` (crear carpeta).
                         </p>
                     </div>
 
-                    <!-- Slide 6 -->
+                    <!-- Slide 14: Review -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 2: Funciones</h2>
-                        <h3>Lección 3: Uso de funciones</h3>
+                        <h2 class="lesson-title">11. Repaso Final</h2>
                         <p class="lesson-text">
-                            Las funciones son bloques de código reutilizables.<br><br>
-                            <strong>Definición:</strong> palabra clave "function", nombre y parámetros.<br>
-                            <strong>Parámetros vs Argumentos:</strong> Variables en la definición vs Valores reales al
-                            llamar.<br>
-                            <strong>Return:</strong> Devuelve un valor al programa principal.
+                            Hemos cubierto la lógica básica, tipos de datos, cómo funciona la web y las herramientas
+                            esenciales. Estás listo para escribir tu primera línea de código en HTML.
                         </p>
                     </div>
 
-                    <!-- Slide 7 -->
+                    <!-- Slide 15: Final Quiz -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 3: POO</h2>
-                        <h3>Lección 1: Introducción a Objetos</h3>
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/nRRNYjOeVsg" title="POO Introducción"
-                                frameborder="0" allowfullscreen></iframe>
+                        <h2 class="lesson-title">Evaluación Final</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Cuál es el siguiente paso lógico?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">Aprender a hackear la NASA</div>
+                                <div class="option-btn" data-correct="true">Aprender HTML</div>
+                                <div class="option-btn" data-correct="false">Instalar Windows 95</div>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Slide 8 -->
-                    <div class="slide">
-                        <h2 class="lesson-title">Tema 3: POO</h2>
-                        <h3>Lección 2: Pilares de la POO</h3>
-                        <p class="lesson-text">
-                            <strong>Encapsulamiento:</strong> Ocultar detalles internos y exponer una interfaz
-                            segura.<br>
-                            <strong>Herencia:</strong> Crear nuevas clases basadas en existentes.<br>
-                            <strong>Polimorfismo:</strong> Capacidad de un objeto de comportarse de diferentes formas.
-                        </p>
-                    </div>
-
                 </div>
 
                 <div class="slider-controls">
@@ -144,16 +195,7 @@
         </section>
     </main>
 
-    <footer class="main-footer">
-        <div class="footer-container container">
-            <div class="footer-bottom">
-                <p>&copy; 2026 CodeCraft.</p>
-            </div>
-        </div>
-    </footer>
-
     <script src="../Js/slider.js"></script>
-    <!-- Keeping existing robust scripts if needed, though mostly just slider is needed here -->
 </body>
 
 </html>

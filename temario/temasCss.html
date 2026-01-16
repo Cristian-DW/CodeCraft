@@ -6,107 +6,187 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lecciones: CSS | CodeCraft</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Kalam:wght@700&display=swap"
-        rel="stylesheet">
-
     <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="shortcut icon" href="/media/001-css-3.png" type="image/x-icon">
 </head>
 
 <body>
     <header class="main-header">
         <nav class="navbar container">
             <a href="../Index.html" class="logo">
-                <img src="../Media/Logo.png" alt="CodeCraft Logo">
                 <span class="nombre">CodeCraft</span>
             </a>
             <div class="course-navigation">
-                <a href="../cursos/CSS.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Volver
-                    al Curso</a>
+                <a href="../cursos/CSS.html" class="btn btn-primary"
+                    style="padding: 8px 20px; font-size: 0.9rem;">Volver al Curso</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="course-header"
-            style="padding: var(--spacing-lg) 0; margin-bottom: var(--spacing-md); background: linear-gradient(135deg, #264de4, #2965f1);">
-            <div class="container">
-                <h1>Lecciones: CSS</h1>
-            </div>
-        </section>
-
-        <section class="container">
+        <section class="container" style="margin-top: 2rem;">
             <div class="lesson-container">
 
                 <div class="slider">
                     <!-- Slide 1 -->
                     <div class="slide active">
-                        <h2 class="lesson-title">Tema 1: Introducción a CSS</h2>
-                        <h3>Lección 1: ¿Qué es CSS?</h3>
+                        <h2 class="lesson-title">1. ¿Qué es CSS?</h2>
                         <p class="lesson-text">
-                            <strong>CSS (Cascading Style Sheets):</strong> Lenguaje para diseñar y dar formato a
-                            HTML.<br><br>
-                            Define el aspecto visual (color, fuente, layout). Se vincula al HTML mediante la etiqueta
-                            <code>&lt;link&gt;</code> o <code>&lt;style&gt;</code>.
+                            CSS (Cascading Style Sheets) controla cómo se ven los elementos HTML. Mientras HTML es el
+                            esqueleto, CSS es la piel y la ropa. Sintaxis: `selector { propiedad: valor; }`.
                         </p>
                     </div>
 
                     <!-- Slide 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 1: Introducción a CSS</h2>
-                        <h3>Lección 2: Selectores Básicos</h3>
-                        <div class="video-container">
-                            <iframe
-                                src="https://www.youtube.com/embed/uqkj7HQ7ids?list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR"
-                                title="Selectores CSS" frameborder="0" allowfullscreen></iframe>
-                        </div>
+                        <h2 class="lesson-title">2. Colores</h2>
+                        <p class="lesson-text">
+                            Hay varias formas de definir colores:<br>
+                            - Nombre: `red`<br>
+                            - Hexadecimal: `#FF0000`<br>
+                            - RGB: `rgb(255, 0, 0)`<br>
+                            - HSL: `hsl(0, 100%, 50%)`
+                        </p>
                     </div>
 
-                    <!-- Slide 3 -->
+                    <!-- Slide 3: QUIZ 1 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 2: Diseño de Cajas</h2>
-                        <h3>Lección 1: Modelo de Caja (Box Model)</h3>
-                        <p class="lesson-text">
-                            Todo elemento en CSS es una caja que consiste en:<br>
-                            - <strong>Contenido:</strong> El texto o imagen real.<br>
-                            - <strong>Padding:</strong> Espacio interno.<br>
-                            - <strong>Border:</strong> Borde alrededor del padding.<br>
-                            - <strong>Margin:</strong> Espacio externo entre elementos.
-                        </p>
+                        <h2 class="lesson-title">Evaluación 1: Sintaxis</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Cuál es la sintaxis correcta para cambiar el color del texto?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">p { text-color: red; }</div>
+                                <div class="option-btn" data-correct="true">p { color: red; }</div>
+                                <div class="option-btn" data-correct="false">p { font-color: red; }</div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Slide 4 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 2: Diseño de Cajas</h2>
-                        <h3>Lección 2: Posicionamiento</h3>
-                        <div class="video-container">
-                            <iframe
-                                src="https://www.youtube.com/embed/JwyjHyGOgmg?list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR"
-                                title="Posicionamiento CSS" frameborder="0" allowfullscreen></iframe>
-                        </div>
+                        <h2 class="lesson-title">3. Tipografía</h2>
+                        <p class="lesson-text">
+                            Controla las fuentes. `font-family` cambia la letra (Arial, Roboto). `font-size` el tamaño
+                            (px, rem). `font-weight` el grosor (bold, 400).
+                        </p>
                     </div>
 
                     <!-- Slide 5 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 3: Diseño Responsivo</h2>
-                        <h3>Lección 1: Media Queries</h3>
+                        <h2 class="lesson-title">4. Modelo de Caja (Box Model)</h2>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/rYO5OpkdMnE" title="Modelo de Caja"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p class="lesson-text">Todo en CSS es una caja rectangular.</p>
+                    </div>
+
+                    <!-- Slide 6: QUIZ 2 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación 2: Cajas</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Qué propiedad controla el espacio INTERNO de la caja?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">Margin</div>
+                                <div class="option-btn" data-correct="true">Padding</div>
+                                <div class="option-btn" data-correct="false">Border</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 7 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">5. Display Property</h2>
                         <p class="lesson-text">
-                            Permiten aplicar estilos diferentes según el dispositivo (móvil, tablet, desktop).<br>
-                            Es la clave para que la web se vea bien en todas partes.<br>
-                            Ejemplo: <code>@media (max-width: 600px) { ... }</code>
+                            Determina cómo se comporta la caja.<br>
+                            `block`: Ocupa todo el ancho (ej. div, p).<br>
+                            `inline`: Solo ocupa su contenido (ej. span, a).<br>
+                            `none`: Desaparece.
                         </p>
                     </div>
 
-                    <!-- Slide 6 -->
+                    <!-- Slide 8 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 3: Diseño Responsivo</h2>
-                        <h3>Lección 2: Técnicas Fluxidas</h3>
+                        <h2 class="lesson-title">6. Flexbox Básico</h2>
                         <p class="lesson-text">
-                            Usar unidades relativas (%, em, rem) en lugar de píxeles fijos.<br>
-                            El contenido fluye y se adapta al contenedor disponible.
+                            Flexbox es un sistema unidimensional para distribuir espacio. `display: flex` en el padre
+                            alinea los hijos en una fila por defecto.
                         </p>
+                    </div>
+
+                    <!-- Slide 9 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">7. Alineación con Flexbox</h2>
+                        <p class="lesson-text">
+                            `justify-content`: Alinea en el eje principal (horizontal).<br>
+                            `align-items`: Alinea en el eje cruzado (vertical).<br>
+                            Es la forma moderna de centrar cosas.
+                        </p>
+                    </div>
+
+                    <!-- Slide 10: QUIZ 3 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación 3: Layouts</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">Para centrar algo perfectamente en el medio con Flexbox usamos:</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="true">justify-content: center; align-items:
+                                    center;</div>
+                                <div class="option-btn" data-correct="false">text-align: center; vertical-align: middle;
+                                </div>
+                                <div class="option-btn" data-correct="false">margin: auto;</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 11 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">8. CSS Grid</h2>
+                        <p class="lesson-text">
+                            Grid es bidimensional (filas y columnas). Es más potente que Flexbox para layouts generales
+                            de página. `display: grid; grid-template-columns: 1fr 1fr;`.
+                        </p>
+                    </div>
+
+                    <!-- Slide 12 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">9. Diseño Responsivo</h2>
+                        <p class="lesson-text">
+                            Las Media Queries (`@media`) permiten aplicar estilos solo si la pantalla tiene cierto
+                            tamaño. Clave para que se vea bien en celulares.
+                        </p>
+                    </div>
+
+                    <!-- Slide 13 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">10. Posicionamiento</h2>
+                        <p class="lesson-text">
+                            `relative`: Respecto a sí mismo.<br>
+                            `absolute`: Respecto al padre posicionado más cercano.<br>
+                            `fixed`: Respecto a la ventana del navegador.
+                        </p>
+                    </div>
+
+                    <!-- Slide 14 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">11. Pseudo-clases</h2>
+                        <p class="lesson-text">
+                            Estados especiales. `:hover` (cuando pasas el mouse), `:focus` (cuando haces click en un
+                            input), `:nth-child` (para seleccionar hijos específicos).
+                        </p>
+                    </div>
+
+                    <!-- Slide 15: Final Quiz -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación Final</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿CSS Grid es mejor para layouts de una sola dimensión?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">Verdadero, reemplaza a Flexbox siempre.
+                                </div>
+                                <div class="option-btn" data-correct="true">Falso, Grid es 2D (filas/col), Flexbox es
+                                    1D.</div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

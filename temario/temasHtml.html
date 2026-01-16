@@ -6,128 +6,181 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lecciones: HTML | CodeCraft</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Kalam:wght@700&display=swap"
-        rel="stylesheet">
-
     <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="shortcut icon" href="/media/003-html-5.png" type="image/x-icon">
 </head>
 
 <body>
     <header class="main-header">
         <nav class="navbar container">
             <a href="../Index.html" class="logo">
-                <img src="../Media/Logo.png" alt="CodeCraft Logo">
                 <span class="nombre">CodeCraft</span>
             </a>
             <div class="course-navigation">
-                <a href="../cursos/HTML.html" class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Volver
-                    al Curso</a>
+                <a href="../cursos/HTML.html" class="btn btn-primary"
+                    style="padding: 8px 20px; font-size: 0.9rem;">Volver al Curso</a>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="course-header"
-            style="padding: var(--spacing-lg) 0; margin-bottom: var(--spacing-md); background: linear-gradient(135deg, #e34c26, #f06529);">
-            <div class="container">
-                <h1>Lecciones: HTML</h1>
-            </div>
-        </section>
-
-        <section class="container">
+        <section class="container" style="margin-top: 2rem;">
             <div class="lesson-container">
 
                 <div class="slider">
                     <!-- Slide 1 -->
                     <div class="slide active">
-                        <h2 class="lesson-title">Tema 1: Introducción a HTML</h2>
-                        <h3>Lección 1: Estructura Básica</h3>
-                        <div class="video-container">
-                            <iframe
-                                src="https://www.youtube.com/embed/oUKJdqkd6a0?list=PLROIqh_5RZeB92ME1GFyeqDVOa-gL0Ybd"
-                                title="Estructura HTML" frameborder="0" allowfullscreen></iframe>
-                        </div>
+                        <h2 class="lesson-title">1. ¿Qué es HTML?</h2>
+                        <p class="lesson-text">
+                            HTML (HyperText Markup Language) no es un lenguaje de programación, es un lenguaje de
+                            marcado. Define la estructura de tu web: qué es un título, qué es un párrafo y qué es una
+                            imagen.
+                        </p>
                     </div>
 
                     <!-- Slide 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 1: Conceptos Básicos</h2>
-                        <h3>Lección 2: Etiquetas, Elementos y Atributos</h3>
+                        <h2 class="lesson-title">2. Etiquetas y Atributos</h2>
                         <p class="lesson-text">
-                            <strong>Etiquetas:</strong> Palabras clave entre &lt; &gt; que indican cómo mostrar
-                            contenido. Ej: &lt;h1&gt;, &lt;p&gt;.<br><br>
-                            <strong>Elementos:</strong> Combinación de etiqueta de apertura, contenido y cierre. Ej:
-                            &lt;p&gt;Texto&lt;/p&gt;.<br><br>
-                            <strong>Atributos:</strong> Información adicional en la etiqueta de apertura. Ej: &lt;a
-                            href="..."&gt;.
+                            HTML usa etiquetas rodeadas por corchetes angulares, como `&lt;p&gt;Hola&lt;/p&gt;`. Los
+                            atributos proveen información extra, como el destino de un enlace.
                         </p>
                     </div>
 
-                    <!-- Slide 3 -->
+                    <!-- Slide 3: QUIZ 1 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 1: Texto Básico</h2>
-                        <h3>Lección 3: Estructura de Texto</h3>
-                        <p class="lesson-text">
-                            <strong>Encabezados:</strong> Jerarquía del contenido (&lt;h1&gt; a &lt;h6&gt;).<br>
-                            <strong>Párrafos:</strong> Bloques de texto (&lt;p&gt;).<br>
-                            <strong>Enlaces:</strong> Hipervínculos (&lt;a href="..."&gt;).
-                        </p>
+                        <h2 class="lesson-title">Evaluación 1: Sintaxis</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Cómo se cierra correctamente una etiqueta de párrafo?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">&lt;p&gt;</div>
+                                <div class="option-btn" data-correct="false">&lt;\p&gt;</div>
+                                <div class="option-btn" data-correct="true">&lt;/p&gt;</div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Slide 4 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 2: Formato de Texto</h2>
-                        <h3>Lección 1: Estilos Básicos</h3>
+                        <h2 class="lesson-title">3. Títulos y Párrafos</h2>
                         <p class="lesson-text">
-                            <strong>Negrita:</strong> &lt;b&gt; ó &lt;strong&gt;.<br>
-                            <strong>Cursiva:</strong> &lt;i&gt; ó &lt;em&gt;.<br>
-                            <strong>Subrayado:</strong> &lt;u&gt;.
+                            Los encabezados van de `h1` (el más importante) a `h6` (el menos importante). Solo debe
+                            haber un `h1` por página. Los párrafos usan la etiqueta `p`.
                         </p>
                     </div>
 
                     <!-- Slide 5 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 2: Estructuras Avanzadas</h2>
-                        <h3>Lección 2: Listas y Tablas</h3>
+                        <h2 class="lesson-title">4. Listas</h2>
                         <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/Vcxl4Gq6cd8" title="Tablas y Listas"
-                                frameborder="0" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/KJbZJgO0tJM" title="Listas HTML" frameborder="0"
+                                allowfullscreen></iframe>
                         </div>
+                        <p class="lesson-text">`ul` para listas desordenadas (puntos) y `ol` para ordenadas (números).
+                            Cada elemento es un `li`.</p>
                     </div>
 
                     <!-- Slide 6 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 3: Formularios</h2>
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/QDOfODwsfuQ" title="Formularios HTML"
-                                frameborder="0" allowfullscreen></iframe>
-                        </div>
+                        <h2 class="lesson-title">5. Enlaces (Links)</h2>
+                        <p class="lesson-text">
+                            La etiqueta más importante de la web: `a`. <br>
+                            `&lt;a href="google.com"&gt;Ir a Google&lt;/a&gt;` transforma el texto en un hipervínculo.
+                        </p>
                     </div>
 
                     <!-- Slide 7 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 4: Buenas Prácticas</h2>
-                        <h3>Lección 1: Validación</h3>
+                        <h2 class="lesson-title">6. Imágenes</h2>
                         <p class="lesson-text">
-                            La validación comprueba si el código cumple los estándares W3C. Usa herramientas online como
-                            el Validador de W3C para asegurar que tu sitio funciona correctamente en todos los
-                            navegadores.
+                            `&lt;img src="foto.jpg" alt="Descripción"&gt;`. <br>
+                            Nota que la etiqueta `img` no tiene cierre. El atributo `alt` es crucial para la
+                            accesibilidad.
                         </p>
                     </div>
 
-                    <!-- Slide 8 -->
+                    <!-- Slide 8: QUIZ 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 4: Accesibilidad</h2>
-                        <h3>Lección 2: Web para Todos</h3>
+                        <h2 class="lesson-title">Evaluación 2: Multimedia</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Qué atributo hace accesible una imagen para personas ciegas?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">src</div>
+                                <div class="option-btn" data-correct="true">alt</div>
+                                <div class="option-btn" data-correct="false">title</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 9 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">7. HTML Semántico</h2>
                         <p class="lesson-text">
-                            Hacer la web accesible para personas con discapacidades.<br><br>
-                            - Usar textos alternativos (alt) en imágenes.<br>
-                            - Usar jerarquía de encabezados correcta.<br>
-                            - Asegurar contraste de colores y navegación por teclado.
+                            En lugar de usar `div` para todo, usa etiquetas que signifiquen algo: `header`, `nav`,
+                            `main`, `section`, `article`, `footer`. Ayuda a Google a entender tu sitio.
                         </p>
+                    </div>
+
+                    <!-- Slide 10 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">8. Formularios</h2>
+                        <p class="lesson-text">
+                            `&lt;form&gt;` envuelve los controles. `&lt;input type="text"&gt;` crea un campo de texto.
+                            Existen muchos tipos: `password`, `email`, `date`, `checkbox`.
+                        </p>
+                    </div>
+
+                    <!-- Slide 11 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">9. Tablas</h2>
+                        <p class="lesson-text">
+                            Úsalas solo para datos tabulares (como Excel), no para diseño. Estructura: `table` > `tr`
+                            (fila) > `th` (encabezado) / `td` (dato).
+                        </p>
+                    </div>
+
+                    <!-- Slide 12: QUIZ 3 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación 3: Estructura</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Qué etiqueta usarías para el menú principal de navegación?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">&lt;div class="menu"&gt;</div>
+                                <div class="option-btn" data-correct="true">&lt;nav&gt;</div>
+                                <div class="option-btn" data-correct="false">&lt;section&gt;</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 13 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">10. Meta Tags</h2>
+                        <p class="lesson-text">
+                            Van en el `head`. Controlan cosas invisibles pero vitales: el set de caracteres (UTF-8), la
+                            descripción para Google y la vista en móviles (viewport).
+                        </p>
+                    </div>
+
+                    <!-- Slide 14 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">11. Buenas Prácticas</h2>
+                        <p class="lesson-text">
+                            - Indenta tu código siempre.<br>
+                            - Usa minúsculas para etiquetas.<br>
+                            - Cierra siempre las etiquetas que lo requieran.<br>
+                            - Comenta tu código con `&lt;!-- comentario --&gt;`
+                        </p>
+                    </div>
+
+                    <!-- Slide 15: Final Quiz -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación Final</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿HTML define los estilos visuales de la página?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">Verdadero</div>
+                                <div class="option-btn" data-correct="true">Falso (Eso es CSS)</div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

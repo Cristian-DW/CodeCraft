@@ -6,20 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lecciones: JavaScript | CodeCraft</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Kalam:wght@700&display=swap"
-        rel="stylesheet">
-
     <link rel="stylesheet" href="../css/estilos.css">
-    <link rel="shortcut icon" href="/media/002-javascript.png" type="image/x-icon">
 </head>
 
 <body>
     <header class="main-header">
         <nav class="navbar container">
             <a href="../Index.html" class="logo">
-                <img src="../Media/Logo.png" alt="CodeCraft Logo">
                 <span class="nombre">CodeCraft</span>
             </a>
             <div class="course-navigation">
@@ -30,81 +23,166 @@
     </header>
 
     <main>
-        <section class="course-header"
-            style="padding: var(--spacing-lg) 0; margin-bottom: var(--spacing-md); background: linear-gradient(135deg, #f0db4f, #d6c100); color: #333;">
-            <div class="container">
-                <h1 style="color: #333;">Lecciones: JavaScript</h1>
-            </div>
-        </section>
-
-        <section class="container">
+        <section class="container" style="margin-top: 2rem;">
             <div class="lesson-container">
 
                 <div class="slider">
                     <!-- Slide 1 -->
                     <div class="slide active">
-                        <h2 class="lesson-title">Tema 1: Introducción a JavaScript</h2>
-                        <h3>Lección 1: ¿Qué es JS?</h3>
+                        <h2 class="lesson-title">1. ¿Qué es JavaScript?</h2>
                         <p class="lesson-text">
-                            JavaScript agrega interactividad y dinamismo. Ejecutado en el navegador, permite manipular
-                            el DOM, responder a eventos y realizar validaciones en tiempo real.
+                            Es el lenguaje que da vida a la web. Mientras HTML/CSS son estáticos, JS permite
+                            interactividad, animaciones y lógica compleja. Se ejecuta en el navegador.
                         </p>
                     </div>
 
                     <!-- Slide 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 1: Introducción a JavaScript</h2>
-                        <h3>Lección 2: Fundamentos Modernos</h3>
-                        <div class="video-container">
-                            <iframe
-                                src="https://www.youtube.com/embed/Z4TuS0HEJP8?list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR"
-                                title="Fundamentos JS" frameborder="0" allowfullscreen></iframe>
-                        </div>
+                        <h2 class="lesson-title">2. Variables Modernas</h2>
+                        <p class="lesson-text">
+                            Olvida `var`. Usa:<br>
+                            `let`: Para valores que cambian (ej. puntuación).<br>
+                            `const`: Para valores fijos (ej. PI, configuraciones).
+                        </p>
                     </div>
 
-                    <!-- Slide 3 -->
+                    <!-- Slide 3: QUIZ 1 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 2: El DOM</h2>
-                        <h3>Lección 1: Manipulación</h3>
-                        <p class="lesson-text">
-                            El <strong>DOM (Document Object Model)</strong> es la representación en árbol del HTML.<br>
-                            Usamos <code>document.getElementById()</code> o <code>querySelector()</code> para acceder a
-                            elementos y modificar su contenido, estilos o atributos.
-                        </p>
+                        <h2 class="lesson-title">Evaluación 1: Conceptos Básicos</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Cuál es la mejor forma de declarar una variable que NO cambiará?
+                            </p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">let x = 10;</div>
+                                <div class="option-btn" data-correct="false">var x = 10;</div>
+                                <div class="option-btn" data-correct="true">const x = 10;</div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Slide 4 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 2: El DOM</h2>
-                        <h3>Lección 2: Eventos</h3>
-                        <div class="video-container">
-                            <iframe
-                                src="https://www.youtube.com/embed/P44XEaO35O4?list=PLhSj3UTs2_yU0fGoS1bjpHqky4kCEmTbR"
-                                title="Eventos DOM" frameborder="0" allowfullscreen></iframe>
-                        </div>
+                        <h2 class="lesson-title">3. Tipos de Datos</h2>
+                        <p class="lesson-text">
+                            Primitivos: String, Number, Boolean, Null, Undefined, Symbol.<br>
+                            Complejos: Object, Array.
+                        </p>
                     </div>
 
                     <!-- Slide 5 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 3: Objetos y Datos</h2>
-                        <h3>Lección 1: Objetos</h3>
+                        <h2 class="lesson-title">4. Operadores</h2>
                         <p class="lesson-text">
-                            Estructuras de datos claves-valor.<br>
-                            <code>const persona = { nombre: "Juan", edad: 30 };</code><br>
-                            Accedemos con <code>persona.nombre</code>.
+                            Aritméticos (+, -, *, /).<br>
+                            Comparación (==, ===, >, <).<br>
+                                Lógicos (&&, ||, !).<br>
+                                *Tip:* Usa siempre `===` para comparaciones estrictas.
                         </p>
                     </div>
 
                     <!-- Slide 6 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Tema 3: Objetos y Datos</h2>
-                        <h3>Lección 2: JSON</h3>
+                        <h2 class="lesson-title">5. Condicionales</h2>
                         <p class="lesson-text">
-                            <strong>JSON (JavaScript Object Notation):</strong> Formato estándar de intercambio de
-                            datos.<br>
-                            - <code>JSON.stringify()</code>: Objeto a String.<br>
-                            - <code>JSON.parse()</code>: String a Objeto.
+                            `if (condición) { ... } else { ... }`.<br>
+                            Permite tomar decisiones en el código.
                         </p>
+                    </div>
+
+                    <!-- Slide 7: QUIZ 2 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación 2: Lógica</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Qué imprime: `if (5 > 10) { console.log("A") } else {
+                                console.log("B") }`?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">A</div>
+                                <div class="option-btn" data-correct="true">B</div>
+                                <div class="option-btn" data-correct="false">Nada</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 8 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">6. Bucles (Loops)</h2>
+                        <p class="lesson-text">
+                            Repiten código.<br>
+                            `for`: Cuando sabes cuántas veces repetir.<br>
+                            `while`: Cuando no sabes cuándo parar.
+                        </p>
+                    </div>
+
+                    <!-- Slide 9 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">7. Funciones Flecha</h2>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/Z4TuS0HEJP8" title="Fundamentos JS"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <p class="lesson-text">Sintaxis moderna: `const sumar = (a, b) => a + b;`</p>
+                    </div>
+
+                    <!-- Slide 10 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">8. El DOM</h2>
+                        <p class="lesson-text">
+                            Document Object Model. Es la representación de tu HTML en memoria.<br>
+                            `document.querySelector('h1')` selecciona el primer título.
+                        </p>
+                    </div>
+
+                    <!-- Slide 11 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">9. Eventos</h2>
+                        <p class="lesson-text">
+                            Cualquier cosa que sucede en la web.<br>
+                            `boton.addEventListener('click', funcion)` hace que algo pase al dar click.
+                        </p>
+                    </div>
+
+                    <!-- Slide 12: QUIZ 3 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación 3: DOM</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿Qué método usamos para escuchar eventos?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="true">addEventListener</div>
+                                <div class="option-btn" data-correct="false">listenEvent</div>
+                                <div class="option-btn" data-correct="false">onClick</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 13 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">10. Arrays y Objetos</h2>
+                        <p class="lesson-text">
+                            Arrays: Listas ordenadas `[1, 2, 3]`.<br>
+                            Objetos: Clave-valor `{ nombre: "Juan", edad: 30 }`.
+                        </p>
+                    </div>
+
+                    <!-- Slide 14 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">11. Fetch API</h2>
+                        <p class="lesson-text">
+                            Permite hacer peticiones HTTP (AJAX) modernas.<br>
+                            `fetch('https://api.com/datos').then(res => res.json())`
+                        </p>
+                    </div>
+
+                    <!-- Slide 15: Final Quiz -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación Final</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">¿JavaScript se ejecuta en el servidor o en el cliente?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="false">Solo en el Servidor (con Node.js)</div>
+                                <div class="option-btn" data-correct="false">Solo en el Cliente</div>
+                                <div class="option-btn" data-correct="true">En ambos (Navegador y Node.js)</div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
