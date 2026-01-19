@@ -31,9 +31,20 @@
                     <div class="slide active">
                         <h2 class="lesson-title">1. Historia de la Programación</h2>
                         <p class="lesson-text">
-                            Todo comenzó con Ada Lovelace en el siglo XIX, considerada la primera programadora. Desde
-                            tarjetas perforadas hasta la nube moderna, la programación ha evolucionado para resolver
-                            problemas complejos mediante instrucciones lógicas dadas a una computadora.
+                            La programación no nació con las computadoras modernas.
+                            <br><br>
+                            <strong>Hitos importantes:</strong>
+                        <ul style="text-align: left; margin: 1rem 0; padding-left: 2rem;">
+                            <li><strong>Ada Lovelace (1843):</strong> Escribió el primer algoritmo para la Máquina
+                                Analítica de Babbage.</li>
+                            <li><strong>Grace Hopper (1950s):</strong> Inventó el primer compilador y popularizó el
+                                término "bug" (insecto) cuando una polilla causó un fallo en una computadora Mark II.
+                            </li>
+                            <li><strong>La Era Moderna:</strong> Desde C y Unix en los 70s hasta la Web (HTML/HTTP)
+                                creada por Tim Berners-Lee en 1989.</li>
+                        </ul>
+                        Programar es, en esencia, dar instrucciones precisas a una máquina para resolver problemas
+                        humanos.
                         </p>
                     </div>
 
@@ -44,20 +55,31 @@
                             <iframe src="https://www.youtube.com/embed/U3CGMyjzlvM" title="Lógica de Programación"
                                 frameborder="0" allowfullscreen></iframe>
                         </div>
-                        <p class="lesson-text">Un algoritmo es simplemente una serie de pasos ordenados para realizar
-                            una tarea.</p>
+                        <p class="lesson-text">
+                            Un <strong>algoritmo</strong> es como una receta de cocina: una serie de pasos ordenados y
+                            finitos.
+                            <br><br>
+                            <em>Ejemplo: Algoritmo para lavarse los dientes</em>
+                        <ol style="text-align: left; margin: 0 auto; display: table;">
+                            <li>Tomar el cepillo y la pasta.</li>
+                            <li>Poner pasta en el cepillo.</li>
+                            <li>Cepillar cada diente por 2 minutos.</li>
+                            <li>Enjuagar.</li>
+                        </ol>
+                        Si te saltas un paso o cambias el orden (enjuagar antes de cepillar), el resultado falla. Eso es
+                        lógica.
+                        </p>
                     </div>
 
                     <!-- Slide 3: QUIZ 1 -->
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación 1: Lógica</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Qué es un algoritmo?</p>
+                            <p class="quiz-question">¿Qué característica NO pertenece a un algoritmo?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Un lenguaje de programación.</div>
-                                <div class="option-btn" data-correct="true">Una secuencia de pasos para resolver un
-                                    problema.</div>
-                                <div class="option-btn" data-correct="false">Un componente de hardware.</div>
+                                <div class="option-btn" data-correct="false">Debe tener un orden específico.</div>
+                                <div class="option-btn" data-correct="true">Debe ser infinito y nunca terminar.</div>
+                                <div class="option-btn" data-correct="false">Debe tener un resultado o fin.</div>
                             </div>
                         </div>
                     </div>
@@ -66,10 +88,25 @@
                     <div class="slide">
                         <h2 class="lesson-title">3. Tipos de Datos</h2>
                         <p class="lesson-text">
-                            Las computadoras manejan diferente información:<br>
-                            - <strong>Texto (String):</strong> "Hola mundo"<br>
-                            - <strong>Números (Int/Float):</strong> 42, 3.14<br>
-                            - <strong>Booleanos:</strong> true (verdadero) o false (falso)
+                            Así como en la vida real distingues entre letras y números, la computadora también lo hace.
+                        <ul style="text-align: left; padding-left: 1.5rem;">
+                            <li><strong>String (Texto):</strong> Una cadena de caracteres. Siempre va entre comillas.
+                                <pre
+                                    style="background: #333; color: #fff; padding: 5px; border-radius: 4px;">"Hola Mundo"</pre>
+                            </li>
+                            <li><strong>Integer (Entero):</strong> Números sin decimales.
+                                <pre
+                                    style="background: #333; color: #fff; padding: 5px; border-radius: 4px;">42, -10, 2026</pre>
+                            </li>
+                            <li><strong>Float (Flotante):</strong> Números con decimales.
+                                <pre
+                                    style="background: #333; color: #fff; padding: 5px; border-radius: 4px;">3.1416, 9.99</pre>
+                            </li>
+                            <li><strong>Boolean (Lógico):</strong> Solo tiene dos valores posibles.
+                                <pre
+                                    style="background: #333; color: #fff; padding: 5px; border-radius: 4px;">true (verdadero), false (falso)</pre>
+                            </li>
+                        </ul>
                         </p>
                     </div>
 
@@ -77,17 +114,33 @@
                     <div class="slide">
                         <h2 class="lesson-title">4. Variables y Constantes</h2>
                         <p class="lesson-text">
-                            Imagina una variable como una caja donde guardas información. Puedes cambiar lo que hay
-                            dentro. Una constante es una caja cerrada que, una vez guardas algo, no puede cambiar.
+                            <strong>La Analogía de la Caja:</strong>
+                            <br>
+                            Imagina que tienes una caja etiquetada como "Edad".
+                            <br><br>
+                            - <strong>Variable:</strong> Puedes meter el número 20 hoy, y cambiarlo por 21 el próximo
+                            año. El contenido varía.
+                            <br>
+                            - <strong>Constante:</strong> Es una caja sellada con pegamento industrial. Una vez metes el
+                            valor (ej. tu fecha de nacimiento), <em>nunca</em> puedes cambiarlo.
+                            <br><br>
+                            En código, usamos variables para guardar datos que usaremos después.
                         </p>
                     </div>
 
                     <!-- Slide 6: VS Code -->
                     <div class="slide">
-                        <h2 class="lesson-title">5. Tu entorno de trabajo</h2>
+                        <h2 class="lesson-title">5. Tu entorno de trabajo (IDE)</h2>
                         <p class="lesson-text">
-                            Para escribir código, necesitas un editor de texto. VS Code es el estándar de la industria
-                            hoy en día: rápido, gratuito y lleno de extensiones útiles.
+                            Para programar no usas Word, usas un <strong>Editor de Código</strong>.
+                            <br><br>
+                            <strong>Visual Studio Code (VS Code)</strong> es el rey actual. ¿Por qué?
+                        <ul style="text-align: left; padding-left: 2rem;">
+                            <li>Resalta la sintaxis con colores.</li>
+                            <li>Te autocompleta el código (IntelliSense).</li>
+                            <li>Tiene miles de <strong>Extensiones</strong> (como Live Server para ver tu web en tiempo
+                                real).</li>
+                        </ul>
                         </p>
                     </div>
 
@@ -95,11 +148,12 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación 2: Conceptos</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Qué tipo de dato usarías para guardar tu edad?</p>
+                            <p class="quiz-question">Si quieres guardar el valor de PI (3.1416), ¿Qué deberías usar?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">String ("Veinte")</div>
-                                <div class="option-btn" data-correct="false">Boolean (true)</div>
-                                <div class="option-btn" data-correct="true">Integer (20)</div>
+                                <div class="option-btn" data-correct="false">Una Variable (porque tiene números)</div>
+                                <div class="option-btn" data-correct="true">Una Constante (porque el valor nunca cambia)
+                                </div>
+                                <div class="option-btn" data-correct="false">Un Boolean</div>
                             </div>
                         </div>
                     </div>
@@ -108,9 +162,16 @@
                     <div class="slide">
                         <h2 class="lesson-title">6. ¿Cómo funciona Internet?</h2>
                         <p class="lesson-text">
-                            Internet es una red global de cables y servidores. Cuando visitas una web, tu computadora
-                            (cliente) pide archivos a otra computadora (servidor) que puede estar al otro lado del
-                            mundo.
+                            Internet son cables submarinos conectando computadoras.
+                            <br><br>
+                            El proceso simplificado:
+                        <ol style="text-align: left; padding-left: 2rem;">
+                            <li>Tú escribes <code>google.com</code>.</li>
+                            <li>Tu navegador pregunta a un <strong>DNS</strong> (la agenda telefónica de internet) cuál
+                                es la IP de Google.</li>
+                            <li>El DNS responde: <code>142.250.189.46</code>.</li>
+                            <li>Tu navegador va a esa dirección IP y pide la página web.</li>
+                        </ol>
                         </p>
                     </div>
 
@@ -121,15 +182,31 @@
                             <iframe src="https://www.youtube.com/embed/zx6b3kGjWdY" title="Cliente y Servidor"
                                 frameborder="0" allowfullscreen></iframe>
                         </div>
+                        <p class="lesson-text">
+                            <strong>Cliente (Tú/Front-end):</strong> Pide recursos (imágenes, webs). Es tu navegador o
+                            celular.
+                            <br>
+                            <strong>Servidor (Ellos/Back-end):</strong> Una computadora poderosa encendida 24/7 que
+                            tiene los archivos y te los envía cuando los pides.
+                        </p>
                     </div>
 
                     <!-- Slide 10: Frontend vs Backend -->
                     <div class="slide">
                         <h2 class="lesson-title">8. Frontend vs Backend</h2>
                         <p class="lesson-text">
-                            <strong>Frontend:</strong> Lo que ves (Diseño, botones). HTML, CSS, JS.<br>
-                            <strong>Backend:</strong> Lo que no ves (Base de datos, lógica del servidor). Python, Java,
-                            Node.js.
+                        <div style="display: flex; gap: 20px; text-align: left;">
+                            <div style="flex: 1; background: #f0f0f0; padding: 10px; border-radius: 8px;">
+                                <strong>Frontend (La Cara)</strong>
+                                <br>Lo que el usuario ve y toca.
+                                <br><em>Tecnologías:</em> HTML, CSS, JavaScript, React.
+                            </div>
+                            <div style="flex: 1; background: #e0e0e0; padding: 10px; border-radius: 8px;">
+                                <strong>Backend (El Cerebro)</strong>
+                                <br>Lógica, datos y seguridad.
+                                <br><em>Tecnologías:</em> Node.js, Python, SQL, Java.
+                            </div>
+                        </div>
                         </p>
                     </div>
 
@@ -137,11 +214,12 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación 3: Arquitectura Web</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Dónde se ejecuta el código HTML y CSS?</p>
+                            <p class="quiz-question">¿Dónde se guardan las contraseñas de los usuarios de forma segura?
+                            </p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="true">En el Cliente (Navegador)</div>
-                                <div class="option-btn" data-correct="false">En la Base de Datos</div>
-                                <div class="option-btn" data-correct="false">En el Servidor Backend</div>
+                                <div class="option-btn" data-correct="false">En el Frontend (HTML)</div>
+                                <div class="option-btn" data-correct="true">En la Base de Datos (Backend)</div>
+                                <div class="option-btn" data-correct="false">En el historial del navegador</div>
                             </div>
                         </div>
                     </div>
@@ -150,8 +228,11 @@
                     <div class="slide">
                         <h2 class="lesson-title">9. Sistemas Operativos</h2>
                         <p class="lesson-text">
-                            Windows, macOS y Linux. Como programador, te encontrarás mucho con **Linux** en los
-                            servidores. Es importante perderle el miedo.
+                            Aunque uses Windows o macOS en casa, <strong>Linux</strong> domina el mundo de los
+                            servidores e internet.
+                            <br><br>
+                            ¿Por qué? Porque es gratuito, de código abierto, muy seguro y eficiente. Como desarrollador,
+                            tarde o temprano tendrás que usar Linux para desplegar tus aplicaciones.
                         </p>
                     </div>
 
@@ -159,8 +240,19 @@
                     <div class="slide">
                         <h2 class="lesson-title">10. La Terminal</h2>
                         <p class="lesson-text">
-                            Esa pantalla negra con letras blancas. Es la forma más directa de hablar con la computadora.
-                            Comandos básicos: `ls` (listar), `cd` (cambiar carpeta), `mkdir` (crear carpeta).
+                            La interfaz de línea de comandos (CLI). Es más rápida que usar el mouse una vez la dominas.
+                            <br><br>
+                            <strong>Comandos Básicos:</strong>
+                        <pre
+                            style="background: #2d2d2d; color: #76e133; text-align: left; padding: 10px; border-radius: 6px; font-family: monospace;">
+# Listar archivos
+$ ls
+
+# Cambiar de carpeta
+$ cd mi-carpeta
+
+# Crear carpeta
+$ mkdir nuevo-proyecto</pre>
                         </p>
                     </div>
 
@@ -168,8 +260,14 @@
                     <div class="slide">
                         <h2 class="lesson-title">11. Repaso Final</h2>
                         <p class="lesson-text">
-                            Hemos cubierto la lógica básica, tipos de datos, cómo funciona la web y las herramientas
-                            esenciales. Estás listo para escribir tu primera línea de código en HTML.
+                            Has aprendido los pilares fundamentales:
+                        <ul style="text-align: left; padding-left: 2rem;">
+                            <li>La programación son instrucciones lógicas.</li>
+                            <li>Usamos variables para datos y editores como VS Code.</li>
+                            <li>La web es una charla entre Cliente y Servidor.</li>
+                        </ul>
+                        <br>
+                        El siguiente paso es construir la estructura de esa web con <strong>HTML</strong>.
                         </p>
                     </div>
 
@@ -177,11 +275,11 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación Final</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Cuál es el siguiente paso lógico?</p>
+                            <p class="quiz-question">¿Cuál es el rol de un desarrollador Full Stack?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Aprender a hackear la NASA</div>
-                                <div class="option-btn" data-correct="true">Aprender HTML</div>
-                                <div class="option-btn" data-correct="false">Instalar Windows 95</div>
+                                <div class="option-btn" data-correct="false">Solo diseñar la parte visual (CSS).</div>
+                                <div class="option-btn" data-correct="true">Manejar tanto Frontend como Backend.</div>
+                                <div class="option-btn" data-correct="false">Configurar servidores DNS únicamente.</div>
                             </div>
                         </div>
                     </div>
