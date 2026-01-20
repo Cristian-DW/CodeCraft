@@ -7,9 +7,14 @@
     <title>Lecciones: JavaScript | CodeCraft</title>
 
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
 </head>
 
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
     <header class="main-header">
         <nav class="navbar container">
             <a href="../Index.html" class="logo">
@@ -31,18 +36,30 @@
                     <div class="slide active">
                         <h2 class="lesson-title">1. ¿Qué es JavaScript?</h2>
                         <p class="lesson-text">
-                            Es el lenguaje que da vida a la web. Mientras HTML/CSS son estáticos, JS permite
-                            interactividad, animaciones y lógica compleja. Se ejecuta en el navegador.
+                            Si HTML es el esqueleto y CSS la piel, <strong>JavaScript (JS)</strong> son los músculos y
+                            el sistema nervioso.
+                            <br><br>
+                            Es un lenguaje de programación real (a diferencia de HTML/CSS) que permite lógica: "Si el
+                            usuario hace click aquí, muestra esto".
+                            <br><br>
+                            Se puede ejecutar en el navegador (Chrome, Firefox) o en el servidor (Node.js).
                         </p>
                     </div>
 
                     <!-- Slide 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">2. Variables Modernas</h2>
+                        <h2 class="lesson-title">2. Variables Modernas (ES6)</h2>
                         <p class="lesson-text">
-                            Olvida `var`. Usa:<br>
-                            `let`: Para valores que cambian (ej. puntuación).<br>
-                            `const`: Para valores fijos (ej. PI, configuraciones).
+                            En el JS moderno (2015+), evitamos `var`.
+                        <pre><code class="language-javascript">// let: Cajita abierta. Puedes cambiar el valor.
+let vidas = 3;
+vidas = 2; // Ok
+
+// const: Cajita sellada. NO puedes cambiar el valor.
+const PI = 3.1416;
+PI = 4; // Error!</code></pre>
+                        <strong>Regla de oro:</strong> Usa `const` por defecto. Si necesitas reasignar, usa `let`. Nunca
+                        uses `var`.
                         </p>
                     </div>
 
@@ -50,12 +67,13 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación 1: Conceptos Básicos</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Cuál es la mejor forma de declarar una variable que NO cambiará?
-                            </p>
+                            <p class="quiz-question">¿Qué pasará si intento ejecutar: `const nombre = "Juan"; nombre =
+                                "Pedro";`?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">let x = 10;</div>
-                                <div class="option-btn" data-correct="false">var x = 10;</div>
-                                <div class="option-btn" data-correct="true">const x = 10;</div>
+                                <div class="option-btn" data-correct="false">La variable cambia a "Pedro".</div>
+                                <div class="option-btn" data-correct="true">El navegador lanza un Error (Assignment to
+                                    constant variable).</div>
+                                <div class="option-btn" data-correct="false">El navegador se cierra.</div>
                             </div>
                         </div>
                     </div>
@@ -64,8 +82,14 @@
                     <div class="slide">
                         <h2 class="lesson-title">3. Tipos de Datos</h2>
                         <p class="lesson-text">
-                            Primitivos: String, Number, Boolean, Null, Undefined, Symbol.<br>
-                            Complejos: Object, Array.
+                            Datos Primitivos vs Objetos.
+                        <ul style="text-align: left; padding-left: 2rem;">
+                            <li><strong>String:</strong> `"Hola"` o `'Hola'`.</li>
+                            <li><strong>Number:</strong> `10` o `10.5` (todos son flotantes internamente).</li>
+                            <li><strong>Boolean:</strong> `true` / `false`.</li>
+                            <li><strong>Undefined:</strong> Variable creada pero sin valor.</li>
+                            <li><strong>Null:</strong> Ausencia intencional de valor.</li>
+                        </ul>
                         </p>
                     </div>
 
@@ -73,10 +97,10 @@
                     <div class="slide">
                         <h2 class="lesson-title">4. Operadores</h2>
                         <p class="lesson-text">
-                            Aritméticos (+, -, *, /).<br>
-                            Comparación (==, ===, >, <).<br>
-                                Lógicos (&&, ||, !).<br>
-                                *Tip:* Usa siempre `===` para comparaciones estrictas.
+                            ¡Cuidado con las comparaciones!
+                        <pre><code class="language-javascript">5 == "5"  // true (convierte el tipo, peligroso)
+5 === "5" // false (estricto, verifica tipo y valor)</code></pre>
+                        Usa siempre la <strong>Triple Igualdad (`===`)</strong> para evitar errores extraños.
                         </p>
                     </div>
 
@@ -84,8 +108,15 @@
                     <div class="slide">
                         <h2 class="lesson-title">5. Condicionales</h2>
                         <p class="lesson-text">
-                            `if (condición) { ... } else { ... }`.<br>
-                            Permite tomar decisiones en el código.
+                            Controlan el flujo del programa.
+                        <pre><code class="language-javascript">const edad = 18;
+
+if (edad >= 18) {
+    console.log("Puedes votar");
+} else {
+    console.log("Eres menor");
+}</code></pre>
+                        La computadora lee línea por línea, pero con `if` puede saltarse bloques enteros.
                         </p>
                     </div>
 
@@ -93,12 +124,11 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación 2: Lógica</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Qué imprime: `if (5 > 10) { console.log("A") } else {
-                                console.log("B") }`?</p>
+                            <p class="quiz-question">¿Cuál es el operador lógico para "O" (OR)?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">A</div>
-                                <div class="option-btn" data-correct="true">B</div>
-                                <div class="option-btn" data-correct="false">Nada</div>
+                                <div class="option-btn" data-correct="false">&&</div>
+                                <div class="option-btn" data-correct="true">||</div>
+                                <div class="option-btn" data-correct="false">!</div>
                             </div>
                         </div>
                     </div>
@@ -107,28 +137,46 @@
                     <div class="slide">
                         <h2 class="lesson-title">6. Bucles (Loops)</h2>
                         <p class="lesson-text">
-                            Repiten código.<br>
-                            `for`: Cuando sabes cuántas veces repetir.<br>
-                            `while`: Cuando no sabes cuándo parar.
+                            Para no repetir código manualmente.
+                        <pre><code class="language-javascript">// Repetir 5 veces
+for (let i = 0; i < 5; i++) {
+    console.log("Vuelta " + i);
+}</code></pre>
+                        Ideal para recorrer listas de datos (ej. lista de productos).
                         </p>
                     </div>
 
                     <!-- Slide 9 -->
                     <div class="slide">
-                        <h2 class="lesson-title">7. Funciones Flecha</h2>
+                        <h2 class="lesson-title">7. Funciones Flecha (Arrow Functions)</h2>
                         <div class="video-container">
                             <iframe src="https://www.youtube.com/embed/Z4TuS0HEJP8" title="Fundamentos JS"
                                 frameborder="0" allowfullscreen></iframe>
                         </div>
-                        <p class="lesson-text">Sintaxis moderna: `const sumar = (a, b) => a + b;`</p>
+                        <p class="lesson-text">
+                            Las funciones son bloques de código reutilizables.
+                        <pre><code class="language-javascript">// Antigua
+function sumar(a, b) { return a + b; }
+
+// Moderna (Arrow)
+const sumar = (a, b) => a + b;</code></pre>
+                        Más limpias y concisas.
+                        </p>
                     </div>
 
                     <!-- Slide 10 -->
                     <div class="slide">
                         <h2 class="lesson-title">8. El DOM</h2>
                         <p class="lesson-text">
-                            Document Object Model. Es la representación de tu HTML en memoria.<br>
-                            `document.querySelector('h1')` selecciona el primer título.
+                            El <strong>DOM (Document Object Model)</strong> es el puente entre JS y HTML.
+                        <pre><code class="language-javascript">// Seleccionar el título h1
+const titulo = document.querySelector('h1');
+
+// Cambiar su texto
+titulo.textContent = "¡Nuevo Título!";
+
+// Cambiar su color
+titulo.style.color = "red";</code></pre>
                         </p>
                     </div>
 
@@ -136,20 +184,26 @@
                     <div class="slide">
                         <h2 class="lesson-title">9. Eventos</h2>
                         <p class="lesson-text">
-                            Cualquier cosa que sucede en la web.<br>
-                            `boton.addEventListener('click', funcion)` hace que algo pase al dar click.
+                            Hacer que la web reaccione al usuario.
+                        <pre><code class="language-javascript">const boton = document.querySelector('.btn');
+
+boton.addEventListener('click', () => {
+    alert('¡Hiciste click!');
+});</code></pre>
+                        Eventos comunes: `click`, `submit` (formularios), `input` (escribir), `scroll`.
                         </p>
                     </div>
 
                     <!-- Slide 12: QUIZ 3 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación 3: DOM</h2>
+                        <h2 class="lesson-title">Evaluación 3: Interacción</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Qué método usamos para escuchar eventos?</p>
+                            <p class="quiz-question">Si quiero ejecutar código cuando el usuario presiona una tecla,
+                                ¿qué evento uso?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="true">addEventListener</div>
-                                <div class="option-btn" data-correct="false">listenEvent</div>
-                                <div class="option-btn" data-correct="false">onClick</div>
+                                <div class="option-btn" data-correct="false">'click'</div>
+                                <div class="option-btn" data-correct="true">'keydown' o 'keypress'</div>
+                                <div class="option-btn" data-correct="false">'hover'</div>
                             </div>
                         </div>
                     </div>
@@ -158,17 +212,26 @@
                     <div class="slide">
                         <h2 class="lesson-title">10. Arrays y Objetos</h2>
                         <p class="lesson-text">
-                            Arrays: Listas ordenadas `[1, 2, 3]`.<br>
-                            Objetos: Clave-valor `{ nombre: "Juan", edad: 30 }`.
+                            Estructuras de datos esenciales.
+                        <pre><code class="language-javascript">// Array (Lista)
+const frutas = ["Manzana", "Banana"];
+console.log(frutas[0]); // Manzana
+
+// Objeto (Diccionario)
+const usuario = { nombre: "Ana", edad: 25 };
+console.log(usuario.nombre); // Ana</code></pre>
                         </p>
                     </div>
 
                     <!-- Slide 14 -->
                     <div class="slide">
-                        <h2 class="lesson-title">11. Fetch API</h2>
+                        <h2 class="lesson-title">11. Fetch API (Async)</h2>
                         <p class="lesson-text">
-                            Permite hacer peticiones HTTP (AJAX) modernas.<br>
-                            `fetch('https://api.com/datos').then(res => res.json())`
+                            Cómo JS pide datos a servidores externos (APIs) sin recargar la página.
+                        <pre><code class="language-javascript">fetch('https://api.clima.com')
+  .then(respuesta => respuesta.json())
+  .then(datos => console.log(datos));</code></pre>
+                        Es la base de las aplicaciones modernas como Instagram o Twitter.
                         </p>
                     </div>
 
@@ -176,11 +239,12 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación Final</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿JavaScript se ejecuta en el servidor o en el cliente?</p>
+                            <p class="quiz-question">¿Qué significa que JavaScript es un lenguaje "Interpretado"?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Solo en el Servidor (con Node.js)</div>
-                                <div class="option-btn" data-correct="false">Solo en el Cliente</div>
-                                <div class="option-btn" data-correct="true">En ambos (Navegador y Node.js)</div>
+                                <div class="option-btn" data-correct="false">Que necesita ser compilado a binario antes
+                                    de correr.</div>
+                                <div class="option-btn" data-correct="true">Que el navegador lee y ejecuta el código
+                                    línea por línea al momento.</div>
                             </div>
                         </div>
                     </div>

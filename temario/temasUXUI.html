@@ -7,9 +7,14 @@
     <title>Lecciones: UX/UI | CodeCraft</title>
 
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
 </head>
 
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
     <header class="main-header">
         <nav class="navbar container">
             <a href="../Index.html" class="logo">
@@ -29,10 +34,13 @@
                 <div class="slider">
                     <!-- Slide 1 -->
                     <div class="slide active">
-                        <h2 class="lesson-title">1. UX vs UI</h2>
+                        <h2 class="lesson-title">1. UX vs UI: La diferencia</h2>
                         <p class="lesson-text">
-                            <strong>UX (User Experience):</strong> Cómo se siente usar el producto (fácil, útil).<br>
-                            <strong>UI (User Interface):</strong> Cómo se ve el producto (colores, botones).
+                            <strong>UI (User Interface):</strong> La botella de Ketchup (Vidrio, etiqueta roja, tapa
+                            plateada). Lo visual.
+                            <br><br>
+                            <strong>UX (User Experience):</strong> Que la botella esté boca abajo para que el ketchup
+                            salga fácil y no tengas que golpearla. Lo funcional y la sensación.
                         </p>
                     </div>
 
@@ -40,8 +48,14 @@
                     <div class="slide">
                         <h2 class="lesson-title">2. Design Thinking</h2>
                         <p class="lesson-text">
-                            Metodología de 5 pasos: Empatizar, Definir, Idear, Prototipar y Testear. Poner al usuario en
-                            el centro.
+                            No diseñamos por "inspiración divina". Usamos un proceso:
+                        <ol style="text-align: left; padding-left: 2rem;">
+                            <li><strong>Empatizar:</strong> Conocer al usuario.</li>
+                            <li><strong>Definir:</strong> El problema real.</li>
+                            <li><strong>Idear:</strong> Lluvia de ideas.</li>
+                            <li><strong>Prototipar:</strong> Crear maquetas.</li>
+                            <li><strong>Testear:</strong> Probar con gente real.</li>
+                        </ol>
                         </p>
                     </div>
 
@@ -49,11 +63,11 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación 1: Conceptos</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Un botón bonito que no funciona es un fallo de UX o UI?</p>
+                            <p class="quiz-question">¿Quién es la persona más importante en el diseño?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Fallo de UI (Visual)</div>
-                                <div class="option-btn" data-correct="true">Fallo de UX (Experiencia/Funcionalidad)
-                                </div>
+                                <div class="option-btn" data-correct="false">El CEO de la empresa.</div>
+                                <div class="option-btn" data-correct="true">El Usuario final.</div>
+                                <div class="option-btn" data-correct="false">El Diseñador.</div>
                             </div>
                         </div>
                     </div>
@@ -62,8 +76,13 @@
                     <div class="slide">
                         <h2 class="lesson-title">3. Teoría del Color</h2>
                         <p class="lesson-text">
-                            60-30-10. Usa un color dominante (60%), uno secundario (30%) y uno de acento (10%). Entiende
-                            el contraste y la psicología.
+                            <strong>Regla 60-30-10:</strong>
+                        <ul style="text-align: left; padding-left: 2rem;">
+                            <li><strong>60%:</strong> Color Dominante (Neutral, fondo).</li>
+                            <li><strong>30%:</strong> Color Secundario (Marca).</li>
+                            <li><strong>10%:</strong> Color Acento (Botones de acción, alertas).</li>
+                        </ul>
+                        Esto crea balance y guía el ojo a lo importante (el 10%).
                         </p>
                     </div>
 
@@ -71,100 +90,123 @@
                     <div class="slide">
                         <h2 class="lesson-title">4. Tipografía</h2>
                         <p class="lesson-text">
-                            No uses más de 2 fuentes. Usa **Sans-Serif** (sin remates) para pantallas por su legibilidad
-                            (como Inter o Roboto).
+                            El texto es la interfaz.
+                            <br>
+                            Usa fuentes <strong>Sans-Serif</strong> (como Inter, Roboto, Arial) para pantallas, ya que
+                            son limpias.
+                            <br>
+                            Jerarquía: El título H1 debe ser visiblemente más grande y pesado que el párrafo P. Si todo
+                            parece igual, el usuario no lee.
                         </p>
                     </div>
 
                     <!-- Slide 6 -->
                     <div class="slide">
-                        <h2 class="lesson-title">5. Espaciado y Grillas</h2>
+                        <h2 class="lesson-title">5. Wireframing (Planos)</h2>
                         <p class="lesson-text">
-                            El espacio en blanco es tu amigo. Da respiro al diseño. Usa grillas de 8pt o 12 columnas
-                            para alinear todo perfectamente.
+                            Antes de poner colores bonitos, dibujas el esqueleto en blanco y negro (Low-Fidelity).
+                            <br>
+                            El objetivo es decidir: "¿Dónde va el botón?" sin distraerse con "¿Qué tono de azul uso?".
                         </p>
                     </div>
 
                     <!-- Slide 7: QUIZ 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación 2: Visual</h2>
+                        <h2 class="lesson-title">Evaluación 2: Proceso</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Qué significa 'Whitespace'?</p>
+                            <p class="quiz-question">¿Por qué hacemos wireframes en blanco y negro?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="true">Espacio vacío entre elementos (no
-                                    necesariamente blanco).</div>
-                                <div class="option-btn" data-correct="false">Texto de color blanco.</div>
+                                <div class="option-btn" data-correct="false">Porque es más artístico.</div>
+                                <div class="option-btn" data-correct="true">Para enfocarnos en la estructura y
+                                    funcionalidad, no en la estética.</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 8 -->
                     <div class="slide">
-                        <h2 class="lesson-title">6. Wireframing</h2>
-                        <p class="lesson-text">
-                            Bocetos de baja fidelidad (Low-Fi). Estructura básica sin colores ni detalles. Como el plano
-                            de una casa.
-                        </p>
-                    </div>
-
-                    <!-- Slide 9 -->
-                    <div class="slide">
-                        <h2 class="lesson-title">7. Prototipado (Figma)</h2>
+                        <h2 class="lesson-title">6. Herramientas: Figma</h2>
                         <div class="video-container">
                             <iframe src="https://www.youtube.com/embed/Cx2dkpBxst8" title="Figma Intro" frameborder="0"
                                 allowfullscreen></iframe>
                         </div>
                         <p class="lesson-text">
-                            Crear versiones interactivas de tu diseño. Figma es la herramienta líder del mercado.
+                            El estándar de la industria. Es como Google Docs pero para diseño: colaborativo, en la nube
+                            y gratis para empezar.
+                        </p>
+                    </div>
+
+                    <!-- Slide 9 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">7. Accesibilidad (a11y)</h2>
+                        <p class="lesson-text">
+                            Tu diseño debe funcionar para todos.
+                        <ul style="text-align: left; padding-left: 2rem;">
+                            <li><strong>Contraste:</strong> Texto gris claro sobre fondo blanco es ilegible.</li>
+                            <li><strong>Daltonismo:</strong> No uses solo color para indicar error (usa íconos también).
+                            </li>
+                            <li><strong>Lectores:</strong> Usa etiquetas correctas para ciegos.</li>
+                        </ul>
                         </p>
                     </div>
 
                     <!-- Slide 10 -->
                     <div class="slide">
-                        <h2 class="lesson-title">8. Pruebas con Usuarios</h2>
+                        <h2 class="lesson-title">8. Mobile First</h2>
                         <p class="lesson-text">
-                            Observar a gente real usando tu app. Descubrirás que lo que para ti es obvio, para ellos no
-                            lo es.
+                            La mayoría de la gente visita webs desde el celular.
+                            <br>
+                            Diseña primero para la pantalla pequeña. Te obliga a quitar lo innecesario y quedarte con lo
+                            esencial. Luego expande al escritorio.
                         </p>
                     </div>
 
                     <!-- Slide 11: QUIZ 3 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación 3: Herramientas</h2>
+                        <h2 class="lesson-title">Evaluación 3: Dispositivos</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Cuál es la herramienta estándar hoy en día para UI?</p>
+                            <p class="quiz-question">¿Qué es el diseño Responsivo?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="true">Figma</div>
-                                <div class="option-btn" data-correct="false">Paint</div>
-                                <div class="option-btn" data-correct="false">Photoshop (para UI web)</div>
+                                <div class="option-btn" data-correct="true">Un diseño que se adapta y reacomoda a
+                                    cualquier tamaño de pantalla.</div>
+                                <div class="option-btn" data-correct="false">Una app que responde rápido a los clicks.
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 12 -->
                     <div class="slide">
-                        <h2 class="lesson-title">9. Accesibilidad (a11y)</h2>
+                        <h2 class="lesson-title">9. Sistemas de Diseño</h2>
                         <p class="lesson-text">
-                            Diseñar para todos, incluyendo personas con discapacidad visual o motora. Usa buen contraste
-                            y etiquetas alt.
+                            Para evitar el caos en equipos grandes.
+                            <br>
+                            Es una librería de componentes "legales": "Este es EL botón primario oficial". "Este es el
+                            tono exacto de azul".
+                            <br>
+                            Asegura consistencia: que la página de Home se vea igual que la de Perfil.
                         </p>
                     </div>
 
                     <!-- Slide 13 -->
                     <div class="slide">
-                        <h2 class="lesson-title">10. Mobile First</h2>
+                        <h2 class="lesson-title">10. Espacio Negativo</h2>
                         <p class="lesson-text">
-                            Diseña primero para la pantalla pequeña del celular, luego escala a escritorio. Obliga a
-                            priorizar contenido.
+                            El espacio vacío NO es espacio desperdiciado. Es espacio activo.
+                            <br>
+                            Ayuda a separar grupos de información y da elegancia. No tengas miedo de dejar espacios en
+                            blanco.
                         </p>
                     </div>
 
                     <!-- Slide 14 -->
                     <div class="slide">
-                        <h2 class="lesson-title">11. Sistemas de Diseño</h2>
+                        <h2 class="lesson-title">11. Testeo con Usuarios</h2>
                         <p class="lesson-text">
-                            Una biblioteca de componentes (botones, inputs, colores) reutilizables para mantener
-                            consistencia en todo el producto.
+                            No eres tu usuario.
+                            <br>
+                            Pon tu diseño frente a alguien que no conoce el proyecto y pídele: "Regístrate". Mira dónde
+                            se traba. Ese es el oro puro para mejorar.
                         </p>
                     </div>
 
@@ -172,11 +214,12 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación Final</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿El diseñador debe saber programar?</p>
+                            <p class="quiz-question">¿Cuál es el objetivo final del UX/UI?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Sí, al nivel de un ingeniero.</div>
-                                <div class="option-btn" data-correct="true">No obligatoriamente, pero entender HTML/CSS
-                                    ayuda muchísimo.</div>
+                                <div class="option-btn" data-correct="false">Hacer que la web se vea bonita para ganar
+                                    premios.</div>
+                                <div class="option-btn" data-correct="true">Resolver problemas del usuario de forma
+                                    eficiente y agradable.</div>
                             </div>
                         </div>
                     </div>

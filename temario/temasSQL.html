@@ -7,9 +7,14 @@
     <title>Lecciones: SQL | CodeCraft</title>
 
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
 </head>
 
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
     <header class="main-header">
         <nav class="navbar container">
             <a href="../Index.html" class="logo">
@@ -31,8 +36,13 @@
                     <div class="slide active">
                         <h2 class="lesson-title">1. ¿Qué es una Base de Datos?</h2>
                         <p class="lesson-text">
-                            Es una colección organizada de información. Las bases de datos relacionales (como MySQL,
-                            PostgreSQL) guardan datos en tablas filas y columnas.
+                            Imagina una hoja de cálculo de Excel gigante y superpoderosa.
+                            <br><br>
+                            Una Base de Datos Relacional (RDBMS) guarda información en <strong>Tablas</strong> que
+                            tienen filas (registros) y columnas (campos).
+                            <br><br>
+                            Ejemplos populares: <strong>PostgreSQL</strong> (la más avanzada), <strong>MySQL</strong>
+                            (la más popular), <strong>SQLite</strong> (ligera).
                         </p>
                     </div>
 
@@ -40,9 +50,12 @@
                     <div class="slide">
                         <h2 class="lesson-title">2. Sintaxis Básica</h2>
                         <p class="lesson-text">
-                            SQL (Structured Query Language) es el idioma estándar. Se escribe en mayúsculas por
-                            convención, aunque no es obligatorio.<br>
-                            `SELECT * FROM usuarios;`
+                            <strong>SQL (Structured Query Language)</strong> es el inglés de los datos.
+                            <br>
+                            Se acostumbra escribir los comandos en MAYÚSCULAS para distinguirlos de los nombres de tus
+                            tablas.
+                        <pre><code class="language-sql">SELECT columna FROM tabla;</code></pre>
+                        El punto y coma `;` final es obligatorio en la mayoría de sistemas.
                         </p>
                     </div>
 
@@ -50,11 +63,12 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación 1: Conceptos</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿SQL sirve para programar videojuegos?</p>
+                            <p class="quiz-question">¿Qué es una "Query" o "Consulta"?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Sí, es su función principal.</div>
-                                <div class="option-btn" data-correct="true">No, es para gestionar bases de datos.</div>
-                                <div class="option-btn" data-correct="false">Es un sistema operativo.</div>
+                                <div class="option-btn" data-correct="true">Una petición de información a la base de
+                                    datos.</div>
+                                <div class="option-btn" data-correct="false">Un error del sistema.</div>
+                                <div class="option-btn" data-correct="false">Un tipo de dato.</div>
                             </div>
                         </div>
                     </div>
@@ -63,9 +77,14 @@
                     <div class="slide">
                         <h2 class="lesson-title">3. SELECT & FROM</h2>
                         <p class="lesson-text">
-                            El "Hola Mundo" de SQL.<br>
-                            `SELECT nombre, edad FROM usuarios;`<br>
-                            Trae solo las columnas 'nombre' y 'edad' de la tabla 'usuarios'.
+                            Para ver datos.
+                        <pre><code class="language-sql">-- Trae TODO (*) de la tabla usuarios
+SELECT * FROM usuarios;
+
+-- Trae solo nombres y correos
+SELECT nombre, email FROM usuarios;</code></pre>
+                        <strong>Tip:</strong> Evita usar `SELECT *` en aplicaciones reales si la tabla es gigante; trae
+                        solo lo que necesites.
                         </p>
                     </div>
 
@@ -73,56 +92,69 @@
                     <div class="slide">
                         <h2 class="lesson-title">4. La Cláusula WHERE</h2>
                         <p class="lesson-text">
-                            Filtra los resultados.<br>
-                            `SELECT * FROM productos WHERE precio > 100;`
-                        </p>
+                            Para filtrar. Sin ella, traerías millones de registros.
+                        <pre><code class="language-sql">SELECT * FROM usuarios
+WHERE pais = 'Mexico' AND edad > 18;</code></pre>
+                        Operadores: `=`, `>`, `<`, `<>` (diferente), `LIKE` (para buscar texto similar).
+                            </p>
                     </div>
 
                     <!-- Slide 6 -->
                     <div class="slide">
-                        <h2 class="lesson-title">5. INSERT, UPDATE, DELETE</h2>
+                        <h2 class="lesson-title">5. INSERT, UPDATE, DELETE (CRUD)</h2>
                         <p class="lesson-text">
-                            Manipular datos (CRUD):<br>
-                            `INSERT INTO ... VALUES ...`<br>
-                            `UPDATE ... SET ...`<br>
-                            `DELETE FROM ...`
+                            Modificar datos es delicado.
+                        <pre><code class="language-sql">-- Insertar
+INSERT INTO usuarios (nombre, edad) VALUES ('Ana', 25);
+
+-- Actualizar (¡Cuidado con el WHERE!)
+UPDATE usuarios SET edad = 26 WHERE nombre = 'Ana';
+
+-- Borrar (¡PELIGRO!)
+DELETE FROM usuarios WHERE id = 5;</code></pre>
                         </p>
                     </div>
 
                     <!-- Slide 7: QUIZ 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación 2: Peligro</h2>
+                        <h2 class="lesson-title">Evaluación 2: Seguridad</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Qué pasa si ejecutas un DELETE sin WHERE?</p>
+                            <p class="quiz-question">¿Qué sucede si ejecutas <code>DELETE FROM usuarios;</code> sin un
+                                WHERE?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="true">Borras TODOS los registros de la tabla.
-                                </div>
-                                <div class="option-btn" data-correct="false">Te da un error de sintaxis.</div>
-                                <div class="option-btn" data-correct="false">Solo borra el último.</div>
+                                <div class="option-btn" data-correct="true">Borras TODA la tabla (Pánico).</div>
+                                <div class="option-btn" data-correct="false">Solo borra el primer usuario.</div>
+                                <div class="option-btn" data-correct="false">SQL te pide contraseña por defecto.</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 8 -->
                     <div class="slide">
-                        <h2 class="lesson-title">6. JOINS</h2>
+                        <h2 class="lesson-title">6. JOINS (Las uniones)</h2>
                         <div class="video-container">
                             <iframe src="https://www.youtube.com/embed/9yeOJ0ZHU60" title="SQL Joins" frameborder="0"
                                 allowfullscreen></iframe>
                         </div>
                         <p class="lesson-text">
-                            Combina filas de dos o más tablas.<br>
-                            `INNER JOIN`: Solo coincidencias.<br>
-                            `LEFT JOIN`: Todo lo de la izquierda.
+                            El poder real de SQL: Cruzar datos de tablas diferentes.
+                        <pre><code class="language-sql">SELECT ordenes.id, usuarios.nombre
+FROM ordenes
+INNER JOIN usuarios ON ordenes.usuario_id = usuarios.id;</code></pre>
+                        Conecta las órdenes con los nombres de quienes las compraron.
                         </p>
                     </div>
 
                     <!-- Slide 9 -->
                     <div class="slide">
-                        <h2 class="lesson-title">7. GROUP BY & ORDER BY</h2>
+                        <h2 class="lesson-title">7. Agrupaciones (GROUP BY)</h2>
                         <p class="lesson-text">
-                            `GROUP BY`: Agrupa filas idénticas (para sumas, promedios).<br>
-                            `ORDER BY`: Ordena ascendente (ASC) o descendente (DESC).
+                            Para reportes y estadísticas.
+                        <pre><code class="language-sql">-- Contar usuarios por país
+SELECT pais, COUNT(*)
+FROM usuarios
+GROUP BY pais;</code></pre>
+                        Funciones de agregación: `COUNT`, `SUM`, `AVG` (promedio), `MAX`, `MIN`.
                         </p>
                     </div>
 
@@ -130,19 +162,23 @@
                     <div class="slide">
                         <h2 class="lesson-title">8. Llaves (Keys)</h2>
                         <p class="lesson-text">
-                            **Primary Key**: Identificador único de cada fila (ID).<br>
-                            **Foreign Key**: Columna que apunta a la Primary Key de otra tabla.
+                        <ul style="text-align: left; padding-left: 2rem;">
+                            <li><strong>Primary Key (PK):</strong> ID único (ej. Cédula, ID). No se repite nunca.</li>
+                            <li><strong>Foreign Key (FK):</strong> Referencia a una PK de otra tabla. Crea la relación.
+                            </li>
+                        </ul>
                         </p>
                     </div>
 
                     <!-- Slide 11: QUIZ 3 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación 3: Relaciones</h2>
+                        <h2 class="lesson-title">Evaluación 3: Diseño</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Una Foreign Key puede repetirse?</p>
+                            <p class="quiz-question">¿Una tabla puede tener dos Primary Key?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="true">Sí, (Relación 1 a Muchos).</div>
-                                <div class="option-btn" data-correct="false">No, nunca.</div>
+                                <div class="option-btn" data-correct="false">Sí, cuantas quieras.</div>
+                                <div class="option-btn" data-correct="true">No, solo una (aunque puede ser compuesta).
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -151,7 +187,10 @@
                     <div class="slide">
                         <h2 class="lesson-title">9. Normalización</h2>
                         <p class="lesson-text">
-                            Proceso de organizar datos para reducir redundancia. 1NF, 2NF, 3NF. Busca evitar duplicados.
+                            Es ordenar tu casa.
+                            <br>
+                            Reglas para evitar datos duplicados. Si guardas la dirección del usuario 50 veces en 50
+                            órdenes, está mal. Mejor guarda la dirección UNA vez en la tabla usuarios y relaciónala.
                         </p>
                     </div>
 
@@ -159,8 +198,12 @@
                     <div class="slide">
                         <h2 class="lesson-title">10. Índices</h2>
                         <p class="lesson-text">
-                            Estructuras de datos especiales para acelerar las consultas. Como el índice de un libro.
-                            Hacen los SELECT rápidos, pero los INSERT lentos.
+                            Hacen que las búsquedas sean instantáneas.
+                            <br>
+                            Sin índice, la DB lee fila por fila (Full Table Scan). Con índice, va directo al grano.
+                            <br>
+                            Coste: Ocupan espacio y hacen que guardar datos nuevos sea un poco más lento (porque hay que
+                            actualizar el índice).
                         </p>
                     </div>
 
@@ -168,8 +211,10 @@
                     <div class="slide">
                         <h2 class="lesson-title">11. NoSQL vs SQL</h2>
                         <p class="lesson-text">
-                            NoSQL (MongoDB, Firebase) no usa tablas, sino documentos JSON. Es más flexible pero menos
-                            estricto con las relaciones.
+                            <strong>SQL (Estructurado):</strong> Bancos, contabilidad, datos críticos y relacionados.
+                            <br>
+                            <strong>NoSQL (Flexible):</strong> Redes sociales, Big Data, prototipos rápidos. No usa
+                            tablas fijas.
                         </p>
                     </div>
 
@@ -177,11 +222,13 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación Final</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Cuál es el comando para obtener datos?</p>
+                            <p class="quiz-question">¿Qué significa ACID en bases de datos?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">GET</div>
-                                <div class="option-btn" data-correct="false">FETCH</div>
-                                <div class="option-btn" data-correct="true">SELECT</div>
+                                <div class="option-btn" data-correct="true">Atomicidad, Consistencia, Aislamiento,
+                                    Durabilidad. (Fiabilidad).</div>
+                                <div class="option-btn" data-correct="false">Ácido Corrosivo.</div>
+                                <div class="option-btn" data-correct="false">Algoritmo Central de Información de Datos.
+                                </div>
                             </div>
                         </div>
                     </div>

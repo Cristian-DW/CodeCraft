@@ -7,9 +7,14 @@
     <title>Lecciones: Git | CodeCraft</title>
 
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
 </head>
 
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
     <header class="main-header">
         <nav class="navbar container">
             <a href="../Index.html" class="logo">
@@ -29,20 +34,24 @@
                 <div class="slider">
                     <!-- Slide 1 -->
                     <div class="slide active">
-                        <h2 class="lesson-title">1. ¿Qué es Control de Versiones?</h2>
+                        <h2 class="lesson-title">1. ¿Qué es Git?</h2>
                         <p class="lesson-text">
-                            Es un sistema que registra los cambios en un archivo o conjunto de archivos a lo largo del
-                            tiempo. Te permite volver a versiones anteriores (como un "Ctrl+Z" gigante).
+                            Git es una <strong>Máquina del Tiempo</strong> para tu código.
+                            <br><br>
+                            Permite guardar "fotos" (commits) de tu proyecto en diferentes momentos. Si rompes algo,
+                            puedes volver al pasado en segundos. Es esencial para trabajar en equipo sin sobreescribir
+                            el trabajo de otros.
                         </p>
                     </div>
 
                     <!-- Slide 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">2. Instalación</h2>
+                        <h2 class="lesson-title">2. Configuración Inicial</h2>
                         <p class="lesson-text">
-                            Git es software libre. En Mac suele venir instalado. En Windows se descarga Git Bash.
-                            Configura tu identidad:<br>
-                            `git config --global user.name "Tu Nombre"`
+                            Antes de empezar, dile a Git quién eres (esto queda en el historial).
+                        <pre><code class="language-bash">$ git config --global user.name "Tu Nombre"
+$ git config --global user.email "tu@email.com"</code></pre>
+                        Esto se hace una sola vez en tu computadora.
                         </p>
                     </div>
 
@@ -50,11 +59,12 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación 1: Conceptos</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Git y GitHub son lo mismo?</p>
+                            <p class="quiz-question">¿Dónde se guarda el historial de tu proyecto?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Sí, son sinónimos.</div>
-                                <div class="option-btn" data-correct="true">No. Git es el software, GitHub es la
-                                    plataforma web.</div>
+                                <div class="option-btn" data-correct="false">En la nube de Google.</div>
+                                <div class="option-btn" data-correct="true">En la carpeta oculta .git de tu proyecto.
+                                </div>
+                                <div class="option-btn" data-correct="false">En la RAM de tu PC.</div>
                             </div>
                         </div>
                     </div>
@@ -63,28 +73,44 @@
                     <div class="slide">
                         <h2 class="lesson-title">3. Init & Clone</h2>
                         <p class="lesson-text">
-                            `git init`: Crea un repositorio nuevo en tu carpeta.<br>
-                            `git clone [url]`: Descarga un repositorio existente desde internet.
+                            Dos formas de empezar:
+                            <br><br>
+                            1. <strong>Desde cero:</strong>
+                        <pre><code class="language-bash">cd mi-proyecto
+git init</code></pre>
+                        2. <strong>Descargar existente:</strong>
+                        <pre><code class="language-bash">git clone https://github.com/usuario/proyecto.git</code></pre>
                         </p>
                     </div>
 
                     <!-- Slide 5 -->
                     <div class="slide">
-                        <h2 class="lesson-title">4. Add & Commit</h2>
+                        <h2 class="lesson-title">4. El Flujo de Git (Workflow)</h2>
                         <p class="lesson-text">
-                            El ciclo de vida:<br>
-                            1. Haces cambios.<br>
-                            2. `git add .` (Mueve a Staging Area).<br>
-                            3. `git commit -m "mensaje"` (Guarda la foto).
+                            Imagina que vas de compras (Shopping Cart Analogy):
+                        <ol style="text-align: left; padding-left: 2rem;">
+                            <li><strong>Working Directory:</strong> Estás en el pasillo eligiendo productos (Editando
+                                archivos).</li>
+                            <li><strong>Staging Area (git add):</strong> Pones los productos en el carrito. Estás listo
+                                para pagar.</li>
+                            <li><strong>Repository (git commit):</strong> Pagas y te dan el recibo. La compra (cambio)
+                                es oficial.</li>
+                        </ol>
                         </p>
                     </div>
 
                     <!-- Slide 6 -->
                     <div class="slide">
-                        <h2 class="lesson-title">5. Status & Log</h2>
+                        <h2 class="lesson-title">5. Comandos Básicos</h2>
                         <p class="lesson-text">
-                            `git status`: ¿Qué ha cambiado? ¿Qué está en verde/rojo?<br>
-                            `git log`: Historial de todos los commits hechos.
+                        <pre><code class="language-bash"># Ver qué archivos cambiaste
+git status
+
+# Agregar todo al carrito
+git add .
+
+# Guardar la foto con mensaje
+git commit -m "Agregué el navbar"</code></pre>
                         </p>
                     </div>
 
@@ -92,12 +118,12 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación 2: Comandos</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Qué comando guarda los cambios permanentemente en el historial?
-                            </p>
+                            <p class="quiz-question">¿Qué hace `git add .`?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">git save</div>
-                                <div class="option-btn" data-correct="false">git add</div>
-                                <div class="option-btn" data-correct="true">git commit</div>
+                                <div class="option-btn" data-correct="false">Guarda los cambios permanentemente.</div>
+                                <div class="option-btn" data-correct="true">Prepara todos los archivos modificados para
+                                    el próximo commit.</div>
+                                <div class="option-btn" data-correct="false">Sube el código a internet.</div>
                             </div>
                         </div>
                     </div>
@@ -110,16 +136,23 @@
                                 allowfullscreen></iframe>
                         </div>
                         <p class="lesson-text">
-                            Universos paralelos. `git branch nueva-feature` crea una copia donde puedes romper cosas sin
-                            afectar la rama principal (main).
+                            El <strong>Multiverso</strong> de tu código.
+                            <br>
+                            `git branch experimento` crea una copia paralela. Puedes borrar todo en la rama
+                            "experimento" y tu rama "main" seguirá intacta y segura.
                         </p>
                     </div>
 
                     <!-- Slide 9 -->
                     <div class="slide">
-                        <h2 class="lesson-title">7. Fusiones (Merge)</h2>
+                        <h2 class="lesson-title">7. Merge (Fusión)</h2>
                         <p class="lesson-text">
-                            Unir una rama con otra. `git merge nueva-feature` trae los cambios de vuelta a main.
+                            Cuando tu experimento fue un éxito, lo integras.
+                        <pre><code class="language-bash"># Voy a la rama principal
+git checkout main
+
+# Traigo los cambios de experimento
+git merge experimento</code></pre>
                         </p>
                     </div>
 
@@ -127,8 +160,10 @@
                     <div class="slide">
                         <h2 class="lesson-title">8. Conflictos</h2>
                         <p class="lesson-text">
-                            Ocurren cuando dos personas editan la misma línea. Git te pide que elijas qué código
-                            quedarte. Se resuelven manualmente.
+                            Pasan cuando dos personas tocan la misma línea del mismo archivo.
+                            <br>
+                            Git no sabe cuál elegir, así que te dice: <em>"¡Ayuda! Resuélvelo tú"</em>. Tienes que
+                            editar el archivo, decidir el código final, y hacer commit de nuevo.
                         </p>
                     </div>
 
@@ -136,30 +171,37 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación 3: Ramas</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Cuál es la rama principal por defecto?</p>
+                            <p class="quiz-question">¿Es buena práctica trabajar todo directamente en la rama 'main'?
+                            </p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="true">main (antes master)</div>
-                                <div class="option-btn" data-correct="false">trunk</div>
-                                <div class="option-btn" data-correct="false">index</div>
+                                <div class="option-btn" data-correct="true">No, es arriesgado. Deberías usar ramas
+                                    (features) para cada tarea.</div>
+                                <div class="option-btn" data-correct="false">Sí, es más rápido.</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 12 -->
                     <div class="slide">
-                        <h2 class="lesson-title">9. GitHub / GitLab</h2>
+                        <h2 class="lesson-title">9. Git vs GitHub</h2>
                         <p class="lesson-text">
-                            Servicios en la nube para alojar tus repositorios Git. Permiten colaboración, backups y
-                            CI/CD.
+                            <strong>Git:</strong> Lo usas en tu terminal (Local).
+                            <br>
+                            <strong>GitHub/GitLab:</strong> La red social del código (Remoto). Guardan copia de tus
+                            repositorios para trabajar en equipo.
                         </p>
                     </div>
 
                     <!-- Slide 13 -->
                     <div class="slide">
-                        <h2 class="lesson-title">10. Pull Requests</h2>
+                        <h2 class="lesson-title">10. Pull Requests (PR)</h2>
                         <p class="lesson-text">
-                            La forma profesional de hacer merge. Pides permiso para unir tus cambios. Tus compañeros
-                            revisan el código antes de aceptar.
+                            En equipos, no haces merge directo a Main.
+                            <br>
+                            Abres una <strong>Pull Request</strong>: <em>"Hola equipo, cambié el botón. ¿Pueden revisar
+                                mi código?"</em>.
+                            <br>
+                            Si aprueban, se fusiona. Si encuentran errores, los corriges antes.
                         </p>
                     </div>
 
@@ -167,8 +209,10 @@
                     <div class="slide">
                         <h2 class="lesson-title">11. .gitignore</h2>
                         <p class="lesson-text">
-                            Un archivo de texto donde listas carpetas y archivos que Git debe ignorar (ej. node_modules,
-                            contraseñas).
+                            El club VIP de archivos ignorados.
+                            <br>
+                            Aquí pones `node_modules`, archivos de configuración con contraseñas (`.env`), etc. Git
+                            fingirá que no existen.
                         </p>
                     </div>
 
@@ -176,11 +220,11 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación Final</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Qué comando descarga cambios remotos a tu local?</p>
+                            <p class="quiz-question">¿Qué comando envías tus commits locales a GitHub?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="true">git pull</div>
-                                <div class="option-btn" data-correct="false">git push</div>
-                                <div class="option-btn" data-correct="false">git download</div>
+                                <div class="option-btn" data-correct="false">git upload</div>
+                                <div class="option-btn" data-correct="true">git push</div>
+                                <div class="option-btn" data-correct="false">git send</div>
                             </div>
                         </div>
                     </div>

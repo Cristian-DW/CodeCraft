@@ -7,9 +7,14 @@
     <title>Lecciones: CSS | CodeCraft</title>
 
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
 </head>
 
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
     <header class="main-header">
         <nav class="navbar container">
             <a href="../Index.html" class="logo">
@@ -31,8 +36,20 @@
                     <div class="slide active">
                         <h2 class="lesson-title">1. ¿Qué es CSS?</h2>
                         <p class="lesson-text">
-                            CSS (Cascading Style Sheets) controla cómo se ven los elementos HTML. Mientras HTML es el
-                            esqueleto, CSS es la piel y la ropa. Sintaxis: `selector { propiedad: valor; }`.
+                            <strong>CSS (Cascading Style Sheets)</strong> es el lenguaje de diseño.
+                            <br><br>
+                            Si HTML es el esqueleto, CSS es la piel, la ropa y el maquillaje.
+                        <pre><code class="language-css">selector {
+    propiedad: valor;
+}
+
+/* Ejemplo */
+p {
+    color: blue;
+    font-size: 16px;
+}</code></pre>
+                        La palabra "Cascada" significa que el orden importa: si escribes dos reglas iguales, la última
+                        gana.
                         </p>
                     </div>
 
@@ -40,11 +57,13 @@
                     <div class="slide">
                         <h2 class="lesson-title">2. Colores</h2>
                         <p class="lesson-text">
-                            Hay varias formas de definir colores:<br>
-                            - Nombre: `red`<br>
-                            - Hexadecimal: `#FF0000`<br>
-                            - RGB: `rgb(255, 0, 0)`<br>
-                            - HSL: `hsl(0, 100%, 50%)`
+                            En el diseño digital, los colores son matemáticas:
+                        <ul style="text-align: left; padding-left: 2rem;">
+                            <li><strong>Hexadecimal:</strong> `#FF5733` (Rojo, Verde, Azul en hex).</li>
+                            <li><strong>RGB:</strong> `rgb(255, 87, 51)` (Rojo, Verde, Azul en decimal).</li>
+                            <li><strong>HSL:</strong> `hsl(0, 100%, 50%)` (Hue, Saturation, Lightness). Es el más humano
+                                e intuitivo al diseñar.</li>
+                        </ul>
                         </p>
                     </div>
 
@@ -52,11 +71,11 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación 1: Sintaxis</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Cuál es la sintaxis correcta para cambiar el color del texto?</p>
+                            <p class="quiz-question">¿Qué color resultaría de `rgb(0, 0, 0)`?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">p { text-color: red; }</div>
-                                <div class="option-btn" data-correct="true">p { color: red; }</div>
-                                <div class="option-btn" data-correct="false">p { font-color: red; }</div>
+                                <div class="option-btn" data-correct="false">Blanco</div>
+                                <div class="option-btn" data-correct="true">Negro (Ausencia de luz)</div>
+                                <div class="option-btn" data-correct="false">Rojo</div>
                             </div>
                         </div>
                     </div>
@@ -65,8 +84,15 @@
                     <div class="slide">
                         <h2 class="lesson-title">3. Tipografía</h2>
                         <p class="lesson-text">
-                            Controla las fuentes. `font-family` cambia la letra (Arial, Roboto). `font-size` el tamaño
-                            (px, rem). `font-weight` el grosor (bold, 400).
+                            El texto es el 90% de la web.
+                        <pre><code class="language-css">body {
+    font-family: 'Inter', sans-serif; /* Tipo de letra */
+    font-size: 16px; /* Tamaño base */
+    font-weight: 700; /* Grosor (Bold) */
+    line-height: 1.5; /* Altura de línea (legibilidad) */
+}</code></pre>
+                        Usa fuentes <strong>Sans-Serif</strong> (sin remates) para pantallas, ya que son más fáciles de
+                        leer que las Serif (tipo periódico).
                         </p>
                     </div>
 
@@ -77,17 +103,25 @@
                             <iframe src="https://www.youtube.com/embed/rYO5OpkdMnE" title="Modelo de Caja"
                                 frameborder="0" allowfullscreen></iframe>
                         </div>
-                        <p class="lesson-text">Todo en CSS es una caja rectangular.</p>
+                        <p class="lesson-text">
+                            Todo elemento HTML es una caja rectangular compuesta por capas (de adentro hacia afuera):
+                        <ol style="text-align: left; display: inline-block;">
+                            <li><strong>Content:</strong> El texto o imagen.</li>
+                            <li><strong>Padding:</strong> Relleno interno (aire entre contenido y borde).</li>
+                            <li><strong>Border:</strong> El borde visible.</li>
+                            <li><strong>Margin:</strong> Espacio externo (separa la caja de otras cajas).</li>
+                        </ol>
+                        </p>
                     </div>
 
                     <!-- Slide 6: QUIZ 2 -->
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación 2: Cajas</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Qué propiedad controla el espacio INTERNO de la caja?</p>
+                            <p class="quiz-question">Si quieres alejar un botón de otro botón vecino, usas:</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Margin</div>
-                                <div class="option-btn" data-correct="true">Padding</div>
+                                <div class="option-btn" data-correct="true">Margin</div>
+                                <div class="option-btn" data-correct="false">Padding</div>
                                 <div class="option-btn" data-correct="false">Border</div>
                             </div>
                         </div>
@@ -97,10 +131,14 @@
                     <div class="slide">
                         <h2 class="lesson-title">5. Display Property</h2>
                         <p class="lesson-text">
-                            Determina cómo se comporta la caja.<br>
-                            `block`: Ocupa todo el ancho (ej. div, p).<br>
-                            `inline`: Solo ocupa su contenido (ej. span, a).<br>
-                            `none`: Desaparece.
+                            Define cómo se comporta la caja en el flujo:
+                        <ul style="text-align: left; padding-left: 2rem;">
+                            <li><code>block</code>: Ocupa todo el ancho disponible y fuerza un salto de línea (ej.
+                                `&lt;div&gt;`, `&lt;p&gt;`).</li>
+                            <li><code>inline</code>: Solo ocupa lo necesario y permite elementos a los lados (ej.
+                                `&lt;span&gt;`, `&lt;a&gt;`). No acepta width/height.</li>
+                            <li><code>inline-block</code>: Híbrido. Permite lados y acepta dimensiones.</li>
+                        </ul>
                         </p>
                     </div>
 
@@ -108,8 +146,13 @@
                     <div class="slide">
                         <h2 class="lesson-title">6. Flexbox Básico</h2>
                         <p class="lesson-text">
-                            Flexbox es un sistema unidimensional para distribuir espacio. `display: flex` en el padre
-                            alinea los hijos en una fila por defecto.
+                            La herramienta definitiva para alinear cosas en <strong>una dimensión</strong> (fila o
+                            columna).
+                        <pre><code class="language-css">.padre {
+    display: flex; /* Activa poderes mágicos */
+    flex-direction: row; /* Fila (por defecto) */
+}</code></pre>
+                        Automáticamente, los hijos se ponen uno al lado del otro.
                         </p>
                     </div>
 
@@ -117,9 +160,14 @@
                     <div class="slide">
                         <h2 class="lesson-title">7. Alineación con Flexbox</h2>
                         <p class="lesson-text">
-                            `justify-content`: Alinea en el eje principal (horizontal).<br>
-                            `align-items`: Alinea en el eje cruzado (vertical).<br>
-                            Es la forma moderna de centrar cosas.
+                            Cómo centrar un div en 2026:
+                        <pre><code class="language-css">.padre {
+    display: flex;
+    justify-content: center; /* Eje Principal (Horizontal) */
+    align-items: center;     /* Eje Cruzado (Vertical) */
+    height: 100vh;
+}</code></pre>
+                        ¡Ya no necesitas trucos raros con márgenes negativos!
                         </p>
                     </div>
 
@@ -127,13 +175,11 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación 3: Layouts</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">Para centrar algo perfectamente en el medio con Flexbox usamos:</p>
+                            <p class="quiz-question">¿Cuál es el valor por defecto de 'flex-direction'?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="true">justify-content: center; align-items:
-                                    center;</div>
-                                <div class="option-btn" data-correct="false">text-align: center; vertical-align: middle;
-                                </div>
-                                <div class="option-btn" data-correct="false">margin: auto;</div>
+                                <div class="option-btn" data-correct="true">row (fila)</div>
+                                <div class="option-btn" data-correct="false">column (columna)</div>
+                                <div class="option-btn" data-correct="false">block</div>
                             </div>
                         </div>
                     </div>
@@ -142,8 +188,13 @@
                     <div class="slide">
                         <h2 class="lesson-title">8. CSS Grid</h2>
                         <p class="lesson-text">
-                            Grid es bidimensional (filas y columnas). Es más potente que Flexbox para layouts generales
-                            de página. `display: grid; grid-template-columns: 1fr 1fr;`.
+                            Para layouts <strong>bidimensionales</strong> (filas Y columnas a la vez).
+                        <pre><code class="language-css">.galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columnas iguales */
+    gap: 20px; /* Espacio entre celdas */
+}</code></pre>
+                        La unidad <code>fr</code> (fracción) es súper potente para crear diseños flexibles.
                         </p>
                     </div>
 
@@ -151,8 +202,16 @@
                     <div class="slide">
                         <h2 class="lesson-title">9. Diseño Responsivo</h2>
                         <p class="lesson-text">
-                            Las Media Queries (`@media`) permiten aplicar estilos solo si la pantalla tiene cierto
-                            tamaño. Clave para que se vea bien en celulares.
+                            Tu web debe verse bien en un reloj, un celular y una TV 4K.
+                        <pre><code class="language-css">/* Estilos base (Móvil) */
+h1 { font-size: 20px; }
+
+/* Si la pantalla es mayor a 768px (Tablet/PC) */
+@media (min-width: 768px) {
+    h1 { font-size: 40px; }
+}</code></pre>
+                        La estrategia <strong>Mobile First</strong> sugiere diseñar primero para móvil (base) y luego
+                        añadir complejidad para pantallas grandes.
                         </p>
                     </div>
 
@@ -160,9 +219,14 @@
                     <div class="slide">
                         <h2 class="lesson-title">10. Posicionamiento</h2>
                         <p class="lesson-text">
-                            `relative`: Respecto a sí mismo.<br>
-                            `absolute`: Respecto al padre posicionado más cercano.<br>
-                            `fixed`: Respecto a la ventana del navegador.
+                            Saca elementos del flujo normal:
+                        <ul style="text-align: left; padding-left: 2rem;">
+                            <li><code>relative</code>: Se mueve respecto a su posición original, pero deja el hueco.
+                            </li>
+                            <li><code>absolute</code>: Se mueve respecto al padre posicionado más cercano. Flota sobre
+                                todo.</li>
+                            <li><code>fixed</code>: Se queda pegado a la pantalla al hacer scroll (como un navbar).</li>
+                        </ul>
                         </p>
                     </div>
 
@@ -170,8 +234,15 @@
                     <div class="slide">
                         <h2 class="lesson-title">11. Pseudo-clases</h2>
                         <p class="lesson-text">
-                            Estados especiales. `:hover` (cuando pasas el mouse), `:focus` (cuando haces click en un
-                            input), `:nth-child` (para seleccionar hijos específicos).
+                            Estilan un elemento según su <strong>estado</strong>.
+                        <pre><code class="language-css">button:hover {
+    background-color: blue; /* Al pasar el mouse */
+}
+
+input:focus {
+    border-color: green; /* Al escribir dentro */
+}</code></pre>
+                        Dan vida y feedback a la interfaz.
                         </p>
                     </div>
 
@@ -179,12 +250,11 @@
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación Final</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿CSS Grid es mejor para layouts de una sola dimensión?</p>
+                            <p class="quiz-question">¿Qué significa la 'C' en CSS?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Verdadero, reemplaza a Flexbox siempre.
-                                </div>
-                                <div class="option-btn" data-correct="true">Falso, Grid es 2D (filas/col), Flexbox es
-                                    1D.</div>
+                                <div class="option-btn" data-correct="false">Color</div>
+                                <div class="option-btn" data-correct="false">Creative</div>
+                                <div class="option-btn" data-correct="true">Cascading (Cascada)</div>
                             </div>
                         </div>
                     </div>
