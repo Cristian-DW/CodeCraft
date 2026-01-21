@@ -7,9 +7,14 @@
     <title>Lecciones: Introducción | CodeCraft</title>
 
     <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
 </head>
 
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
     <header class="main-header">
         <nav class="navbar container">
             <a href="../Index.html" class="logo">
@@ -27,262 +32,245 @@
             <div class="lesson-container">
 
                 <div class="slider">
-                    <!-- Slide 1: History -->
+                    <!-- Slide 1 -->
                     <div class="slide active">
-                        <h2 class="lesson-title">1. Historia de la Programación</h2>
+                        <h2 class="lesson-title">1. El Superpoder de Crear</h2>
                         <p class="lesson-text">
-                            La programación no nació con las computadoras modernas.
+                            Bienvenido. Estás a punto de aprender el superpoder más cercano a la magia que existe en el
+                            mundo real: <strong>La Programación</strong>.
                             <br><br>
-                            <strong>Hitos importantes:</strong>
-                        <ul style="text-align: left; margin: 1rem 0; padding-left: 2rem;">
-                            <li><strong>Ada Lovelace (1843):</strong> Escribió el primer algoritmo para la Máquina
-                                Analítica de Babbage.</li>
-                            <li><strong>Grace Hopper (1950s):</strong> Inventó el primer compilador y popularizó el
-                                término "bug" (insecto) cuando una polilla causó un fallo en una computadora Mark II.
-                            </li>
-                            <li><strong>La Era Moderna:</strong> Desde C y Unix en los 70s hasta la Web (HTML/HTTP)
-                                creada por Tim Berners-Lee en 1989.</li>
-                        </ul>
-                        Programar es, en esencia, dar instrucciones precisas a una máquina para resolver problemas
-                        humanos.
+                            Saber programar no es solo escribir líneas raras en una pantalla negra; es enseñarle a una
+                            máquina a resolver problemas por ti. Es pasar de ser un <em>consumidor</em> de tecnología a
+                            ser un <em>creador</em>.
+                            <br><br>
+                            En este curso no solo vas a memorizar comandos. Vas a aprender a <strong>pensar</strong>
+                            como una computadora.
                         </p>
                     </div>
 
-                    <!-- Slide 2: Video Logic -->
+                    <!-- Slide 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">2. Lógica y Algoritmos</h2>
+                        <h2 class="lesson-title">2. Gigantes del Pasado</h2>
+                        <p class="lesson-text">
+                            No estamos aquí por casualidad. Todo lo que ves hoy se construyó sobre hombros de gigantes:
+                        <ul style="text-align: left; padding-left: 2rem; margin-top: 1rem;">
+                            <li><strong>Ada Lovelace (1843):</strong> La madre de la programación. Escribió el primer
+                                algoritmo de la historia para una máquina que ¡ni siquiera existía físicamente todavía!
+                                Ella vio que las computadoras podían hacer más que matemáticas: podían componer música y
+                                arte.</li>
+                            <li><strong>Alan Turing (1936):</strong> Formalizó el concepto de "computación". Descifró el
+                                código Enigma de los nazis, acortando la Segunda Guerra Mundial por años.</li>
+                            <li><strong>Grace Hopper (1952):</strong> Creó el primer compilador (traductor de humano a
+                                máquina) y popularizó el término "bug" cuando literalmente encontró una polilla muerta
+                                dentro de un relevador de la computadora Mark II.</li>
+                        </ul>
+                        </p>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">3. ¿Qué es un Algoritmo?</h2>
                         <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/U3CGMyjzlvM" title="Lógica de Programación"
+                            <iframe src="https://www.youtube.com/embed/U3aXWizDbEU" title="Qué es un Algoritmo"
                                 frameborder="0" allowfullscreen></iframe>
                         </div>
                         <p class="lesson-text">
-                            Un <strong>algoritmo</strong> es como una receta de cocina: una serie de pasos ordenados y
-                            finitos.
+                            Suena intimidante, pero un algoritmo es simplemente <strong>una serie de pasos ordenados
+                                para lograr un objetivo</strong>.
                             <br><br>
-                            <em>Ejemplo: Algoritmo para lavarse los dientes</em>
-                        <ol style="text-align: left; margin: 0 auto; display: table;">
-                            <li>Tomar el cepillo y la pasta.</li>
-                            <li>Poner pasta en el cepillo.</li>
-                            <li>Cepillar cada diente por 2 minutos.</li>
-                            <li>Enjuagar.</li>
+                            <em>El Algoritmo del Café:</em>
+                        <ol style="text-align: left; display: inline-block;">
+                            <li>Hervir agua.</li>
+                            <li>Poner café en la taza.</li>
+                            <li>Si (agua hirviendo) -> Servir.</li>
+                            <li>Si (quieres azúcar) -> Agregar azúcar.</li>
+                            <li>Mezclar.</li>
                         </ol>
-                        Si te saltas un paso o cambias el orden (enjuagar antes de cepillar), el resultado falla. Eso es
-                        lógica.
+                        Programar es escribir estas recetas con un nivel de detalle obsesivo, porque las computadoras no
+                        tienen sentido común. Si no le dices "para de servir", la máquina derramará el café eternamente.
                         </p>
                     </div>
 
-                    <!-- Slide 3: QUIZ 1 -->
+                    <!-- Slide 4: QUIZ 1 -->
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación 1: Lógica</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Qué característica NO pertenece a un algoritmo?</p>
+                            <p class="quiz-question">Si le dices a un robot: "Ve a la tienda y si hay huevos, trae 6".
+                                El robot va, ve huevos, y regresa con 6 cartones de leche. ¿Por qué?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Debe tener un orden específico.</div>
-                                <div class="option-btn" data-correct="true">Debe ser infinito y nunca terminar.</div>
-                                <div class="option-btn" data-correct="false">Debe tener un resultado o fin.</div>
+                                <div class="option-btn" data-correct="false">El robot está defectuoso.</div>
+                                <div class="option-btn" data-correct="true">La instrucción fue ambigua. "Trae 6" se
+                                    refería a la leche que usualmente se pide, o el robot interpretó literalmente el
+                                    último objeto mencionado. (Chiste clásico de programación).</div>
+                                <div class="option-btn" data-correct="false">Los robots prefieren la leche.</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Slide 4: Data Types -->
+                    <!-- Slide 5 -->
                     <div class="slide">
-                        <h2 class="lesson-title">3. Tipos de Datos</h2>
+                        <h2 class="lesson-title">4. Hardware: El Cuerpo</h2>
                         <p class="lesson-text">
-                            Así como en la vida real distingues entre letras y números, la computadora también lo hace.
-                        <ul style="text-align: left; padding-left: 1.5rem;">
-                            <li><strong>String (Texto):</strong> Una cadena de caracteres. Siempre va entre comillas.
-                                <pre
-                                    style="background: #333; color: #fff; padding: 5px; border-radius: 4px;">"Hola Mundo"</pre>
-                            </li>
-                            <li><strong>Integer (Entero):</strong> Números sin decimales.
-                                <pre
-                                    style="background: #333; color: #fff; padding: 5px; border-radius: 4px;">42, -10, 2026</pre>
-                            </li>
-                            <li><strong>Float (Flotante):</strong> Números con decimales.
-                                <pre
-                                    style="background: #333; color: #fff; padding: 5px; border-radius: 4px;">3.1416, 9.99</pre>
-                            </li>
-                            <li><strong>Boolean (Lógico):</strong> Solo tiene dos valores posibles.
-                                <pre
-                                    style="background: #333; color: #fff; padding: 5px; border-radius: 4px;">true (verdadero), false (falso)</pre>
-                            </li>
-                        </ul>
-                        </p>
-                    </div>
-
-                    <!-- Slide 5: Variables -->
-                    <div class="slide">
-                        <h2 class="lesson-title">4. Variables y Constantes</h2>
-                        <p class="lesson-text">
-                            <strong>La Analogía de la Caja:</strong>
-                            <br>
-                            Imagina que tienes una caja etiquetada como "Edad".
-                            <br><br>
-                            - <strong>Variable:</strong> Puedes meter el número 20 hoy, y cambiarlo por 21 el próximo
-                            año. El contenido varía.
-                            <br>
-                            - <strong>Constante:</strong> Es una caja sellada con pegamento industrial. Una vez metes el
-                            valor (ej. tu fecha de nacimiento), <em>nunca</em> puedes cambiarlo.
-                            <br><br>
-                            En código, usamos variables para guardar datos que usaremos después.
-                        </p>
-                    </div>
-
-                    <!-- Slide 6: VS Code -->
-                    <div class="slide">
-                        <h2 class="lesson-title">5. Tu entorno de trabajo (IDE)</h2>
-                        <p class="lesson-text">
-                            Para programar no usas Word, usas un <strong>Editor de Código</strong>.
-                            <br><br>
-                            <strong>Visual Studio Code (VS Code)</strong> es el rey actual. ¿Por qué?
+                            Para entender el software (mente), debes conocer el hardware (cuerpo):
                         <ul style="text-align: left; padding-left: 2rem;">
-                            <li>Resalta la sintaxis con colores.</li>
-                            <li>Te autocompleta el código (IntelliSense).</li>
-                            <li>Tiene miles de <strong>Extensiones</strong> (como Live Server para ver tu web en tiempo
-                                real).</li>
+                            <li><strong>CPU (Procesador):</strong> El cerebro. Ejecuta operaciones matemáticas a
+                                velocidades absurdas. Es el "trabajador".</li>
+                            <li><strong>RAM (Memoria):</strong> La mesa de trabajo. Es memoria rápida pero volátil. Si
+                                apagas la PC, se borra. Aquí viven tus programas abiertos.</li>
+                            <li><strong>Disco (HDD/SSD):</strong> El archivo. Memoria lenta pero permanente. Aquí
+                                guardas tus fotos y código.</li>
                         </ul>
+                        Cuando abres Chrome, el programa viaja del <strong>Disco</strong> a la <strong>RAM</strong> para
+                        que el <strong>CPU</strong> pueda usarlo.
                         </p>
                     </div>
 
-                    <!-- Slide 7: QUIZ 2 -->
+                    <!-- Slide 6 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación 2: Conceptos</h2>
-                        <div class="quiz-container">
-                            <p class="quiz-question">Si quieres guardar el valor de PI (3.1416), ¿Qué deberías usar?</p>
-                            <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Una Variable (porque tiene números)</div>
-                                <div class="option-btn" data-correct="true">Una Constante (porque el valor nunca cambia)
-                                </div>
-                                <div class="option-btn" data-correct="false">Un Boolean</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 8: Internet -->
-                    <div class="slide">
-                        <h2 class="lesson-title">6. ¿Cómo funciona Internet?</h2>
+                        <h2 class="lesson-title">5. ¿Cómo funciona Internet?</h2>
                         <p class="lesson-text">
-                            Internet son cables submarinos conectando computadoras.
+                            Internet son cables submarinos gigantes conectando computadoras.
                             <br><br>
-                            El proceso simplificado:
-                        <ol style="text-align: left; padding-left: 2rem;">
-                            <li>Tú escribes <code>google.com</code>.</li>
-                            <li>Tu navegador pregunta a un <strong>DNS</strong> (la agenda telefónica de internet) cuál
-                                es la IP de Google.</li>
-                            <li>El DNS responde: <code>142.250.189.46</code>.</li>
-                            <li>Tu navegador va a esa dirección IP y pide la página web.</li>
-                        </ol>
-                        </p>
-                    </div>
-
-                    <!-- Slide 9: Client vs Server -->
-                    <div class="slide">
-                        <h2 class="lesson-title">7. Cliente vs Servidor</h2>
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/zx6b3kGjWdY" title="Cliente y Servidor"
-                                frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <p class="lesson-text">
-                            <strong>Cliente (Tú/Front-end):</strong> Pide recursos (imágenes, webs). Es tu navegador o
-                            celular.
+                            Cada dispositivo tiene una <strong>IP</strong> (como un número de teléfono: `192.168.1.1`).
                             <br>
-                            <strong>Servidor (Ellos/Back-end):</strong> Una computadora poderosa encendida 24/7 que
-                            tiene los archivos y te los envía cuando los pides.
+                            Cuando entras a `google.com`, tu computadora grita: <em>"¿Quién tiene google.com?"</em>. Un
+                            servidor <strong>DNS</strong> (la agenda telefónica de internet) responde: <em>"Está en la
+                                IP 142.250.xxx"</em>.
+                            <br>
+                            Entonces tu navegador envía una carta (petición) a esa dirección y Google te responde con el
+                            sitio web. Todo en milisegundos.
                         </p>
                     </div>
 
-                    <!-- Slide 10: Frontend vs Backend -->
+                    <!-- Slide 7 -->
                     <div class="slide">
-                        <h2 class="lesson-title">8. Frontend vs Backend</h2>
+                        <h2 class="lesson-title">6. Tipos de Datos: Los Átomos</h2>
                         <p class="lesson-text">
-                        <div style="display: flex; gap: 20px; text-align: left;">
-                            <div style="flex: 1; background: #f0f0f0; padding: 10px; border-radius: 8px;">
-                                <strong>Frontend (La Cara)</strong>
-                                <br>Lo que el usuario ve y toca.
-                                <br><em>Tecnologías:</em> HTML, CSS, JavaScript, React.
-                            </div>
-                            <div style="flex: 1; background: #e0e0e0; padding: 10px; border-radius: 8px;">
-                                <strong>Backend (El Cerebro)</strong>
-                                <br>Lógica, datos y seguridad.
-                                <br><em>Tecnologías:</em> Node.js, Python, SQL, Java.
-                            </div>
-                        </div>
-                        </p>
-                    </div>
-
-                    <!-- Slide 11: QUIZ 3 -->
-                    <div class="slide">
-                        <h2 class="lesson-title">Evaluación 3: Arquitectura Web</h2>
-                        <div class="quiz-container">
-                            <p class="quiz-question">¿Dónde se guardan las contraseñas de los usuarios de forma segura?
-                            </p>
-                            <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">En el Frontend (HTML)</div>
-                                <div class="option-btn" data-correct="true">En la Base de Datos (Backend)</div>
-                                <div class="option-btn" data-correct="false">En el historial del navegador</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Slide 12: OS -->
-                    <div class="slide">
-                        <h2 class="lesson-title">9. Sistemas Operativos</h2>
-                        <p class="lesson-text">
-                            Aunque uses Windows o macOS en casa, <strong>Linux</strong> domina el mundo de los
-                            servidores e internet.
-                            <br><br>
-                            ¿Por qué? Porque es gratuito, de código abierto, muy seguro y eficiente. Como desarrollador,
-                            tarde o temprano tendrás que usar Linux para desplegar tus aplicaciones.
-                        </p>
-                    </div>
-
-                    <!-- Slide 13: Terminal -->
-                    <div class="slide">
-                        <h2 class="lesson-title">10. La Terminal</h2>
-                        <p class="lesson-text">
-                            La interfaz de línea de comandos (CLI). Es más rápida que usar el mouse una vez la dominas.
-                            <br><br>
-                            <strong>Comandos Básicos:</strong>
-                        <pre
-                            style="background: #2d2d2d; color: #76e133; text-align: left; padding: 10px; border-radius: 6px; font-family: monospace;">
-# Listar archivos
-$ ls
-
-# Cambiar de carpeta
-$ cd mi-carpeta
-
-# Crear carpeta
-$ mkdir nuevo-proyecto</pre>
-                        </p>
-                    </div>
-
-                    <!-- Slide 14: Review -->
-                    <div class="slide">
-                        <h2 class="lesson-title">11. Repaso Final</h2>
-                        <p class="lesson-text">
-                            Has aprendido los pilares fundamentales:
+                            En el universo digital, todo son datos. Pero no todos los datos son iguales:
                         <ul style="text-align: left; padding-left: 2rem;">
-                            <li>La programación son instrucciones lógicas.</li>
-                            <li>Usamos variables para datos y editores como VS Code.</li>
-                            <li>La web es una charla entre Cliente y Servidor.</li>
+                            <li><strong>String (Texto):</strong> "Hola", "user123". Siempre van entre comillas.</li>
+                            <li><strong>Integer/Float (Números):</strong> 42, 3.14. Sirven para matemáticas.</li>
+                            <li><strong>Boolean (Lógica):</strong> `true` (verdadero) o `false` (falso). La base de la
+                                toma de decisiones.</li>
                         </ul>
-                        <br>
-                        El siguiente paso es construir la estructura de esa web con <strong>HTML</strong>.
+                        Intentar sumar "Hola" + 5 dará un error o un resultado extraño ("Hola5"), dependiendo del
+                        lenguaje.
                         </p>
                     </div>
 
-                    <!-- Slide 15: Final Quiz -->
+                    <!-- Slide 8: QUIZ 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación Final</h2>
+                        <h2 class="lesson-title">Evaluación 2: Datos</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Cuál es el rol de un desarrollador Full Stack?</p>
+                            <p class="quiz-question">¿Cuál de estos es un 'String'?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Solo diseñar la parte visual (CSS).</div>
-                                <div class="option-btn" data-correct="true">Manejar tanto Frontend como Backend.</div>
-                                <div class="option-btn" data-correct="false">Configurar servidores DNS únicamente.</div>
+                                <div class="option-btn" data-correct="false">2026</div>
+                                <div class="option-btn" data-correct="false">true</div>
+                                <div class="option-btn" data-correct="true">"2026"</div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Slide 9 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">7. Variables: Las Cajas</h2>
+                        <p class="lesson-text">
+                            Imagina que te mudas de casa. Necesitas cajas para guardar tus cosas y etiquetas para saber
+                            qué hay dentro.
+                            <br><br>
+                            En programación:
+                            <br>
+                            <code>etiqueta = contenido</code>
+                            <br><br>
+                        <pre><code class="language-javascript">let vidaJugador = 100; // Guardamos un número
+let nombreUsuario = "Cristian"; // Guardamos texto</code></pre>
+                        Si el jugador recibe un golpe, cambiamos lo que hay dentro de la caja `vidaJugador` a 90. La
+                        caja es la misma, el contenido cambia.
+                        </p>
+                    </div>
+
+                    <!-- Slide 10 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">8. Cliente vs Servidor</h2>
+                        <p class="lesson-text">
+                            La arquitectura básica de la web.
+                            <br><br>
+                            <strong>Cliente (Tú):</strong> Tu navegador, tu celular. Pide información. (El comensal en
+                            el restaurante).
+                            <br>
+                            <strong>Servidor (La Nube):</strong> Computadoras potentes siempre encendidas que guardan
+                            los sitios web y bases de datos. Entregan información. (La cocina del restaurante).
+                        </p>
+                    </div>
+
+                    <!-- Slide 11 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">9. Frontend vs Backend</h2>
+                        <p class="lesson-text">
+                            Siguiendo la analogía del restaurante:
+                        <ul style="text-align: left; padding-left: 2rem;">
+                            <li><strong>Frontend (Lo que ves):</strong> La decoración, el menú, los platos, la
+                                presentación. HTML, CSS, JavaScript. Es con lo que interactúas.</li>
+                            <li><strong>Backend (Lo que no ves):</strong> Los cocineros, la despensa, los proveedores,
+                                la caja fuerte. Node.js, Python, Bases de Datos. Es la lógica y la seguridad.</li>
+                        </ul>
+                        Un <strong>Full Stack Developer</strong> es alguien que puede cocinar Y decorar el salón.
+                        </p>
+                    </div>
+
+                    <!-- Slide 12: QUIZ 3 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">Evaluación 3: Roles</h2>
+                        <div class="quiz-container">
+                            <p class="quiz-question">Si un botón está desalineado y tiene el color incorrecto, ¿de quién
+                                es el problema?</p>
+                            <div class="quiz-options">
+                                <div class="option-btn" data-correct="true">Frontend</div>
+                                <div class="option-btn" data-correct="false">Backend</div>
+                                <div class="option-btn" data-correct="false">Base de Datos</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 13 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">10. La Temida Terminal</h2>
+                        <p class="lesson-text">
+                            Esa pantalla negra con letras blancas tipo Matrix.
+                            <br>
+                            Muchos le temen, pero es tu mejor amiga. Las interfaces gráficas (ventanas, mouse) son
+                            lentas y limitadas. La terminal es directa. Hablas con el núcleo del sistema operativo sin
+                            intermediarios.
+                            <br><br>
+                            <code>mkdir proyecto</code> es más rápido que: Click derecho -> Nuevo -> Carpeta -> Borrar
+                            "Nueva carpeta" -> Escribir nombre.
+                        </p>
+                    </div>
+
+                    <!-- Slide 14 -->
+                    <div class="slide">
+                        <h2 class="lesson-title">11. Tu Primer Código</h2>
+                        <p class="lesson-text">
+                            Es tradición sagrada. Si no lo haces, dicen que los dioses del código maldecirán tu teclado.
+                            <br><br>
+                            Abrir la consola (F12 en Chrome -> Console) y escribir:
+                        <pre><code class="language-javascript">console.log("¡Hola Mundo!");</code></pre>
+                        Acabas de dar tu primera orden a la máquina. Y obedeció.
+                        </p>
+                    </div>
+
+                    <!-- Slide 15: Final -->
+                    <div class="slide">
+                        <h2 class="lesson-title">¡Felicidades!</h2>
+                        <p class="lesson-text">
+                            Has completado la introducción. Ya no ves un sitio web como "magia", sino como un conjunto
+                            de archivos (HTML, CSS, JS) servidos desde una computadora a otra a través de cables.
+                            <br><br>
+                            Ahora estás listo para ensuciarte las manos. El siguiente paso es construir el esqueleto de
+                            la web: <strong>HTML</strong>.
+                        </p>
+                    </div>
+
                 </div>
 
                 <div class="slider-controls">

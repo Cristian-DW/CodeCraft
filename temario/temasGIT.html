@@ -34,24 +34,33 @@
                 <div class="slider">
                     <!-- Slide 1 -->
                     <div class="slide active">
-                        <h2 class="lesson-title">1. ¿Qué es Git?</h2>
+                        <h2 class="lesson-title">1. El Salva-Vidas del Programador</h2>
                         <p class="lesson-text">
-                            Git es una <strong>Máquina del Tiempo</strong> para tu código.
+                            ¿Alguna vez guardaste un archivo como `tesis_final.doc`, `tesis_final_v2.doc`,
+                            `tesis_final_AHORA_SI.doc`?
                             <br><br>
-                            Permite guardar "fotos" (commits) de tu proyecto en diferentes momentos. Si rompes algo,
-                            puedes volver al pasado en segundos. Es esencial para trabajar en equipo sin sobreescribir
-                            el trabajo de otros.
+                            <strong>Git</strong> soluciona eso profesionalmente. Es un Sistema de Control de Versiones
+                            Distribuido.
+                            <br>
+                            Te permite guardar el historial completo de tu proyecto, viajar en el tiempo a versiones
+                            anteriores, y lo más importante: <strong>trabajar en equipo</strong> sin sobrescribir el
+                            código de tus compañeros.
                         </p>
                     </div>
 
                     <!-- Slide 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">2. Configuración Inicial</h2>
+                        <h2 class="lesson-title">2. Los 3 Estados de Git</h2>
                         <p class="lesson-text">
-                            Antes de empezar, dile a Git quién eres (esto queda en el historial).
-                        <pre><code class="language-bash">$ git config --global user.name "Tu Nombre"
-$ git config --global user.email "tu@email.com"</code></pre>
-                        Esto se hace una sola vez en tu computadora.
+                            Entender esto es la clave de todo.
+                        <ol style="text-align: left; padding-left: 2rem;">
+                            <li><strong>Working Directory:</strong> Tu carpeta de trabajo actual. Donde editas archivos.
+                            </li>
+                            <li><strong>Staging Area (El Carrito):</strong> Una zona intermedia donde "preparas" los
+                                archivos que quieres guardar. (Comando `git add`).</li>
+                            <li><strong>Repository (La Foto):</strong> Cuando confirmas los cambios. Quedan grabados en
+                                piedra en la base de datos de Git. (Comando `git commit`).</li>
+                        </ol>
                         </p>
                     </div>
 
@@ -59,174 +68,183 @@ $ git config --global user.email "tu@email.com"</code></pre>
                     <div class="slide">
                         <h2 class="lesson-title">Evaluación 1: Conceptos</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Dónde se guarda el historial de tu proyecto?</p>
+                            <p class="quiz-question">Si modifico un archivo, ¿se guarda automáticamente en el
+                                repositorio?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">En la nube de Google.</div>
-                                <div class="option-btn" data-correct="true">En la carpeta oculta .git de tu proyecto.
-                                </div>
-                                <div class="option-btn" data-correct="false">En la RAM de tu PC.</div>
+                                <div class="option-btn" data-correct="false">Sí, Git guarda todo en tiempo real.</div>
+                                <div class="option-btn" data-correct="true">No. Debes agregarlo (add) y confirmarlo
+                                    (commit) manualmente.</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 4 -->
                     <div class="slide">
-                        <h2 class="lesson-title">3. Init & Clone</h2>
+                        <h2 class="lesson-title">3. Comandos Esenciales</h2>
                         <p class="lesson-text">
-                            Dos formas de empezar:
-                            <br><br>
-                            1. <strong>Desde cero:</strong>
-                        <pre><code class="language-bash">cd mi-proyecto
-git init</code></pre>
-                        2. <strong>Descargar existente:</strong>
-                        <pre><code class="language-bash">git clone https://github.com/usuario/proyecto.git</code></pre>
+                            Tu pan de cada día:
+                        <pre><code class="language-bash">git status     # ¿Qué ha cambiado?
+git add .      # Agregar todo al Staging
+git commit -m "Agregué el login"  # Guardar foto con mensaje
+git log        # Ver historial de fotos</code></pre>
+                        El mensaje del commit (`-m`) es vital. No escribas "arreglos". Escribe "corrige bug en
+                        validación de email". Tu "yo" del futuro te lo agradecerá.
                         </p>
                     </div>
 
                     <!-- Slide 5 -->
                     <div class="slide">
-                        <h2 class="lesson-title">4. El Flujo de Git (Workflow)</h2>
+                        <h2 class="lesson-title">4. Ramas (Branches): El Multiverso</h2>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/JtIX3HJKwfo" title="Git Branches" frameborder="0"
+                                allowfullscreen></iframe>
+                        </div>
                         <p class="lesson-text">
-                            Imagina que vas de compras (Shopping Cart Analogy):
-                        <ol style="text-align: left; padding-left: 2rem;">
-                            <li><strong>Working Directory:</strong> Estás en el pasillo eligiendo productos (Editando
-                                archivos).</li>
-                            <li><strong>Staging Area (git add):</strong> Pones los productos en el carrito. Estás listo
-                                para pagar.</li>
-                            <li><strong>Repository (git commit):</strong> Pagas y te dan el recibo. La compra (cambio)
-                                es oficial.</li>
-                        </ol>
+                            Imagina que quieres probar una idea loca sin romper el proyecto principal (`main`).
+                            <br>
+                            Creas una rama paralela:
+                        <pre><code class="language-bash">git checkout -b nueva-idea</code></pre>
+                        Ahora estás en una línea temporal alternativa. Puedes borrar todo, romper todo... y la rama
+                        `main` sigue intacta.
                         </p>
                     </div>
 
                     <!-- Slide 6 -->
                     <div class="slide">
-                        <h2 class="lesson-title">5. Comandos Básicos</h2>
+                        <h2 class="lesson-title">5. Merge: Fusionando Universos</h2>
                         <p class="lesson-text">
-                        <pre><code class="language-bash"># Ver qué archivos cambiaste
-git status
-
-# Agregar todo al carrito
-git add .
-
-# Guardar la foto con mensaje
-git commit -m "Agregué el navbar"</code></pre>
+                            Tu "nueva-idea" funcionó. Es hora de traerla a la realidad principal.
+                        <pre><code class="language-bash">git checkout main  # Volver al presente
+git merge nueva-idea # Traer los cambios</code></pre>
+                        Git intentará unir los códigos automáticamente. Si modificaron líneas diferentes, es magia. Si
+                        modificaron la MISMA línea... tenemos un problema.
                         </p>
                     </div>
 
                     <!-- Slide 7: QUIZ 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación 2: Comandos</h2>
+                        <h2 class="lesson-title">Evaluación 2: Ramas</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Qué hace `git add .`?</p>
+                            <p class="quiz-question">¿Por qué usamos ramas?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Guarda los cambios permanentemente.</div>
-                                <div class="option-btn" data-correct="true">Prepara todos los archivos modificados para
-                                    el próximo commit.</div>
-                                <div class="option-btn" data-correct="false">Sube el código a internet.</div>
+                                <div class="option-btn" data-correct="true">Para desarrollar funcionalidades aisladas
+                                    sin afectar el código estable (producción).</div>
+                                <div class="option-btn" data-correct="false">Para hacer el código más lento.</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 8 -->
                     <div class="slide">
-                        <h2 class="lesson-title">6. Ramas (Branches)</h2>
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/JtIX3HJKwfo" title="Git Branches" frameborder="0"
-                                allowfullscreen></iframe>
-                        </div>
+                        <h2 class="lesson-title">6. Conflictos: La Pesadilla</h2>
                         <p class="lesson-text">
-                            El <strong>Multiverso</strong> de tu código.
-                            <br>
-                            `git branch experimento` crea una copia paralela. Puedes borrar todo en la rama
-                            "experimento" y tu rama "main" seguirá intacta y segura.
+                            Dos personas editaron el mismo botón. Uno lo puso Rojo. Otro lo puso Azul. Git entra en
+                            pánico al hacer Merge.
+                            <br><br>
+                            Aparecerá esto en tu código:
+                        <pre><code class="language-bash"><<<<<<< HEAD
+color: red;
+=======
+color: blue;
+>>>>>>> nueva-idea</code></pre>
+                        Tienes que elegir manualmente cuál queda, borrar las marcas raras, y hacer commit de nuevo. Es
+                        parte del trabajo.
                         </p>
                     </div>
 
                     <!-- Slide 9 -->
                     <div class="slide">
-                        <h2 class="lesson-title">7. Merge (Fusión)</h2>
+                        <h2 class="lesson-title">7. Git vs GitHub</h2>
                         <p class="lesson-text">
-                            Cuando tu experimento fue un éxito, lo integras.
-                        <pre><code class="language-bash"># Voy a la rama principal
-git checkout main
-
-# Traigo los cambios de experimento
-git merge experimento</code></pre>
+                            No confundir.
+                            <br>
+                            <strong>Git:</strong> Es el software en tu PC (Local).
+                            <br>
+                            <strong>GitHub (o GitLab/Bitbucket):</strong> Es una web que aloja repositorios Git en la
+                            nube (Remoto). Es la red social de los programadores.
+                            <br>
+                            Para subir tu código: `git push`. Para bajarlo: `git pull`.
                         </p>
                     </div>
 
                     <!-- Slide 10 -->
                     <div class="slide">
-                        <h2 class="lesson-title">8. Conflictos</h2>
+                        <h2 class="lesson-title">8. Pull Requests (PR)</h2>
                         <p class="lesson-text">
-                            Pasan cuando dos personas tocan la misma línea del mismo archivo.
+                            En equipos profesionales, está prohibido hacer `git push` directo a `main`.
+                            <br><br>
+                            El flujo correcto es:
+                            1. Subes tu rama.
+                            2. Creas una <strong>Pull Request</strong> en GitHub.
+                            3. Tus compañeros revisan tu código, comentan mejoras ("Code Review").
+                            4. Si aprueban, se fusiona.
                             <br>
-                            Git no sabe cuál elegir, así que te dice: <em>"¡Ayuda! Resuélvelo tú"</em>. Tienes que
-                            editar el archivo, decidir el código final, y hacer commit de nuevo.
+                            Esto asegura la calidad del código.
                         </p>
                     </div>
 
                     <!-- Slide 11: QUIZ 3 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación 3: Ramas</h2>
+                        <h2 class="lesson-title">Evaluación 3: Colaboración</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Es buena práctica trabajar todo directamente en la rama 'main'?
-                            </p>
+                            <p class="quiz-question">¿Qué es un Code Review?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="true">No, es arriesgado. Deberías usar ramas
-                                    (features) para cada tarea.</div>
-                                <div class="option-btn" data-correct="false">Sí, es más rápido.</div>
+                                <div class="option-btn" data-correct="false">Mirar el código para memorizarlo.</div>
+                                <div class="option-btn" data-correct="true">El proceso donde otros desarrolladores leen
+                                    y aprueban tus cambios antes de aceptarlos.</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 12 -->
                     <div class="slide">
-                        <h2 class="lesson-title">9. Git vs GitHub</h2>
+                        <h2 class="lesson-title">9. .gitignore</h2>
                         <p class="lesson-text">
-                            <strong>Git:</strong> Lo usas en tu terminal (Local).
+                            Hay cosas que NO deben subir a internet: carpetas gigantes como `node_modules`, archivos con
+                            contraseñas `.env`, o archivos basura del sistema (`.DS_Store`).
                             <br>
-                            <strong>GitHub/GitLab:</strong> La red social del código (Remoto). Guardan copia de tus
-                            repositorios para trabajar en equipo.
+                            Creas un archivo `.gitignore` y listas allí todo lo que Git debe ignorar. Es el club VIP de
+                            los archivos invisibles.
                         </p>
                     </div>
 
                     <!-- Slide 13 -->
                     <div class="slide">
-                        <h2 class="lesson-title">10. Pull Requests (PR)</h2>
+                        <h2 class="lesson-title">10. Viajando en el Tiempo</h2>
                         <p class="lesson-text">
-                            En equipos, no haces merge directo a Main.
-                            <br>
-                            Abres una <strong>Pull Request</strong>: <em>"Hola equipo, cambié el botón. ¿Pueden revisar
-                                mi código?"</em>.
-                            <br>
-                            Si aprueban, se fusiona. Si encuentran errores, los corriges antes.
+                            ¿Rompiste todo hace 10 minutos?
+                        <pre><code class="language-bash">git checkout .</code></pre>
+                        (Deshace cambios no guardados en archivos).
+                        <br><br>
+                        ¿Quieres volver a la versión de ayer?
+                        <pre><code class="language-bash">git checkout [ID-DEL-COMMIT]</code></pre>
+                        Es un superpoder real.
                         </p>
                     </div>
 
                     <!-- Slide 14 -->
                     <div class="slide">
-                        <h2 class="lesson-title">11. .gitignore</h2>
+                        <h2 class="lesson-title">11. Git Flow</h2>
                         <p class="lesson-text">
-                            El club VIP de archivos ignorados.
-                            <br>
-                            Aquí pones `node_modules`, archivos de configuración con contraseñas (`.env`), etc. Git
-                            fingirá que no existen.
+                            Es una convención de nombres de ramas estándar:
+                        <ul>
+                            <li>`main`: Producción (Sagrado).</li>
+                            <li>`develop`: Donde se juntan las nuevas "features" antes de salir.</li>
+                            <li>`feature/login`: Tu rama de trabajo.</li>
+                            <li>`hotfix/bug-urgente`: Parches rápidos para errores críticos.</li>
+                        </ul>
                         </p>
                     </div>
 
-                    <!-- Slide 15: Final Quiz -->
+                    <!-- Slide 15: Final -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación Final</h2>
-                        <div class="quiz-container">
-                            <p class="quiz-question">¿Qué comando envías tus commits locales a GitHub?</p>
-                            <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">git upload</div>
-                                <div class="option-btn" data-correct="true">git push</div>
-                                <div class="option-btn" data-correct="false">git send</div>
-                            </div>
-                        </div>
+                        <h2 class="lesson-title">¡Control Total!</h2>
+                        <p class="lesson-text">
+                            Saber Git es lo que te diferencia de un amateur. Ninguna empresa contrata a alguien que
+                            envía código por email o USB.
+                            <br><br>
+                            Ahora tu código está seguro, versionado y listo para equiparse.
+                        </p>
                     </div>
 
                 </div>

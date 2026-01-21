@@ -34,219 +34,233 @@
                 <div class="slider">
                     <!-- Slide 1 -->
                     <div class="slide active">
-                        <h2 class="lesson-title">1. ¿Qué es JavaScript?</h2>
+                        <h2 class="lesson-title">1. El Lenguaje de la Web</h2>
                         <p class="lesson-text">
-                            Si HTML es el esqueleto y CSS la piel, <strong>JavaScript (JS)</strong> son los músculos y
-                            el sistema nervioso.
+                            <strong>JavaScript (JS)</strong> no tiene NADA que ver con Java. Se le puso el nombre por
+                            marketing en los 90s.
                             <br><br>
-                            Es un lenguaje de programación real (a diferencia de HTML/CSS) que permite lógica: "Si el
-                            usuario hace click aquí, muestra esto".
-                            <br><br>
-                            Se puede ejecutar en el navegador (Chrome, Firefox) o en el servidor (Node.js).
+                            Es el único lenguaje de programación que entienden los navegadores. Si quieres hacer una web
+                            interactiva, no tienes opción: necesitas JS.
+                            <br>
+                            Hoy en día es tan poderoso que no solo vive en el navegador: con Node.js, puede controlar
+                            servidores, robots y cohetes (literalmente, SpaceX usa JS en sus interfaces).
                         </p>
                     </div>
 
                     <!-- Slide 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">2. Variables Modernas (ES6)</h2>
+                        <h2 class="lesson-title">2. Variables y Mutabilidad</h2>
                         <p class="lesson-text">
-                            En el JS moderno (2015+), evitamos `var`.
-                        <pre><code class="language-javascript">// let: Cajita abierta. Puedes cambiar el valor.
-let vidas = 3;
-vidas = 2; // Ok
+                            En el pasado (antes de 2015), usábamos <code>var</code>. Era caótico. Olvídalo.
+                            <br>
+                            Hoy usamos dos sabores:
+                        <pre><code class="language-javascript">// const: CONSTANTE. No cambia.
+const pi = 3.1416;
+pi = 5; // Error! Protege tu código de ti mismo.
 
-// const: Cajita sellada. NO puedes cambiar el valor.
-const PI = 3.1416;
-PI = 4; // Error!</code></pre>
-                        <strong>Regla de oro:</strong> Usa `const` por defecto. Si necesitas reasignar, usa `let`. Nunca
-                        uses `var`.
+// let: VARIABLE. Puede cambiar.
+let vidas = 3;
+vidas = 2; // Ok.</code></pre>
+                        <strong>Regla Pro:</strong> Usa <code>const</code> por defecto. Solo usa <code>let</code> si
+                        sabes seguro que el valor va a cambiar (como un contador).
                         </p>
                     </div>
 
                     <!-- Slide 3: QUIZ 1 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación 1: Conceptos Básicos</h2>
+                        <h2 class="lesson-title">Evaluación 1: Buenas Prácticas</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Qué pasará si intento ejecutar: `const nombre = "Juan"; nombre =
-                                "Pedro";`?</p>
+                            <p class="quiz-question">¿Por qué casi no usamos 'var' hoy en día?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">La variable cambia a "Pedro".</div>
-                                <div class="option-btn" data-correct="true">El navegador lanza un Error (Assignment to
-                                    constant variable).</div>
-                                <div class="option-btn" data-correct="false">El navegador se cierra.</div>
+                                <div class="option-btn" data-correct="false">Porque es muy lento.</div>
+                                <div class="option-btn" data-correct="true">Porque tiene problemas de alcance (scope)
+                                    que causan bugs difíciles de rastrear.</div>
+                                <div class="option-btn" data-correct="false">Porque es una palabra muy corta.</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 4 -->
                     <div class="slide">
-                        <h2 class="lesson-title">3. Tipos de Datos</h2>
+                        <h2 class="lesson-title">3. Tipos y "Tipado Débil"</h2>
                         <p class="lesson-text">
-                            Datos Primitivos vs Objetos.
-                        <ul style="text-align: left; padding-left: 2rem;">
-                            <li><strong>String:</strong> `"Hola"` o `'Hola'`.</li>
-                            <li><strong>Number:</strong> `10` o `10.5` (todos son flotantes internamente).</li>
-                            <li><strong>Boolean:</strong> `true` / `false`.</li>
-                            <li><strong>Undefined:</strong> Variable creada pero sin valor.</li>
-                            <li><strong>Null:</strong> Ausencia intencional de valor.</li>
-                        </ul>
+                            JavaScript es "débilmente tipado". Significa que no es estricto con los tipos de datos.
+                        <pre><code class="language-javascript">let caja = 5;       // Número
+caja = "Cinco";     // Ahora es Texto. ¡JS te deja hacerlo!</code></pre>
+                        Esto es cómodo al principio, pero peligroso en proyectos grandes.
+                        <br>
+                        <strong>Tip:</strong> Ten cuidado con la coerción automática. <code>1 + "1"</code> es
+                        <code>"11"</code> (Texto), no <code>2</code>.
                         </p>
                     </div>
 
                     <!-- Slide 5 -->
                     <div class="slide">
-                        <h2 class="lesson-title">4. Operadores</h2>
+                        <h2 class="lesson-title">4. Lógica Booleana (If/Else)</h2>
                         <p class="lesson-text">
-                            ¡Cuidado con las comparaciones!
-                        <pre><code class="language-javascript">5 == "5"  // true (convierte el tipo, peligroso)
-5 === "5" // false (estricto, verifica tipo y valor)</code></pre>
-                        Usa siempre la <strong>Triple Igualdad (`===`)</strong> para evitar errores extraños.
+                            El cerebro del programa. Tomar decisiones.
+                        <pre><code class="language-javascript">const edad = 17;
+
+if (edad >= 18) {
+    console.log("Cerveza 🍺");
+} else {
+    console.log("Jugo 🧃");
+}</code></pre>
+                        Usa siempre la triple igualdad <code>===</code>. La doble igualdad <code>==</code> es
+                        traicionera (<code>0 == false</code> es true, ¡pero no son lo mismo!).
                         </p>
                     </div>
 
                     <!-- Slide 6 -->
                     <div class="slide">
-                        <h2 class="lesson-title">5. Condicionales</h2>
+                        <h2 class="lesson-title">5. Funciones (Modernas)</h2>
                         <p class="lesson-text">
-                            Controlan el flujo del programa.
-                        <pre><code class="language-javascript">const edad = 18;
+                            Las funciones son recetas reutilizables.
+                            <br>
+                            La sintaxis moderna (Arrow Functions) es más limpia:
+                        <pre><code class="language-javascript">// Función Flecha
+const saludar = (nombre) => {
+    return `Hola, ${nombre}`; // Template String (con backticks `)
+};
 
-if (edad >= 18) {
-    console.log("Puedes votar");
-} else {
-    console.log("Eres menor");
-}</code></pre>
-                        La computadora lee línea por línea, pero con `if` puede saltarse bloques enteros.
+console.log(saludar("Cristian"));</code></pre>
+                        Las Template Strings `${}` nos salvaron de concatenar con `+` eternamente.
                         </p>
                     </div>
 
                     <!-- Slide 7: QUIZ 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación 2: Lógica</h2>
+                        <h2 class="lesson-title">Evaluación 2: Operadores</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Cuál es el operador lógico para "O" (OR)?</p>
+                            <p class="quiz-question">¿Qué imprime `console.log(1 === "1")`?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">&&</div>
-                                <div class="option-btn" data-correct="true">||</div>
-                                <div class="option-btn" data-correct="false">!</div>
+                                <div class="option-btn" data-correct="false">true</div>
+                                <div class="option-btn" data-correct="true">false (Son de tipo diferente: Número vs
+                                    String)</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 8 -->
                     <div class="slide">
-                        <h2 class="lesson-title">6. Bucles (Loops)</h2>
+                        <h2 class="lesson-title">6. Arrays y Objetos</h2>
                         <p class="lesson-text">
-                            Para no repetir código manualmente.
-                        <pre><code class="language-javascript">// Repetir 5 veces
-for (let i = 0; i < 5; i++) {
-    console.log("Vuelta " + i);
-}</code></pre>
-                        Ideal para recorrer listas de datos (ej. lista de productos).
+                            Cómo organizamos datos complejos.
+                        <pre><code class="language-javascript">// Objeto (Entidad con propiedades)
+const usuario = {
+    nombre: "Ana",
+    activo: true,
+    roles: ["Admin", "Editor"] // Array dentro de objeto
+};
+
+console.log(usuario.roles[0]); // "Admin"</code></pre>
+                        JSON (JavaScript Object Notation), el formato universal de datos de internet, se basa en esta
+                        sintaxis.
                         </p>
                     </div>
 
                     <!-- Slide 9 -->
                     <div class="slide">
-                        <h2 class="lesson-title">7. Funciones Flecha (Arrow Functions)</h2>
+                        <h2 class="lesson-title">7. Bucles (Loops)</h2>
                         <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/Z4TuS0HEJP8" title="Fundamentos JS"
+                            <iframe src="https://www.youtube.com/embed/Z4TuS0HEJP8" title="JS Fundamentals"
                                 frameborder="0" allowfullscreen></iframe>
                         </div>
                         <p class="lesson-text">
-                            Las funciones son bloques de código reutilizables.
-                        <pre><code class="language-javascript">// Antigua
-function sumar(a, b) { return a + b; }
+                            Para repetir tareas. Aunque el <code>for</code> clásico existe, los profesionales usan
+                            métodos modernos de arrays:
+                        <pre><code class="language-javascript">const frutas = ["Manzana", "Pera"];
 
-// Moderna (Arrow)
-const sumar = (a, b) => a + b;</code></pre>
-                        Más limpias y concisas.
+// forEach: Para cada elemento...
+frutas.forEach(fruta => {
+    console.log("Me gusta la " + fruta);
+});</code></pre>
+                        Es más legible y menos propenso a errores de "off-by-one".
                         </p>
                     </div>
 
                     <!-- Slide 10 -->
                     <div class="slide">
-                        <h2 class="lesson-title">8. El DOM</h2>
+                        <h2 class="lesson-title">8. El DOM (Document Object Model)</h2>
                         <p class="lesson-text">
-                            El <strong>DOM (Document Object Model)</strong> es el puente entre JS y HTML.
-                        <pre><code class="language-javascript">// Seleccionar el título h1
+                            Aquí es donde JS toca el HTML. El DOM es el árbol de elementos de tu página.
+                        <pre><code class="language-javascript">// Seleccionar
 const titulo = document.querySelector('h1');
 
-// Cambiar su texto
-titulo.textContent = "¡Nuevo Título!";
-
-// Cambiar su color
+// Modificar
+titulo.textContent = "¡Hackeado por JS!";
 titulo.style.color = "red";</code></pre>
+                        Todo lo que ves en una web interactiva (modales, menús, chats) es manipulación del DOM.
                         </p>
                     </div>
 
                     <!-- Slide 11 -->
                     <div class="slide">
-                        <h2 class="lesson-title">9. Eventos</h2>
+                        <h2 class="lesson-title">9. Eventos (Escuchar)</h2>
                         <p class="lesson-text">
-                            Hacer que la web reaccione al usuario.
-                        <pre><code class="language-javascript">const boton = document.querySelector('.btn');
+                            Tu web no solo habla, también escucha.
+                        <pre><code class="language-javascript">const boton = document.querySelector('#miBoton');
 
 boton.addEventListener('click', () => {
-    alert('¡Hiciste click!');
+    alert("¡Me tocaste!");
 });</code></pre>
-                        Eventos comunes: `click`, `submit` (formularios), `input` (escribir), `scroll`.
+                        Puedes escuchar clicks, movimiento del mouse, teclas, scroll, batería baja... casi todo.
                         </p>
                     </div>
 
                     <!-- Slide 12: QUIZ 3 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación 3: Interacción</h2>
+                        <h2 class="lesson-title">Evaluación 3: DOM</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">Si quiero ejecutar código cuando el usuario presiona una tecla,
-                                ¿qué evento uso?</p>
+                            <p class="quiz-question">¿Cuál es el método moderno preferido para seleccionar elementos?
+                            </p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">'click'</div>
-                                <div class="option-btn" data-correct="true">'keydown' o 'keypress'</div>
-                                <div class="option-btn" data-correct="false">'hover'</div>
+                                <div class="option-btn" data-correct="false">getElementById</div>
+                                <div class="option-btn" data-correct="true">querySelector (Más flexible, acepta
+                                    selectores CSS)</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 13 -->
                     <div class="slide">
-                        <h2 class="lesson-title">10. Arrays y Objetos</h2>
+                        <h2 class="lesson-title">10. Asincronía y Fetch</h2>
                         <p class="lesson-text">
-                            Estructuras de datos esenciales.
-                        <pre><code class="language-javascript">// Array (Lista)
-const frutas = ["Manzana", "Banana"];
-console.log(frutas[0]); // Manzana
-
-// Objeto (Diccionario)
-const usuario = { nombre: "Ana", edad: 25 };
-console.log(usuario.nombre); // Ana</code></pre>
+                            JS es "single-threaded" (una sola mano), pero puede hacer malabares.
+                            <br>
+                            <code>fetch</code> permite pedir datos externos sin congelar la página.
+                        <pre><code class="language-javascript">// Pide datos a una API
+fetch('https://api.clima.com')
+    .then(respuesta => respuesta.json()) // Espera...
+    .then(datos => console.log(datos));  // ¡Llegó!</code></pre>
+                        Hoy en día usamos <strong>Async/Await</strong>, que se ve aún más limpio.
                         </p>
                     </div>
 
                     <!-- Slide 14 -->
                     <div class="slide">
-                        <h2 class="lesson-title">11. Fetch API (Async)</h2>
+                        <h2 class="lesson-title">11. El Ecosistema</h2>
                         <p class="lesson-text">
-                            Cómo JS pide datos a servidores externos (APIs) sin recargar la página.
-                        <pre><code class="language-javascript">fetch('https://api.clima.com')
-  .then(respuesta => respuesta.json())
-  .then(datos => console.log(datos));</code></pre>
-                        Es la base de las aplicaciones modernas como Instagram o Twitter.
+                            JS vainilla es genial, pero el ecosistema es inmenso.
+                            <br>
+                            <strong>Librerías:</strong> React, Vue, Angular (ayudan a construir UIs complejas).
+                            <br>
+                            <strong>Herramientas:</strong> TypeScript (JS con tipos estrictos), Webpack, Babel.
+                            <br>
+                            Aprender las bases firmes de JS hará que aprender cualquier Framework sea fácil.
                         </p>
                     </div>
 
-                    <!-- Slide 15: Final Quiz -->
+                    <!-- Slide 15: Final -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación Final</h2>
-                        <div class="quiz-container">
-                            <p class="quiz-question">¿Qué significa que JavaScript es un lenguaje "Interpretado"?</p>
-                            <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Que necesita ser compilado a binario antes
-                                    de correr.</div>
-                                <div class="option-btn" data-correct="true">Que el navegador lee y ejecuta el código
-                                    línea por línea al momento.</div>
-                            </div>
-                        </div>
+                        <h2 class="lesson-title">¡Eres un Programador!</h2>
+                        <p class="lesson-text">
+                            Ya conoces la tríada sagrada: HTML (Estructura), CSS (Estilo) y JS (Lógica).
+                            <br><br>
+                            Ya puedes construir casi cualquier cosa en la web. Pero, ¿qué pasa si queremos guardar
+                            usuarios, contraseñas y datos reales? Necesitamos salir del navegador e ir al servidor.
+                            Necesitamos <strong>Node.js</strong>.
+                        </p>
                     </div>
 
                 </div>

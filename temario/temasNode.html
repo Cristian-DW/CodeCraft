@@ -34,158 +34,175 @@
                 <div class="slider">
                     <!-- Slide 1 -->
                     <div class="slide active">
-                        <h2 class="lesson-title">1. ¿Qué es Node.js?</h2>
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/yXEesONyd_o" title="Node.js Intro"
-                                frameborder="0" allowfullscreen></iframe>
-                        </div>
+                        <h2 class="lesson-title">1. JavaScript fuera del Navegador</h2>
                         <p class="lesson-text">
-                            Muchos creen que es un lenguaje, pero <strong>NO</strong> lo es.
+                            Durante años, JavaScript estuvo atrapado dentro de Chrome y Firefox. En 2009, Ryan Dahl tuvo
+                            una idea loca: "Arrancar" el motor V8 de Chrome, envolverlo en C++, y ejecutarlo
+                            directamente en el servidor.
                             <br><br>
-                            Node.js es un <strong>entorno de ejecución</strong> para JavaScript construido sobre el
-                            motor V8 de Chrome (el mismo que usa tu navegador).
+                            Así nació <strong>Node.js</strong>.
                             <br>
-                            Te permite correr JS fuera del navegador: en servidores, en tu computadora, en robots, etc.
+                            No es un nuevo lenguaje. Es un <strong>entorno de ejecución (Runtime)</strong>. Te permite
+                            usar el mismo JS que ya sabes para construir servidores, leer archivos del disco duro, y
+                            crear APIs.
                         </p>
                     </div>
 
                     <!-- Slide 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">2. Instalación y NPM</h2>
+                        <h2 class="lesson-title">2. El Event Loop (El Camarero)</h2>
                         <p class="lesson-text">
-                            Al instalar Node.js, automáticamente instalas <strong>NPM (Node Package Manager)</strong>.
-                        <pre><code class="language-bash">$ node -v
-v18.16.0
-
-$ npm -v
-9.5.1</code></pre>
-                        NPM es la tienda de aplicaciones más grande para desarrolladores. ¿Necesitas crear PDFs? Hay un
-                        paquete. ¿Manejar fechas? Hay un paquete.
+                            A diferencia de otros (como PHP o Java antiguo) que crean un "hilo" nuevo por cada usuario
+                            (lo que consume mucha memoria), Node.js es <strong>Single-Threaded</strong> (un solo hilo).
+                            <br><br>
+                            <strong>La Analogía del Camarero:</strong>
+                            <br>
+                            Un solo camarero (Node) atiende 10 mesas. Toma la orden de la mesa 1, se la da a la cocina,
+                            y va INMEDIATAMENTE a la mesa 2. No se queda esperando a que el cocinero termine la
+                            hamburguesa.
+                            <br>
+                            Esto lo hace increíblemente rápido para aplicaciones con mucho tráfico (I/O intensivo) como
+                            chats o streaming.
                         </p>
                     </div>
 
                     <!-- Slide 3: QUIZ 1 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación 1: Conceptos</h2>
+                        <h2 class="lesson-title">Evaluación 1: Arquitectura</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Node.js usa un lenguaje diferente a JavaScript?</p>
+                            <p class="quiz-question">¿Para qué tipo de tareas NO es bueno Node.js?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Sí, usa C++.</div>
-                                <div class="option-btn" data-correct="true">No, usa JavaScript.</div>
-                                <div class="option-btn" data-correct="false">Sí, usa Java.</div>
+                                <div class="option-btn" data-correct="true">Procesamiento pesado de CPU (Cálculos
+                                    matemáticos complejos, edición de video). Bloquearía al único camarero.</div>
+                                <div class="option-btn" data-correct="false">Aplicaciones de Chat en tiempo real.</div>
+                                <div class="option-btn" data-correct="false">APIs REST.</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 4 -->
                     <div class="slide">
-                        <h2 class="lesson-title">3. Sistema de Módulos</h2>
+                        <h2 class="lesson-title">3. NPM: La tienda de legos</h2>
                         <p class="lesson-text">
-                            Node organiza el código en piezas reutilizables.
-                        <pre><code class="language-javascript">// Forma antigua (CommonJS)
-const fs = require('fs');
-
-// Forma moderna (ES Modules)
-import fs from 'fs';</code></pre>
-                        Esto permite tener archivos pequeños y mantenibles en lugar de un archivo de 10,000 líneas.
+                            <strong>NPM (Node Package Manager)</strong> es el registro de software más grande del mundo.
+                            <br><br>
+                            ¿Necesitas encriptar contraseñas? Ya existe un paquete (`bcrypt`). ¿Manejar fechas?
+                            (`date-fns`). ¿Conectarte a una base de datos?
+                            <br>
+                            No reinventes la rueda. Instala piezas y construye tu castillo.
+                        <pre><code class="language-bash">npm install express</code></pre>
                         </p>
                     </div>
 
                     <!-- Slide 5 -->
                     <div class="slide">
-                        <h2 class="lesson-title">4. File System (fs)</h2>
+                        <h2 class="lesson-title">4. Módulos: CommonJS vs ES Modules</h2>
                         <p class="lesson-text">
-                            A diferencia del navegador, Node.js tiene acceso a tus archivos.
-                        <pre><code class="language-javascript">import fs from 'fs';
-
-// Leer un archivo de texto
-const contenido = fs.readFileSync('nota.txt', 'utf-8');
-console.log(contenido);</code></pre>
-                        Poderoso, pero peligroso si no tienes cuidado con la seguridad.
+                            Node organiza el código en ficheros separados llamados módulos.
+                            <br><br>
+                            <strong>Antiguo (CommonJS):</strong>
+                        <pre><code class="language-javascript">const http = require('http');</code></pre>
+                        <strong>Moderno (ES Modules - Lo que usamos hoy):</strong>
+                        <pre><code class="language-javascript">import http from 'http';</code></pre>
+                        Permite mantener tu código limpio y separado por responsabilidades.
                         </p>
                     </div>
 
                     <!-- Slide 6 -->
                     <div class="slide">
-                        <h2 class="lesson-title">5. Event Loop (El Camarero)</h2>
+                        <h2 class="lesson-title">5. Tu primer Servidor HTTP</h2>
                         <p class="lesson-text">
-                            <strong>Node.js es Asíncrono y No Bloqueante.</strong>
-                            <br><br>
-                            Imagine un camarero (Node):
-                        <ul style="text-align: left; padding-left: 2rem;">
-                            <li>Toma tu pedido y lo pasa a la cocina.</li>
-                            <li>Inmediatamente va a atender a otra mesa (no espera en la cocina).</li>
-                            <li>Cuando la cocina termina, el camarero te trae la comida.</li>
-                        </ul>
-                        Esto le permite manejar miles de conexiones a la vez con un solo hilo.
+                            Node trae un módulo nativo `http`.
+                        <pre><code class="language-javascript">import http from 'http';
+
+const server = http.createServer((req, res) => {
+    // req: Request (Lo que pide el usuario)
+    // res: Response (Lo que respondemos)
+    res.write('¡Hola desde el servidor!');
+    res.end();
+});
+
+server.listen(3000);
+console.log('Servidor corriendo en puerto 3000');</code></pre>
+                        Si entras a `localhost:3000` en tu navegador, verás el mensaje. ¡Acabas de crear un backend!
                         </p>
                     </div>
 
                     <!-- Slide 7: QUIZ 2 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación 2: Arquitectura</h2>
+                        <h2 class="lesson-title">Evaluación 2: Servidores</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Qué pasa si una tarea tarda mucho en Node.js?</p>
+                            <p class="quiz-question">¿Qué significa 'listen(3000)'?</p>
                             <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Se congela todo el servidor (Bloqueo).
-                                </div>
-                                <div class="option-btn" data-correct="true">Node sigue atendiendo otras peticiones (No
-                                    Bloqueo).</div>
+                                <div class="option-btn" data-correct="false">Que el servidor escuche 3000 usuarios a la
+                                    vez.</div>
+                                <div class="option-btn" data-correct="true">Que el servidor se quede esperando
+                                    peticiones en el puerto lógico 3000 de tu computadora.</div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Slide 8 -->
                     <div class="slide">
-                        <h2 class="lesson-title">6. Servidor HTTP Nativo</h2>
+                        <h2 class="lesson-title">6. File System (fs)</h2>
                         <p class="lesson-text">
-                            Puedes crear un servidor sin instalar nada extra:
-                        <pre><code class="language-javascript">import http from 'http';
+                            En el navegador, JS no puede leer tus archivos por seguridad. En Node, TIENE PODER TOTAL.
+                        <pre><code class="language-javascript">import fs from 'fs/promises';
 
-const server = http.createServer((req, res) => {
-    res.write('¡Hola Mundo desde Node!');
-    res.end();
-});
-
-server.listen(3000);</code></pre>
-                        Aunque es posible, es muy verboso. Por eso usamos frameworks.
+// Leer un archivo de texto
+const texto = await fs.readFile('./secreto.txt', 'utf-8');
+console.log(texto);</code></pre>
+                        Esto es útil para leer configuraciones, procesar imágenes, o crear herramientas de línea de
+                        comandos.
                         </p>
                     </div>
 
                     <!-- Slide 9 -->
                     <div class="slide">
-                        <h2 class="lesson-title">7. Express.js</h2>
+                        <h2 class="lesson-title">7. Express.js: El Framework</h2>
                         <p class="lesson-text">
-                            El framework estándar. Simplifica todo.
+                            El módulo `http` nativo es muy básico. Para aplicaciones reales, usamos
+                            <strong>Express</strong>.
+                            <br>
+                            Es minimalista, flexible y es el estándar de la industria.
                         <pre><code class="language-javascript">import express from 'express';
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('¡Hola Express!');
+    res.send('Bienvenidos a mi API con Express');
 });
 
 app.listen(3000);</code></pre>
-                        Menos código, más fácil de leer.
+                        Mucho más limpio, ¿verdad?
                         </p>
                     </div>
 
                     <!-- Slide 10 -->
                     <div class="slide">
-                        <h2 class="lesson-title">8. Rutas (Routing)</h2>
+                        <h2 class="lesson-title">8. Routing (Rutas)</h2>
                         <p class="lesson-text">
-                            Responder diferente según la URL.
-                        <pre><code class="language-javascript">app.get('/usuarios', (req, res) => { ... });
-app.post('/login', (req, res) => { ... });
-app.delete('/borrar', (req, res) => { ... });</code></pre>
-                        Cada "verbo" HTTP (GET, POST, DELETE) tiene su función.
+                            Routing es decidir qué código ejecutar según la URL que visita el usuario.
+                        <pre><code class="language-javascript">app.get('/usuarios', (req, res) => {
+    // Devolver lista de usuarios
+});
+
+app.post('/usuarios', (req, res) => {
+    // Crear un usuario nuevo
+});
+
+app.delete('/usuarios/:id', (req, res) => {
+    // Borrar usuario específico
+});</code></pre>
+                        Esto es la base de una <strong>REST API</strong>.
                         </p>
                     </div>
 
                     <!-- Slide 11: QUIZ 3 -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación 3: Express</h2>
+                        <h2 class="lesson-title">Evaluación 3: Métodos HTTP</h2>
                         <div class="quiz-container">
-                            <p class="quiz-question">¿Qué verbo HTTP usamos para enviar datos (ej. un formulario)?</p>
+                            <p class="quiz-question">¿Qué método HTTP se usa convencionalmente para CREAR datos nuevos?
+                            </p>
                             <div class="quiz-options">
                                 <div class="option-btn" data-correct="false">GET</div>
                                 <div class="option-btn" data-correct="true">POST</div>
@@ -197,50 +214,59 @@ app.delete('/borrar', (req, res) => { ... });</code></pre>
                     <!-- Slide 12 -->
                     <div class="slide">
                         <h2 class="lesson-title">9. Middleware</h2>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/HkZK5l7d5aM" title="Express Middleware"
+                                frameborder="0" allowfullscreen></iframe>
+                        </div>
                         <p class="lesson-text">
-                            Funciones intermedias. Imagina un guardia de seguridad antes de entrar al club.
-                        <pre><code class="language-javascript">app.use((req, res, next) => {
-    console.log("Alguien entró...");
-    next(); // Deja pasar al siguiente paso
-});</code></pre>
-                        Se usan para verificar logins, leer cookies o procesar datos.
+                            El concepto más poderoso de Express.
+                            <br>
+                            Son funciones que se ejecutan "en medio" de la petición.
+                            <br>
+                            <em>Usuario pide datos -> **Middleware (Verifica si está logueado)** -> Código final.</em>
+                            <br>
+                            Si el middleware dice "No pasa", la petición se detiene ahí.
                         </p>
                     </div>
 
                     <!-- Slide 13 -->
                     <div class="slide">
-                        <h2 class="lesson-title">10. Bases de Datos</h2>
+                        <h2 class="lesson-title">10. Variables de Entorno (.env)</h2>
                         <p class="lesson-text">
-                            Node.js es el mejor amigo de <strong>MongoDB</strong> (Base de datos NoSQL).
-                            <br><br>
-                            Juntos forman el stack <strong>MERN</strong> (Mongo, Express, React, Node). Mongo guarda los
-                            datos como documentos JSON, lo que es muy natural para JavaScript.
+                            <strong>NUNCA</strong> subas contraseñas a GitHub.
+                            <br>
+                            Usamos un archivo `.env` que se queda en tu servidor y una librería `dotenv` para leerlo.
+                        <pre><code class="language-bash">DB_PASSWORD=secreto123
+PORT=8080</code></pre>
+                        <code>const dbPass = process.env.DB_PASSWORD;</code>
                         </p>
                     </div>
 
                     <!-- Slide 14 -->
                     <div class="slide">
-                        <h2 class="lesson-title">11. Despliegue (Deploy)</h2>
+                        <h2 class="lesson-title">11. Bases de Datos</h2>
                         <p class="lesson-text">
-                            Tu servidor Node no vive en tu laptop.
+                            Node se lleva bien con todos.
                             <br>
-                            Servicios como <strong>Render</strong>, <strong>Railway</strong> o <strong>AWS</strong>
-                            permiten subir tu código para que funcione 24/7 en la nube y sea accesible desde cualquier
-                            lugar.
+                            <strong>SQL (Postgres, MySQL):</strong> Usamos ORMs como <em>Prisma</em> o
+                            <em>Sequelize</em> para interactuar con tablas.
+                            <br>
+                            <strong>NoSQL (MongoDB):</strong> Usamos <em>Mongoose</em>. Es muy popular con Node (MERN
+                            Stack) porque guardas los datos como objetos JSON, que es nativo para JS.
                         </p>
                     </div>
 
-                    <!-- Slide 15: Final Quiz -->
+                    <!-- Slide 15: Final -->
                     <div class="slide">
-                        <h2 class="lesson-title">Evaluación Final</h2>
-                        <div class="quiz-container">
-                            <p class="quiz-question">¿Qué significa la 'N' en el stack MERN?</p>
-                            <div class="quiz-options">
-                                <div class="option-btn" data-correct="false">Network</div>
-                                <div class="option-btn" data-correct="false">Netscape</div>
-                                <div class="option-btn" data-correct="true">Node.js</div>
-                            </div>
-                        </div>
+                        <h2 class="lesson-title">¡Backend Desbloqueado!</h2>
+                        <p class="lesson-text">
+                            Ya sabes crear servidores, APIs y leer archivos.
+                            <br><br>
+                            Con HTML/CSS/JS haces la cara bonita. Con Node haces el cerebro lógico.
+                            <br>
+                            Para dominar la interfaz moderna compleja, necesitamos una herramienta más especializada que
+                            JS vainilla. Necesitamos <strong>React</strong>.
+                        </p>
                     </div>
 
                 </div>
