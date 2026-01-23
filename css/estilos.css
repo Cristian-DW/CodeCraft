@@ -2,7 +2,7 @@
    1. VARIABLES & RESET
    ========================================= */
 :root {
-    /* Color Palette */
+    /* Color Palette (Light Mode) */
     --primary-color: #57C5B6;
     --primary-dark: #159895;
     --secondary-color: #1A5F7A;
@@ -11,6 +11,7 @@
     --text-light: #666666;
     --bg-light: #f9f9f9;
     --white: #ffffff;
+    --card-bg: #ffffff;
     --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -26,6 +27,22 @@
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
+}
+
+/* DARK MODE VARIABLES */
+body.dark-mode {
+    --primary-color: #57C5B6;
+    --primary-dark: #80ED99;
+    --secondary-color: #AEE6E6;
+    --accent-color: #F0F8FF;
+    --text-color: #E0E0E0;
+    --text-light: #B0B0B0;
+    --bg-light: #121212;
+    --white: #1E1E1E; /* Dark card bg */
+    --card-bg: #1E1E1E;
+    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -48,6 +65,52 @@ body {
     line-height: 1.6;
     background-color: var(--bg-light);
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* === THEME TOGGLE BTN === */
+.theme-toggle-btn {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; /* Opposite to WhatsApp */
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color);
+    color: var(--bg-light); /* Inverted icon color */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+    z-index: 2000;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+    transform: rotate(45deg) scale(1.1);
+}
+
+/* === PROGRESS BADGES === */
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.badge-complete {
+    background-color: #25D366;
+    color: #fff;
+}
+
+.badge-progress {
+    background-color: #FFD700;
+    color: #333;
 }
 
 img {
