@@ -60,9 +60,22 @@ pi = 5; // Error! Protege tu código de ti mismo.
 
 // let: VARIABLE. Puede cambiar.
 let vidas = 3;
-vidas = 2; // Ok.</code></pre>
-                        <strong>Regla Pro:</strong> Usa <code>const</code> por defecto. Solo usa <code>let</code> si
-                        sabes seguro que el valor va a cambiar (como un contador).
+                    <!-- Slide 2: Variables -->
+            <div class="slide">
+                <h2 class="lesson-title">2. Variables: Cajas con Etiquetas</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/EDMmfs1H6v0" title="JS Variables" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <p class="lesson-text">
+                    Una variable es un espacio en memoria para guardar datos.
+                <ul>
+                    <li><code>let</code>: Para datos que cambian (ej. puntaje).</li>
+                    <li><code>const</code>: Para datos fijos (ej. valor de Pi).</li>
+                    <li><s>var</s>: La forma antigua (¡evítala!).</li>
+                </ul>
+                <pre><code class="language-js">let edad = 25;
+const nombre = "Cristian";
+// nombre = "David"; // ¡Error! No puedes cambiar una constante.</code></pre>
                         </p>
                     </div>
 

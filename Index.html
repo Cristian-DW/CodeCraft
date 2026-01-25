@@ -5,14 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Aprende a programar desde cero con CodeCraft. Cursos gratuitos de HTML, CSS y JavaScript.">
-    <meta name="keywords" content="programación, desarrollo web, HTML, CSS, JavaScript, curso gratis">
-    <title>CodeCraft | Aprende Desarrollo Web</title>
+        content="Aprende a programar desde cero con CodeCraft. Cursos gratuitos, interactivos y premium de HTML, CSS, JavaScript, Node.js y React.">
+    <meta name="keywords"
+        content="programación, desarrollo web, HTML, CSS, JavaScript, curso gratis, learn to code, bootcamp">
+    <meta name="author" content="CodeCraft Team">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://codecraft.com/">
+    <meta property="og:title" content="CodeCraft | Domina el Desarrollo Web">
+    <meta property="og:description"
+        content="La plataforma educativa que te enseña a programar con proyectos reales, gamificación y contenido premium.">
+    <meta property="og:image" content="./Media/og-image.jpg">
 
-    <!-- Google Fonts: Inter (Modern/Clean) & Kalam (Creative Accents) -->
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://codecraft.com/">
+    <meta property="twitter:title" content="CodeCraft | Aprende Programación Web">
+    <meta property="twitter:description"
+        content="Tu carrera como desarrollador empieza aquí. Cursos interactivos de alta calidad.">
+    <meta property="twitter:image" content="./Media/og-image.jpg">
+
+    <title>CodeCraft | Aprende Desarrollo Web Moderno</title>
+
+    <!-- Google Fonts: Inter (UI) & Kalam (Creative) & Outfit (Modern Headings) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Kalam:wght@700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Kalam:wght@700&family=Outfit:wght@500;700;800&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="./css/estilos.css">
@@ -20,156 +39,249 @@
 </head>
 
 <body>
-    <header class="main-header">
+    <header class="main-header glass-effect">
         <nav class="navbar container">
             <a href="#" class="logo">
                 <img src="./Media/Logo.png" alt="CodeCraft Logo">
                 <span class="nombre">CodeCraft</span>
             </a>
-            <ul class="nav-links">
-                <!-- Add navigation links here if needed in future, currently empty in original but structure ready -->
-            </ul>
+            <div class="nav-actions">
+                <a href="#courses" class="btn btn-sm btn-outline">Ver Cursos</a>
+                <a href="#about" class="btn btn-sm btn-primary">Empezar Gratis</a>
+            </div>
         </nav>
     </header>
 
     <main>
+        <!-- MODERN HERO SECTION -->
         <section class="hero container">
             <div class="hero-content">
-                <h1>Bienvenido a <span class="highlight">CodeCraft</span></h1>
-                <p>Entra al mundo digital, línea a línea. Aprende, crea y cautiva con HTML, CSS y JavaScript con nuestro
-                    curso web.</p>
-                <a href="cursos/Introduccion.html" class="btn btn-primary">Empieza ahora</a>
+                <span class="badge-hero">🚀 Tu Futuro Digital Empieza Aquí</span>
+                <h1>Domina la Web, <br><span class="highlight-text-gradient">Línea por Línea</span></h1>
+                <p class="hero-subtitle">
+                    Olvídate de los tutoriales aburridos. Aprende HTML, CSS, JS y React con una experiencia
+                    <strong>interactiva, gamificada y diseñada para humanos</strong>.
+                </p>
+                <div class="hero-buttons">
+                    <a href="cursos/Introduccion.html" class="btn btn-lg btn-glow">Empezar Ahora</a>
+                    <a href="#features" class="btn btn-lg btn-ghost">¿Cómo funciona?</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">9+</span>
+                        <span class="stat-label">Cursos Premium</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Gratuito</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">4.9/5</span>
+                        <span class="stat-label">Valoración</span>
+                    </div>
+                </div>
             </div>
-            <div class="hero-image">
-                <img src="./Media/ilustracion.png" alt="Ilustración de programación web">
+            <div class="hero-image-container">
+                <div class="hero-blob"></div>
+                <!-- Placeholder for a high-quality 3D illustration or mockup -->
+                <img src="./Media/ilustracion.png" alt="Programación Web Ilustración" class="hero-img floating-anim">
+
+                <!-- Floating Cards Elements (Decorative) -->
+                <div class="float-card card-html">
+                    <span>&lt;HTML&gt;</span>
+                </div>
+                <div class="float-card card-css">
+                    <span>{ CSS }</span>
+                </div>
+                <div class="float-card card-js">
+                    <span>JS();</span>
+                </div>
             </div>
         </section>
 
-        <section class="features container">
-            <div class="features-intro">
-                <h2>¿Quieres aprender a programar desde cero?</h2>
-                <p>Domina HTML, CSS y JavaScript con nuestra guía rápida y concisa. Aprende los fundamentos y escala
-                    rápidamente tus conocimientos en desarrollo web. Construye una base sólida y adquiere la confianza
-                    necesaria para enfrentar desafíos.</p>
+        <!-- FEATURES / VALUE PROP -->
+        <section id="features" class="features container">
+            <div class="section-header">
+                <h2>¿Por qué CodeCraft?</h2>
+                <p>No es solo otro curso. Es una carrera acelerada hacia tu éxito profesional.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card glass-card">
+                    <div class="icon-box">🧠</div>
+                    <h3>Aprendizaje Profundo</h3>
+                    <p>Contenido "Nutritivo". No solo copiamos código, entendemos <strong>por qué</strong> funciona.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="icon-box">🎮</div>
+                    <h3>Gamificación</h3>
+                    <p>Gana medallas, supera quizzes y ve tu progreso en tiempo real. Aprender es jugar.</p>
+                </div>
+                <div class="feature-card glass-card">
+                    <div class="icon-box">💼</div>
+                    <h3>Proyectos Reales</h3>
+                    <p>Sal con un portafolio listo para mostrar a reclutadores. Teoría aplicada al 100%.</p>
+                </div>
             </div>
         </section>
 
-        <section class="courses container">
+        <!-- COURSES GRID -->
+        <section id="courses" class="courses container">
+            <div class="section-header">
+                <h2>Nuestra Ruta de Aprendizaje</h2>
+                <p>De cero a experto. Sigue el camino diseñado para ti.</p>
+            </div>
+
             <div class="course-grid">
-                <article class="card">
+                <!-- 1. INTRO -->
+                <article class="card course-card">
                     <a href="cursos/Introduccion.html">
-                        <div class="card-image">
+                        <div class="card-image gradient-intro">
                             <img src="./Media/aprende.png" alt="Introducción">
                         </div>
                         <div class="card-content">
-                            <h3>Introducción</h3>
-                            <p>15 lecciones</p>
+                            <h3>Fundamentos</h3>
+                            <p class="course-meta">15 Lecciones • Lógica</p>
                         </div>
                     </a>
                 </article>
 
-                <article class="card">
+                <!-- 2. HTML -->
+                <article class="card course-card">
                     <a href="cursos/HTML.html">
-                        <div class="card-image">
+                        <div class="card-image gradient-html">
                             <img src="./Media/003-html-5.png" alt="Curso HTML">
                         </div>
                         <div class="card-content">
-                            <h3>HTML</h3>
-                            <p>15 lecciones</p>
+                            <h3>HTML5 Semántico</h3>
+                            <p class="course-meta">15 Lecciones • Estructura</p>
                         </div>
                     </a>
                 </article>
 
-                <article class="card">
+                <!-- 3. CSS -->
+                <article class="card course-card">
                     <a href="cursos/CSS.html">
-                        <div class="card-image">
+                        <div class="card-image gradient-css">
                             <img src="./Media/001-css-3.png" alt="Curso CSS">
                         </div>
                         <div class="card-content">
-                            <h3>CSS</h3>
-                            <p>15 lecciones</p>
+                            <h3>CSS3 Moderno</h3>
+                            <p class="course-meta">15 Lecciones • Diseño</p>
                         </div>
                     </a>
                 </article>
 
-                <article class="card">
+                <!-- 4. JS -->
+                <article class="card course-card">
                     <a href="cursos/JavaScript.html">
-                        <div class="card-image">
+                        <div class="card-image gradient-js">
                             <img src="./media/002-javascript.png" alt="Curso JavaScript">
                         </div>
                         <div class="card-content">
-                            <h3>JavaScript</h3>
-                            <p>15 lecciones</p>
+                            <h3>JavaScript ES6+</h3>
+                            <p class="course-meta">15 Lecciones • Lógica</p>
                         </div>
                     </a>
                 </article>
 
-                <article class="card">
+                <!-- 5. NODE -->
+                <article class="card course-card">
                     <a href="cursos/NodeJS.html">
-                        <div class="card-image" style="background: #3C873A10;">
+                        <div class="card-image gradient-node">
                             <img src="https://cdn.iconscout.com/icon/free/png-256/free-node-js-1174925.png"
-                                alt="Curso Node.js" style="max-height: 80%;">
+                                alt="Curso Node.js">
                         </div>
                         <div class="card-content">
-                            <h3>Node.js</h3>
-                            <p>15 lecciones</p>
+                            <h3>Node.js Backend</h3>
+                            <p class="course-meta">15 Lecciones • Servidores</p>
                         </div>
                     </a>
                 </article>
 
-                <article class="card">
+                <!-- 6. REACT -->
+                <article class="card course-card">
                     <a href="cursos/ReactJS.html">
-                        <div class="card-image" style="background: #61DAFB10;">
+                        <div class="card-image gradient-react">
                             <img src="https://cdn.iconscout.com/icon/free/png-256/free-react-1-282599.png"
-                                alt="Curso React.js" style="max-height: 80%;">
+                                alt="Curso React.js">
                         </div>
                         <div class="card-content">
-                            <h3>React.js</h3>
-                            <p>15 lecciones</p>
+                            <h3>React.js Avanzado</h3>
+                            <p class="course-meta">15 Lecciones • Frontend</p>
                         </div>
                     </a>
                 </article>
 
-                <article class="card">
+                <!-- 7. SQL -->
+                <article class="card course-card">
                     <a href="cursos/SQL.html">
-                        <div class="card-image" style="background: #33679110;">
-                            <img src="https://cdn.iconscout.com/icon/free/png-256/free-sql-4-190805.png" alt="Curso SQL"
-                                style="max-height: 80%;">
+                        <div class="card-image gradient-sql">
+                            <img src="https://cdn.iconscout.com/icon/free/png-256/free-sql-4-190805.png"
+                                alt="Curso SQL">
                         </div>
                         <div class="card-content">
-                            <h3>Base de Datos (SQL)</h3>
-                            <p>15 lecciones</p>
+                            <h3>Bases de Datos SQL</h3>
+                            <p class="course-meta">15 Lecciones • Data</p>
                         </div>
                     </a>
                 </article>
 
-                <article class="card">
+                <!-- 8. GIT -->
+                <article class="card course-card">
                     <a href="cursos/GIT.html">
-                        <div class="card-image" style="background: #F0503210;">
+                        <div class="card-image gradient-git">
                             <img src="https://cdn.iconscout.com/icon/free/png-256/free-git-17-1175218.png"
-                                alt="Curso Git" style="max-height: 80%;">
+                                alt="Curso Git">
                         </div>
                         <div class="card-content">
-                            <h3>Git & Github</h3>
-                            <p>15 lecciones</p>
+                            <h3>Git & GitHub</h3>
+                            <p class="course-meta">15 Lecciones • DevOps</p>
                         </div>
                     </a>
                 </article>
 
-                <article class="card">
+                <!-- 9. UX/UI -->
+                <article class="card course-card">
                     <a href="cursos/UXUI.html">
-                        <div class="card-image" style="background: #FF61F610;">
+                        <div class="card-image gradient-ux">
                             <img src="https://cdn.iconscout.com/icon/free/png-256/free-ui-ux-3610486-3015091.png"
-                                alt="Curso UX/UI" style="max-height: 80%;">
+                                alt="Curso UX/UI">
                         </div>
                         <div class="card-content">
                             <h3>Diseño UX/UI</h3>
-                            <p>15 lecciones</p>
+                            <p class="course-meta">15 Lecciones • Creatividad</p>
                         </div>
                     </a>
                 </article>
             </div>
         </section>
+
+        <!-- TESTIMONIALS / SOCIAL PROOF -->
+        <section class="testimonials container mb-xl">
+            <div class="glass-container">
+                <h2>Lo que dicen nuestros estudiantes</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-item">
+                        <p>"Increíble. Pasé de no saber qué era una terminal a desplegar mi primera API en Node.js en
+                            dos semanas."</p>
+                        <div class="user-info">
+                            <strong>— Juan Pérez</strong>
+                            <span>Desarrollador Jr.</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <p>"El diseño de la plataforma es hermoso y las explicaciones son súper claras. ¡Me encanta el
+                            modo oscuro!"</p>
+                        <div class="user-info">
+                            <strong>— María García</strong>
+                            <span>Diseñadora UX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <a href="https://wa.me/573224389547" class="btn-floating-whatsapp" target="_blank"
@@ -184,23 +296,25 @@
                     <img src="./Media/Logo.png" alt="Logo CodeCraft">
                     <span class="nombre">CodeCraft</span>
                 </a>
+                <p class="footer-desc">Plataforma de educación tecnológica de vanguardia. Creamos el futuro, hoy.</p>
             </div>
 
             <div class="footer-column">
-                <h3>Cursos</h3>
+                <h3>Aprende</h3>
                 <ul>
-                    <li><a href="cursos/Introduccion.html">Introducción</a></li>
-                    <li><a href="cursos/HTML.html">HTML</a></li>
-                    <li><a href="cursos/CSS.html">CSS</a></li>
+                    <li><a href="cursos/HTML.html">HTML & CSS</a></li>
                     <li><a href="cursos/JavaScript.html">JavaScript</a></li>
+                    <li><a href="cursos/ReactJS.html">React & Node</a></li>
+                    <li><a href="cursos/UXUI.html">Diseño & UX</a></li>
                 </ul>
             </div>
 
             <div class="footer-column">
-                <h3>Contacto</h3>
+                <h3>Comunidad</h3>
                 <ul>
-                    <li><a href="mailto:info@codecraft.com">info@codecraft.com</a></li>
-                    <li>Teléfono: +57 322 438 9547</li>
+                    <li><a href="#">Discord (Pronto)</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Recursos Gratuitos</a></li>
                 </ul>
             </div>
 
@@ -216,7 +330,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 CodeCraft. Todos los derechos reservados.</p>
+            <p>&copy; 2026 CodeCraft. Hecho con ❤️ y mucho código.</p>
         </div>
     </footer>
 
