@@ -124,7 +124,7 @@ function showCelebration() {
 }
 
 function closeCelebration() {
-  window.location.href = '../Index.html';
+  window.location.href = '../index.html';
 }
 
 function createConfetti() {

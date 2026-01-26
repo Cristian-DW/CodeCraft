@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // We need to map "cursos/NodeJS.html" -> the ID used in slider.js
         // In slider.js: window.location.pathname.split('/').pop().replace('.html', '')
         // So for "temario/temasNode.html", ID is "temasNode"
-        // BUT, the cards on Index.html point to "cursos/NodeJS.html" (Overview pages).
+        // BUT, the cards on index.html point to "cursos/NodeJS.html" (Overview pages).
 
         // Wait, the progress is saved in the LESSON page (temario/temasNode.html).
         // I need to know the 'temario' file name corresponding to the 'cursos' file name to find the localStorage key.
