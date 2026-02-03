@@ -1,0 +1,54 @@
+/* =========================================
+   INTERACTIONS & ANIMATIONS
+   ========================================= */
+
+/* 1. SCROLL REVEAL UTILITIES */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggering delays are handled inline in HTML for cards, 
+   but we can add default ones here if needed */
+
+/* 2. TYPING EFFECT CURSOR */
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: var(--accent-color, #00d4ff);
+    animation: blink 1s infinite;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* 3. PARTICLE EFFECTS (Optional - CSS Only Background) */
+/* We can add a subtle moving gradient to the hero background */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(97, 218, 251, 0.1) 0%, rgba(0,0,0,0) 70%);
+    animation: rotateBg 20s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes rotateBg {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
